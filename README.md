@@ -1,1 +1,3 @@
-# ecoteh
+# Plant
+
+запуск - npm run dev
