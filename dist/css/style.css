@@ -1,3 +1,66 @@
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-Black.woff2") format("woff2"), url("../fonts/Commissioner-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-Bold.woff2") format("woff2"), url("../fonts/Commissioner-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-Medium.woff2") format("woff2"), url("../fonts/Commissioner-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-Light.woff2") format("woff2"), url("../fonts/Commissioner-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-Regular.woff2") format("woff2"), url("../fonts/Commissioner-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Commissioner;
+  font-display: swap;
+  src: url("../fonts/Commissioner-SemiBold.woff2") format("woff2"), url("../fonts/Commissioner-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -100,12 +163,11 @@ legend {
 
 body {
   position: relative;
-  font-family: Commissioner, Arial, Helvetica, sans-serif;
+  font-family: "Commissioner", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 110%;
-  color: #222;
-  background-color: #f9f9f9;
+  color: #555a5e;
 }
 
 h1,
@@ -156,14 +218,6 @@ img {
   border: 0;
 }
 
-.btn-reset {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
 .wrap {
   display: flex;
   flex-flow: row nowrap;
@@ -175,6 +229,14 @@ img {
   flex-flow: column nowrap;
 }
 
+.btn_reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1180px;
   width: 100%;
@@ -182,17 +244,43 @@ img {
 }
 
 .header {
-  padding-top: 18px;
+  background-color: #fff;
 }
-
+.header__container {
+  position: relative;
+}
+@media (max-width: 1700px) {
+  .header__container {
+    padding: 0 20px;
+  }
+}
 .header__top-blok {
+  padding: 18px 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 5px;
 }
-
+.header__bot-blok {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 18px 0;
+  backdrop-filter: blur(10px);
+}
+.header__top-right-blok {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header__contacts {
+  padding-top: 3px;
+}
 .logo {
   display: flex;
   flex-flow: row nowrap;
@@ -200,75 +288,325 @@ img {
   justify-content: center;
   gap: 20px;
 }
-
 .logo__ecoteh {
   width: 156px;
   height: 26px;
 }
-
 .logo__sk {
   width: 88px;
   height: 26px;
 }
 
 .contacts {
+  width: max-content;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  gap: 5px;
 }
-
 .contacts__item {
-  width: 142px;
   height: 20px;
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #555A5E;
+  color: #555a5e;
   flex: none;
   order: 0;
   flex-grow: 0;
+  transition: color 0.3s ease-in-out;
 }
-
-.header__btns {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+.contacts__item:hover {
+  color: #2fa7be;
+}
+.contacts_email {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.12px;
+  text-align: left;
 }
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: none;
+  color: #fff;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: #fff;
+  cursor: pointer;
   border: 1px solid #222;
+  transition: all 0.3s ease-in-out;
   border-radius: 4px;
 }
-
-.btn_w_167 {
+.btn:focus-visible {
+  outline: 1px solid #2fa7be;
+  outline-offset: 3px;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #2fa7be;
+  outline: none;
+  box-shadow: 0px 4px 7px 0px rgba(23, 64, 7, 0.4);
+}
+.btn:active {
+  color: #fff;
+  background-color: #fff;
+  outline: 1px solid #2fa7be;
+  outline-offset: 0;
+  box-shadow: none;
+}
+.btn.btn_blue {
   width: 167px;
   height: 48px;
+  border-color: #2da1b7;
+  color: #2da1b7;
 }
-
-.btn_blue {
-  border-color: #2DA1B7;
-  color: #2DA1B7;
+.btn.btn_blue:focus-visible {
+  outline: 1px solid #2fa7be;
+  outline-offset: 3px;
 }
-
-.btn_w_108 {
+.btn.btn_blue:hover {
+  color: #fff;
+  background-color: #37cbd3;
+  border-color: #37cbd3;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn_blue:active {
+  color: #fff;
+  background-color: #2fa7be;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn_black {
+  border-color: #555a5e;
+  color: #555a5e;
+}
+.btn.btn__cart svg {
+  margin-right: 8px;
+}
+.btn.btn__cart svg path {
+  transition: all 0.3s ease-in-out;
+}
+.btn.btn__cart {
+  font-size: 14px;
+  position: relative;
+  padding-left: 38px;
   width: 108px;
   height: 48px;
+  border-color: #555a5e;
+  color: #555a5e;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.btn.btn__cart svg {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+}
+.btn.btn__cart svg path {
+  transition: all 0.3s ease-in-out;
+}
+.btn.btn__cart:focus-visible {
+  outline: 1px solid #555a5e;
+  outline-offset: 3px;
+}
+.btn.btn__cart:hover {
+  background-color: #fff;
+  color: #2fa7be;
+  border-color: #2fa7be;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn__cart:hover svg path {
+  stroke: #2fa7be;
+}
+.btn.btn__cart:active {
+  background-color: #fff;
+  color: #37cbd3;
+  border-color: #37cbd3;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn__cart:active svg path {
+  stroke: #37cbd3;
+}
+.btn.btn__cart_active {
+  color: #555a5e;
+  border-color: rgba(45, 161, 183, 0.5);
+}
+.btn.btn__cart_active:hover {
+  background-color: #fff;
+  color: #2fa7be;
+  border-color: #2fa7be;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn__cart_active:hover svg path {
+  stroke: rgba(45, 161, 183, 0.5);
+  fill: rgba(45, 161, 183, 0.5);
+}
+.btn.btn__cart_active:active {
+  background-color: #fff;
+  color: #37cbd3;
+  border-color: #37cbd3;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn__cart_active:active svg path {
+  stroke: #37cbd3;
+  fill: #37cbd3;
+}
+.btn .btn_w_81 {
+  width: 81px;
+}
+.btn .btn_w_150 {
+  width: 150px;
+}
+.btn .btn_w_161 {
+  width: 161px;
+}
+.btn .btn_w_179 {
+  width: 179px;
+}
+.btn .btn_w_195 {
+  width: 195px;
+}
+.btn .btn_w_201 {
+  width: 201px;
+}
+.btn .btn_w_229 {
+  width: 229px;
+}
+.btn .btn_w_230 {
+  width: 230px;
+}
+.btn .btn_w_240 {
+  width: 240px;
+}
+.btn .btn_w_245 {
+  width: 245px;
+}
+.btn .btn_w_350 {
+  width: 350px;
+}
+.btn .btn_m_0 {
+  margin: 0;
+}
+.btn .btn_mr_35 {
+  margin-right: 35px;
+}
+.btn .btn_disabled {
+  color: rgba(34, 34, 34, 0.55);
+  background: #d2d2d2;
+  cursor: default;
+  pointer-events: none;
+}
+.btn.btn_red:hover {
+  background: #570000;
+  box-shadow: 0px 4px 7px 0px rgba(87, 0, 0, 0.4);
+}
+.btn.btn_white {
+  background-color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.search-form {
+  position: relative;
+}
+.search-form .search-form__input {
+  width: 285px;
+  height: 44px;
+  background-color: rgba(179, 219, 255, 0.3);
+  border-radius: 50px;
+  color: #555a5e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 20px;
+  width: 290px;
+  height: 40px;
+  transition: background-color 0.3s ease-in-out;
+}
+.search-form .search-form__input:hover {
+  background-color: rgba(179, 219, 255, 0.5);
+}
+.search-form .search-form__input::placeholder {
+  color: #828282;
+}
+.search-form .search-form__submit-btn {
+  position: absolute;
+  top: 6px;
+  right: 21px;
+  padding-top: 5px;
 }
 
-.btn_black {
-  border-color: #555A5E;
-  color: #555A5E;
+.nav__list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
 }
-
-.btn__cart svg {
-  margin-right: 8px;
+.nav__list .nav__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(54, 193, 201, 0.3);
+}
+.nav__list .nav__link {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 7px;
+  flex: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.nav__list .nav__link .nav__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.57px;
+}
+.nav__list .nav__link_active {
+  background: rgba(255, 255, 255, 0.85);
+}
+.nav__list .nav__link_active .nav__text {
+  font-weight: 700;
+  color: #2fa7be;
+}
+.nav__list .nav__link_active svg path {
+  fill: #222;
+}
+.nav__list .nav__link_active:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+.nav__list .nav__link:focus-visible {
+  outline: 1px solid #2fa7be;
+  outline-offset: 5px;
+}
+.nav__list .nav__link:hover {
+  text-decoration: underline;
+}
+.nav__list .nav__link:active {
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+}
+.nav__list .nav__link:active .nav__text {
+  color: #222;
+}
+.nav__list .nav__link:active svg path {
+  fill: #222;
 }
 /*# sourceMappingURL=style.css.map */
