@@ -601,7 +601,6 @@ img {
     fill: $color-555A5E;
   }
 
-
   // flex-basis: 48%;
   // @media (max-width: 1460px) {
   //   flex-basis: unset;
@@ -627,9 +626,113 @@ img {
       stroke: $color-37CBD3;
     }
   }
-
-
 }
+
+.title {
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39.14px;
+  text-align: center;
+  color: $color-555A5E;
+  width: 100%;
+  text-transform: uppercase;
+  background-image: url(@img/bg-title.svg);
+  background-repeat: no-repeat;
+  background-position: 434px 16px;
+  background-size: 180px;
+  // z-index: 1;
+  // padding: 10px 0;
+}
+
+.link {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26.91px;
+  color: $color-2FA7BE;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+}
+
+.section {
+}
+
+.card {
+  position: relative;
+  /* Frame 914 */
+  // position: absolute;
+  width: 580px;
+  min-height: 360px;
+  // left: 0;
+  // top: 0;
+  /* Автолейаут */
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 98px 40px;
+  border-radius: 15px;
+  // transition: all .5s ease-in-out;
+
+
+
+
+
+  .card__text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 502px;
+    height: 165px;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex: none;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: width .4s ease-in-out, height .4s ease-in-out;
+    
+  }
+
+  &:hover .card__text-block {
+    // backdrop-filter: blur(10px);
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    // max-width: 100%;
+    // min-height: 100%;
+  }
+
+  .card__title {
+    color: $color-white;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .card__desc {
+    color: $color-white;
+    max-width: 450px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    // letter-spacing: 0%;
+    text-align: center;
+  }
+}
+
 // --------------------------------------- HEADER start ---------------------------------------
 .header {
   background-color: $color-white;
@@ -775,7 +878,6 @@ img {
     .contacts__item_email {
       letter-spacing: -1.3px;
     }
-
   }
 
   .nav__link_footer {
@@ -887,7 +989,7 @@ img {
       .footer__policy {
         align-self: flex-end;
         letter-spacing: 1.1px;
-      color: $color-828282;
+        color: $color-828282;
 
         &:hover {
           color: $color-555A5E;
@@ -898,3 +1000,75 @@ img {
 }
 // --------------------------------------- FOOTER end ---------------------------------------
 
+// --------------------------------------- CATALOG start ---------------------------------------
+.catalog_main {
+  background-image: url('@img/bg-catalog.svg');
+  background-repeat: no-repeat;
+  background-position: center 115px;
+  background-size: cover;
+  .catalog-main__container {
+    position: relative;
+
+    // padding: 0 10px;
+    // min-height: 100vh;
+    .link {
+      position: absolute;
+      right: 10px;
+      top: 126px;
+      text-align: right;
+
+    }
+  }
+
+
+  .catalog-main__head {
+    position: relative;
+    padding-top: 83px;
+    margin-bottom: 13px;
+
+  }
+  .catalog-main__body {
+    padding: 0 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 10px;    
+  }
+  .card_tile {
+    background-image: url('@img/catalog-tile.jpg');
+
+  }
+  .card_crumb {
+    background-image: url('@img/catalog-crumb.jpg');
+    
+
+
+  }
+
+  .card_roll {
+    background-image: url('@img/catalog-roll.jpg');
+  }
+  .card_seamless {
+    background-image: url('@img/catalog-seamless.jpg');
+    
+  }
+}
+
+// --------------------------------------- CATALOG end ---------------------------------------
+
+// --------------------------------------- CATALOG start ---------------------------------------
+
+// --------------------------------------- CATALOG end ---------------------------------------
+// --------------------------------------- CATALOG start ---------------------------------------
+
+// --------------------------------------- CATALOG end ---------------------------------------
+// --------------------------------------- CATALOG start ---------------------------------------
+
+// --------------------------------------- CATALOG end ---------------------------------------
+// --------------------------------------- CATALOG start ---------------------------------------
+
+// --------------------------------------- CATALOG end ---------------------------------------
+// --------------------------------------- CATALOG start ---------------------------------------
+
+// --------------------------------------- CATALOG end ---------------------------------------
