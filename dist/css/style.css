@@ -670,6 +670,12 @@ img {
   text-align: center;
 }
 
+.sliderswiper .swiper-slide--1 {
+  background-image: url(../img/slide-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .header {
   background-color: #fff;
 }
@@ -798,27 +804,27 @@ img {
   color: #555a5e;
 }
 
-.catalog_main {
+.catalog_section {
   background-image: url("../img/bg-catalog.svg");
   background-repeat: no-repeat;
   background-position: center 115px;
   background-size: cover;
 }
-.catalog_main .catalog-main__container {
+.catalog_section .catalog-main__container {
   position: relative;
 }
-.catalog_main .catalog-main__container .link {
+.catalog_section .catalog-main__container .link {
   position: absolute;
   right: 10px;
   top: 126px;
   text-align: right;
 }
-.catalog_main .catalog-main__head {
+.catalog_section .catalog-main__head {
   position: relative;
   padding-top: 83px;
   margin-bottom: 13px;
 }
-.catalog_main .catalog-main__body {
+.catalog_section .catalog-main__body {
   padding: 0 10px;
   display: flex;
   flex-flow: row wrap;
@@ -826,16 +832,16 @@ img {
   justify-content: space-between;
   gap: 20px 10px;
 }
-.catalog_main .card_tile {
+.catalog_section .card_tile {
   background-image: url("../img/catalog-tile.jpg");
 }
-.catalog_main .card_crumb {
+.catalog_section .card_crumb {
   background-image: url("../img/catalog-crumb.jpg");
 }
-.catalog_main .card_roll {
+.catalog_section .card_roll {
   background-image: url("../img/catalog-roll.jpg");
 }
-.catalog_main .card_seamless {
+.catalog_section .card_seamless {
   background-image: url("../img/catalog-seamless.jpg");
 }
 /*# sourceMappingURL=style.css.map */

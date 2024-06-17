@@ -678,10 +678,6 @@ img {
   border-radius: 15px;
   // transition: all .5s ease-in-out;
 
-
-
-
-
   .card__text-block {
     position: absolute;
     top: 50%;
@@ -699,8 +695,7 @@ img {
     flex: none;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    transition: width .4s ease-in-out, height .4s ease-in-out;
-    
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   }
 
   &:hover .card__text-block {
@@ -730,6 +725,32 @@ img {
     line-height: 22px;
     // letter-spacing: 0%;
     text-align: center;
+  }
+}
+
+.slider {
+  &swiper {
+    .swiper-slide {
+      &--1 {
+        background-image: url(@img/slide-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+      }
+
+      &--2 {
+      }
+
+      &--3 {
+      }
+
+      &--4 {
+      }
+
+      &--5 {
+      }
+    }
   }
 }
 
@@ -1001,8 +1022,8 @@ img {
 // --------------------------------------- FOOTER end ---------------------------------------
 
 // --------------------------------------- CATALOG start ---------------------------------------
-.catalog_main {
-  background-image: url('@img/bg-catalog.svg');
+.catalog_section {
+  background-image: url("@img/bg-catalog.svg");
   background-repeat: no-repeat;
   background-position: center 115px;
   background-size: cover;
@@ -1016,16 +1037,13 @@ img {
       right: 10px;
       top: 126px;
       text-align: right;
-
     }
   }
-
 
   .catalog-main__head {
     position: relative;
     padding-top: 83px;
     margin-bottom: 13px;
-
   }
   .catalog-main__body {
     padding: 0 10px;
@@ -1033,33 +1051,43 @@ img {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px 10px;    
+    gap: 20px 10px;
   }
   .card_tile {
-    background-image: url('@img/catalog-tile.jpg');
-
+    background-image: url("@img/catalog-tile.jpg");
   }
   .card_crumb {
-    background-image: url('@img/catalog-crumb.jpg');
-    
-
-
+    background-image: url("@img/catalog-crumb.jpg");
   }
 
   .card_roll {
-    background-image: url('@img/catalog-roll.jpg');
+    background-image: url("@img/catalog-roll.jpg");
   }
   .card_seamless {
-    background-image: url('@img/catalog-seamless.jpg');
-    
+    background-image: url("@img/catalog-seamless.jpg");
   }
 }
 
 // --------------------------------------- CATALOG end ---------------------------------------
 
-// --------------------------------------- CATALOG start ---------------------------------------
+// --------------------------------------- GLAVNAYA start ---------------------------------------
+.glavnaya {
+  .glavnaya__main {
+  }
+  .glavnaya__section {
+  }
+  .glavnaya__section_slider {
+  }
+  .glavnaya__container {
+  }
+  .glavnaya__container_slider {
+  }
 
-// --------------------------------------- CATALOG end ---------------------------------------
+  .glavnaya__slider {
+  }
+}
+
+// --------------------------------------- GLAVNAYA end ---------------------------------------
 // --------------------------------------- CATALOG start ---------------------------------------
 
 // --------------------------------------- CATALOG end ---------------------------------------
