@@ -1423,45 +1423,45 @@ img {
 .glavnaya .glavnaya__section_main .main-block_about .main-block__body {
   display: block;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about {
-  max-width: 100%;
+.glavnaya .glavnaya__section_main .main-block_about .slider {
+  max-width: 100vw;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper {
   position: relative;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper::before {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper::before {
   position: absolute;
   content: "";
   z-index: 10;
   height: 100%;
   display: block;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-button-prev {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-button-prev {
   position: absolute;
   top: 46%;
   left: 14%;
   width: 50px;
   height: 50px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-button-next {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-button-next {
   position: absolute;
   top: 46%;
   right: 14%;
   width: 50px;
   height: 50px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-button-prev::after,
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-button-next::after {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-button-prev::after,
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-button-next::after {
   display: none;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide {
   width: 100vw;
   height: 615px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right center;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .swiper__container {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .swiper__container {
   max-width: 1178px;
   padding: 126px 0;
   display: flex;
@@ -1471,7 +1471,7 @@ img {
   gap: 78px;
   flex: 0 1 730px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .slider__title {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .slider__title {
   max-width: 796px;
   font-style: normal;
   font-weight: 700;
@@ -1479,14 +1479,14 @@ img {
   line-height: 83px;
   color: #ffffff;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .slider__card-block {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .slider__card-block {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
   justify-content: flex-start;
   gap: 47px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .card_slide {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_slide {
   width: unset;
   height: unset;
   max-width: 215px;
@@ -1501,19 +1501,34 @@ img {
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .card_slide .card__title {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_slide .card__title {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fff;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider_about .slider_about .swiper-slide .card_slide .card__text {
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_slide .card__text {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.04em;
   color: #fff;
+}
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide--1 {
+  background-image: linear-gradient(91.63deg, #004e83 20.07%, rgba(0, 85, 133, 0.897351) 23.64%, rgba(0, 99, 137, 0.699955) 42.59%, rgba(0, 164, 227, 0) 99.22%), url("../img/slide-1.jpg");
+}
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide--2 {
+  background-image: linear-gradient(91.63deg, #004e83 20.07%, rgba(0, 85, 133, 0.897351) 23.64%, rgba(0, 99, 137, 0.699955) 42.59%, rgba(0, 164, 227, 0) 99.22%), url("../img/slide-1.jpg");
+}
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide--3 {
+  background-image: linear-gradient(91.63deg, #004e83 20.07%, rgba(0, 85, 133, 0.897351) 23.64%, rgba(0, 99, 137, 0.699955) 42.59%, rgba(0, 164, 227, 0) 99.22%), url("../img/slide-1.jpg");
+}
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide--4 {
+  background-image: linear-gradient(91.63deg, #004e83 20.07%, rgba(0, 85, 133, 0.897351) 23.64%, rgba(0, 99, 137, 0.699955) 42.59%, rgba(0, 164, 227, 0) 99.22%), url("../img/slide-1.jpg");
+}
+.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide--5 {
+  background-image: linear-gradient(91.63deg, #004e83 20.07%, rgba(0, 85, 133, 0.897351) 23.64%, rgba(0, 99, 137, 0.699955) 42.59%, rgba(0, 164, 227, 0) 99.22%), url("../img/slide-1.jpg");
 }
 .glavnaya .glavnaya__pic {
   background: linear-gradient(180deg, #fff 0%, rgba(102, 102, 102, 0) 82.31%), url("../img/crumbs.png");
