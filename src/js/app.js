@@ -20,7 +20,7 @@ cartBtn.addEventListener("click", () => {
   key = !key;
 });
 
-//подсветка активного пункта меню:
+//подсветка активного пункта меню:---------------------------------------------------------
 const body = document.querySelector("body");
 const page = body.getAttribute("data-page");
 const navLinks = document.querySelectorAll('.nav__link');
@@ -29,6 +29,60 @@ navLinks.forEach((item) => {
     item.classList.add("nav__link_active");    
   }
 })
+
+// start swiper -----------------------------------------------------------------------------
+// const swipers = document.querySelectorAll('.swiper');
+// swipers.forEach((item) => {
+//   new Swiper(item, {
+//     // Optional parameters
+//     direction: "horizontal",
+//     loop: true,
+//     allowTouchMove: true,
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+// })
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  allowTouchMove: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// const swiper2 = new Swiper(".swiper2", {
+//   // Optional parameters
+//   direction: "horizontal",
+//   loop: true,
+//   allowTouchMove: true,
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
+
+// end swiper -----------------------------------------------------------------------------
 
 
 // const activPage = document.querySelector(`.${page}`);
