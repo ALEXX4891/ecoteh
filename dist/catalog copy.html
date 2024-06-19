@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Экотех. flower bridge</title>
+  <title>Экотех. Каталог</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/style.css">  
 </head>
 
-<body>
+<body data-page="catalog">
+  <p class="page" hidden>Контрагенты</p>
   <header class="header">
   <div class="container header__container">
     <div class="header__top-block">
@@ -136,21 +137,92 @@
 
 </header>
 
-  <div class="container container__not-found not-found">
-    <div class="not-found__wrapper">
-      <h1 class="not-found__title">404</h1>
-      <h3 class="not-found__subtitle">Ошибка!</h3>
-      <h4 class="not-found__text">
-        К сожалению, запрашиваемая
-        Вами страница не найдена...
-      </h4>
-      <a class="not-found__link">
-        Перейдите на главную страницу
-      </a>
+  <main class="main">
+    <section class="section catalog_section catalog-main">
+      <div class="container catalog-main__container">
+
+        <div class="catalog-main__head">
+          <h1 class="catalog-main__title title">
+            Каталог
+          </h1>
+        </div>
+
+        <div class="catalog-main__body">
+          <article class="catalog-main__card card card_seamless">
+            <div class="card__text-block">
+              <h2 class="card__title">
+                бесшовное покрытие
+              </h2>
+              <p class="card__desc">
+                Бесшовное покрытие обладает высокой износостойкостью и&nbsp;долговечностью, что позволяет использовать его в&nbsp;местах с&nbsp;высокой нагрузкой
+              </p>
+            </div>
+          </article>
+
+          <article class="catalog-main__card card card_tile">
+            <div class="card__text-block">
+              <h2 class="card__title">
+                Плитка
+              </h2>
+              <p class="card__desc">
+                Лучше всего подходит для ступенек, дорожек, игровых детских площадок
+              </p>
+            </div>
+          </article>
+
+          <article class="catalog-main__card card card_crumb">
+            <div class="card__text-block">
+              <h2 class="card__title">
+                резиновая крошка
+              </h2>
+              <p class="card__desc">
+                Идеальный материал для детских и&nbsp;спортивных площадок, тренажерных залов и&nbsp;дорожек на&nbsp;загородных участках
+              </p>
+            </div>
+          </article>
+
+          <article class="catalog-main__card card card_roll">
+            <div class="card__text-block">
+              <h2 class="card__title">
+                рулонное покрытие
+              </h2>
+              <p class="card__desc">
+                Обеспечивает амортизацию при падениях, защищает пол и&nbsp;оборудование от&nbsp;повреждений, а&nbsp;также обеспечивает хорошее сцепление
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <a class="catalog-main__link link" href="catalog-all.html" >
+          Все товары
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- <div class="popup" id="popup">
+    <div class="popup__body">
+      <div class="popup__content popup-deal">
+
+        <h3 class="popup__title">ООО «Длинное большое название»</h3>
+        <p class="popup__text">Вы действительно хотите переместить контрагента в архив?</p>
+        <div class="popup__btn-wrapper">
+          <button class="btn btn-reset popup__btn popup-close" href="#">Отменить</button>
+          <button class="btn btn_red btn-reset popup__btn popup-approval" href="#">Переместить</button>
+        </div>
+
+        <div class="popup__close popup-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.8546 0.399985L10.0001 8.25454L2.14552 0.399985C1.91406 0.168523 1.60013 0.0384892 1.27279 0.0384892C0.945455 0.0384892 0.631526 0.168523 0.400064 0.399985C0.168602 0.631447 0.0385678 0.945377 0.0385678 1.27271C0.0385678 1.60005 0.168602 1.91398 0.400064 2.14544L8.25462 10L0.400064 17.8546C0.168602 18.086 0.0385678 18.3999 0.0385678 18.7273C0.0385678 19.0546 0.168602 19.3686 0.400064 19.6C0.631526 19.8315 0.945455 19.9615 1.27279 19.9615C1.60013 19.9615 1.91406 19.8315 2.14552 19.6L10.0001 11.7455L17.8546 19.6C18.0861 19.8315 18.4 19.9615 18.7274 19.9615C19.0547 19.9615 19.3686 19.8315 19.6001 19.6C19.8316 19.3686 19.9616 19.0546 19.9616 18.7273C19.9616 18.4 19.8316 18.086 19.6001 17.8546L11.7455 10L19.6001 2.14544C19.8316 1.91398 19.9616 1.60005 19.9616 1.27271C19.9616 0.945376 19.8316 0.631447 19.6001 0.399985C19.3686 0.168523 19.0547 0.0384886 18.7274 0.0384886C18.4 0.0384886 18.0861 0.168523 17.8546 0.399985Z"
+              fill="#222222" />
+          </svg>
+        </div>
+      </div>
     </div>
-  </div>
-
-
+  </div> -->
 
   <footer class="footer">
   <div class="container footer__container">
@@ -203,7 +275,7 @@
         </a>
       </div>
 
-      <button class="btn btn_w_167 btn_blue btn_reset footer__btn" href="#">
+      <button class="btn btn_w_167 btn_blue btn_reset footer__btn">
         Отправить заявку
       </button>
     </div>
@@ -355,6 +427,8 @@
 <!-- <script src="js/lib/simplebar.min.js"></script> -->
 <script src="js/lib/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
+
+
 </body>
 
 </html>

@@ -1,0 +1,131 @@
+<div class="popup" id="popup-form">
+  <div class="popup__body">
+    <div class="popup__content popup-form">
+      <form class="popup-form__project-form project-form" action="#">
+        <a class="project-form__close popup-close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.999999 15L8 7.92308M1 0.999999L8 7.92308M8 7.92308L14.5 0.999999M8 7.92308L14.5 15"
+              stroke="black" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </a>
+        <h2 class="project-form__title">
+          Обсудим проект?
+        </h2>
+        <p class="project-form__subtitle">
+          Расскажите нам про вашу идею
+        </p>
+
+        <div class="project-form__inputs">
+          <input class="project-form__input" type="text" name="name" placeholder="Как вас зовут?">
+          <input class="project-form__input" type="email" name="email" placeholder="E-mail*" required>
+          <input class="project-form__input" type="text" name="company-name" placeholder="Компания">
+        </div>
+
+        <div class="project-form__select-wrap">
+          <p class="project-form__select-title">Тип мероприятия*</p>
+          <select class="project-form__select" name="filter" required>
+            <option class="project-form__option" value="" selected disabled>
+              Выбрать
+            </option>
+            <option class="project-form__option" value="team-building">
+              Тимбилдинг
+            </option>
+            <option class="project-form__option" value="business-events">
+              Деловые мероприятия
+            </option>
+            <option class="project-form__option" value="marketing-and-promo">
+              Маркетинг и промо
+            </option>
+            <option class="project-form__option" value="field-trips">
+              Выездные
+            </option>
+            <option class="project-form__option" value="sport">
+              Спортивные
+            </option>
+            <option class="project-form__option" value="corporate">
+              Корпоративные
+            </option>
+            <option class="project-form__option" value="professional-skill-events">
+              Мероприятия профессионального мастерства
+            </option>
+          </select>
+        </div>
+
+        <label class="project-form__label project-form__label_textarea">
+          Комментарий
+          <textarea class="project-form__textarea" name="textarea" rows="3"
+            placeholder="Поговорим о деталях"></textarea>
+        </label>
+
+        <div class="project-form__wrapper">
+          <p class="project-form__subtitle project-form__subtitle_buttons">
+            Примерный бюджет
+          </p>
+          <p class="project-form__desc">
+            Выберите диапозон
+          </p>
+        </div>
+
+        <div class="project-form__btns">
+          <input class="project-form__radio" type="radio" name="budget" value="200t" id="200t">
+          <label class="project-form__btn" for="200t">
+            от 200 тысяч р.
+          </label>
+
+          <input class="project-form__radio" type="radio" name="budget" value="500t" id="500t">
+          <label class="project-form__btn project-form__btn_active" for="500t">
+            до 500 тысяч р.
+          </label>
+
+          <input class="project-form__radio" type="radio" name="budget" value="700t" id="700t">
+          <label class="project-form__btn" for="700t">
+            до 700 тысяч р.
+          </label>
+
+          <input class="project-form__radio" type="radio" name="budget" value="1000t" id="1000t">
+          <label class="project-form__btn" for="1000t">
+            до 1 млн р.
+          </label>
+        </div>
+
+        <label class="project-form__label_check" tabindex="0">
+          Я даю согласие на <a class="project-form__link" href="./pers-info.html">обработку персональных данных</a>
+          <input class="project-form__checkbox" type="checkbox" name="approval" value="approval">
+          <span class="project-form__mark"></span>
+        </label>
+
+        <button class="project-form__submit btn-reset" type="submit">
+          Отправить
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="success">
+  <div class="popup__body">
+    <div class="popup__content modal">
+      <h3 class="modal__title">
+        Спасибо
+      </h3>
+      <p class="modal__subtitle">
+        Заявка успешно отправлена. Скоро наш менеджер свяжется с вами для уточнения деталей.
+      </p>
+      <p class="modal__desc">
+        Буду ждать!
+      </p>
+
+      <a href="" class="modal__btn popup-close">
+        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.999999 24.5L12.4074 12.8736M1 1.5L12.4074 12.8736M12.4074 12.8736L23 1.5M12.4074 12.8736L23 24.5"
+            stroke="black" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
