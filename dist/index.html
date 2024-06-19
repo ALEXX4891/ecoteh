@@ -28,7 +28,7 @@
       <form id="search-form" action="" method="get" class="header__search-form search-form"
         enctype="multipart/form-data">
         <input id="searchInput" type="text" class="search-form__input" placeholder="Поиск" name="search">
-        <button id="searchBtn" type="submit" class="search-form__submit-btn" name="submit" value="">
+        <button id="searchBtn" type="submit" class="search-form__submit-btn" name="submit" value="submit" name="submit">
           <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.25 16.25L12.8855 12.8795M14.75 8.375C14.75 10.0658 14.0784 11.6873 12.8828 12.8828C11.6873 14.0784 10.0658 14.75 8.375 14.75C6.68424 14.75 5.06274 14.0784 3.86719 12.8828C2.67165 11.6873 2 10.0658 2 8.375C2 6.68424 2.67165 5.06274 3.86719 3.86719C5.06274 2.67165 6.68424 2 8.375 2C10.0658 2 11.6873 2.67165 12.8828 3.86719C14.0784 5.06274 14.75 6.68424 14.75 8.375Z"
@@ -42,7 +42,7 @@
           <a href="tel:+7 (3452) 55-11-30" class="contacts__item contacts__item_phone">+7 (3452) 55-11-30</a>
           <a href="mailto:ecoteh.72@gmail.com" class="contacts__item contacts__item_email">ecoteh.72@gmail.com</a>
         </div>
-        <button class="btn btn_w_167 btn_blue btn_reset header__btn">
+        <button class="btn btn_w_167 btn_blue btn_reset header__btn popup-link" href="#popup-form">
           Отправить заявку
         </button>
         <button class="btn btn_w_108 btn_reset header__btn btn__cart">
@@ -848,7 +848,7 @@
         </a>
       </div>
 
-      <button class="btn btn_w_167 btn_blue btn_reset footer__btn" href="#">
+      <button class="btn btn_w_167 btn_blue btn_reset footer__btn popup-link" href="#popup-form">
         Отправить заявку
       </button>
     </div>
@@ -1003,109 +1003,45 @@
   <div class="popup" id="popup-form">
   <div class="popup__body">
     <div class="popup__content popup-form">
-      <form class="popup-form__project-form project-form" action="#">
-        <a class="project-form__close popup-close">
+      <form class="popup-form__project-form project-form" action="#" method="post" enctype="multipart/form-data">
+        <!-- <a class="project-form__close popup-close">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.999999 15L8 7.92308M1 0.999999L8 7.92308M8 7.92308L14.5 0.999999M8 7.92308L14.5 15"
               stroke="black" stroke-width="1.5" stroke-linecap="round" />
           </svg>
-        </a>
+        </a> -->
         <h2 class="project-form__title">
-          Обсудим проект?
+          Оставьте заявку
         </h2>
         <p class="project-form__subtitle">
-          Расскажите нам про вашу идею
+          Мы свяжемся с вами и расскажем подробнее обо всех видах услуг
         </p>
 
         <div class="project-form__inputs">
-          <input class="project-form__input" type="text" name="name" placeholder="Как вас зовут?">
-          <input class="project-form__input" type="email" name="email" placeholder="E-mail*" required>
-          <input class="project-form__input" type="text" name="company-name" placeholder="Компания">
+          <input class="project-form__input" type="text" name="name" placeholder="Имя" required>
+          <input class="project-form__input" type="tel" name="phone" placeholder="+7 (_____) _____ ___ ___" required>
+          <input class="project-form__input" type="email" name="email" placeholder="Email" required>
         </div>
 
-        <div class="project-form__select-wrap">
-          <p class="project-form__select-title">Тип мероприятия*</p>
-          <select class="project-form__select" name="filter" required>
-            <option class="project-form__option" value="" selected disabled>
-              Выбрать
-            </option>
-            <option class="project-form__option" value="team-building">
-              Тимбилдинг
-            </option>
-            <option class="project-form__option" value="business-events">
-              Деловые мероприятия
-            </option>
-            <option class="project-form__option" value="marketing-and-promo">
-              Маркетинг и промо
-            </option>
-            <option class="project-form__option" value="field-trips">
-              Выездные
-            </option>
-            <option class="project-form__option" value="sport">
-              Спортивные
-            </option>
-            <option class="project-form__option" value="corporate">
-              Корпоративные
-            </option>
-            <option class="project-form__option" value="professional-skill-events">
-              Мероприятия профессионального мастерства
-            </option>
-          </select>
-        </div>
 
-        <label class="project-form__label project-form__label_textarea">
-          Комментарий
-          <textarea class="project-form__textarea" name="textarea" rows="3"
-            placeholder="Поговорим о деталях"></textarea>
-        </label>
+          <textarea class="project-form__input project-form__input_textarea" name="textarea" rows="5" cols="96"  value="" placeholder="Текст сообщения"></textarea>
 
-        <div class="project-form__wrapper">
-          <p class="project-form__subtitle project-form__subtitle_buttons">
-            Примерный бюджет
-          </p>
-          <p class="project-form__desc">
-            Выберите диапозон
-          </p>
-        </div>
-
-        <div class="project-form__btns">
-          <input class="project-form__radio" type="radio" name="budget" value="200t" id="200t">
-          <label class="project-form__btn" for="200t">
-            от 200 тысяч р.
-          </label>
-
-          <input class="project-form__radio" type="radio" name="budget" value="500t" id="500t">
-          <label class="project-form__btn project-form__btn_active" for="500t">
-            до 500 тысяч р.
-          </label>
-
-          <input class="project-form__radio" type="radio" name="budget" value="700t" id="700t">
-          <label class="project-form__btn" for="700t">
-            до 700 тысяч р.
-          </label>
-
-          <input class="project-form__radio" type="radio" name="budget" value="1000t" id="1000t">
-          <label class="project-form__btn" for="1000t">
-            до 1 млн р.
-          </label>
-        </div>
-
-        <label class="project-form__label_check" tabindex="0">
-          Я даю согласие на <a class="project-form__link" href="./pers-info.html">обработку персональных данных</a>
-          <input class="project-form__checkbox" type="checkbox" name="approval" value="approval">
-          <span class="project-form__mark"></span>
-        </label>
-
-        <button class="project-form__submit btn-reset" type="submit">
-          Отправить
-        </button>
+          <div class="project-form__submit-wrap">
+            <input class="project-form__submit btn-reset" type="submit">
+            <label class="call-form__labe checkbox">
+              Соглашаюсь с условиями
+              <input class="checkbox__input" type="checkbox" name="check" value="да">
+              <span></span>
+              <a class="checkbox__link" href="agreement.html" target="_blank">обработки персональных данных</a>
+            </label>
+          </div>
 
       </form>
     </div>
   </div>
 </div>
 
-<div class="popup" id="success">
+<!-- <div class="popup" id="success">
   <div class="popup__body">
     <div class="popup__content modal">
       <h3 class="modal__title">
@@ -1130,7 +1066,7 @@
 
   </div>
 
-</div>
+</div> -->
 
 
 </body>
