@@ -345,12 +345,14 @@ function popupClose(popupActive, doUnlock = true) {
 function bodyLock() {
   const lockPaddingValue =
     window.innerWidth - document.querySelector(".header").offsetWidth + "px";
-  console.log(lockPaddingValue);
+  // console.log(lockPaddingValue);
   for (let index = 0; index < lockPadding.length; index++) {
     const el = lockPadding[index];
     el.style.marginRight = lockPaddingValue;
+    // console.log(el.style.marginRight);
   }
   body.style.paddingRight = lockPaddingValue;
+  // console.log(body.style.paddingRight);
   body.classList.add("lock");
 
   unlock = false;
