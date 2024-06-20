@@ -1525,7 +1525,7 @@ img {
 
 // --------------------------------------- CATALOG start ---------------------------------------
 .catalog_section {
-  background-image: url("@img/bg-catalog.svg");
+  background: url("@img/bg-catalog.svg"), #F3FAFC;
   background-repeat: no-repeat;
   background-position: center 115px;
   background-size: cover;
@@ -2563,7 +2563,7 @@ img {
 // --------------------------------------- NEWS start ---------------------------------------
 .novosti {
   .main {
-    background-image: url("@img/bg-news.svg");
+    background: url("@img/bg-news.svg"), #F3FAFC;
     background-repeat: no-repeat;
     background-position: 92% 80%;
     background-size: 150.5%;
