@@ -375,45 +375,6 @@ img {
   stroke: #37cbd3;
   fill: #37cbd3;
 }
-.btn .btn_w_81 {
-  width: 81px;
-}
-.btn .btn_w_150 {
-  width: 150px;
-}
-.btn .btn_w_161 {
-  width: 161px;
-}
-.btn .btn_w_179 {
-  width: 179px;
-}
-.btn .btn_w_195 {
-  width: 195px;
-}
-.btn .btn_w_201 {
-  width: 201px;
-}
-.btn .btn_w_229 {
-  width: 229px;
-}
-.btn .btn_w_230 {
-  width: 230px;
-}
-.btn .btn_w_240 {
-  width: 240px;
-}
-.btn .btn_w_245 {
-  width: 245px;
-}
-.btn .btn_w_350 {
-  width: 350px;
-}
-.btn .btn_m_0 {
-  margin: 0;
-}
-.btn .btn_mr_35 {
-  margin-right: 35px;
-}
 .btn .btn_disabled {
   color: rgba(34, 34, 34, 0.55);
   background: #d2d2d2;
@@ -2322,5 +2283,45 @@ img {
 }
 .runner.runner_reverse .runner__list {
   animation: scroll-reverse 20s linear infinite;
+}
+
+/* Изображение_WhatsApp_2024_03_25_в_15_07_44_b0f144c4 (1) 2 */
+.not-found .not-found__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 186px 10px 148px;
+  border-bottom: 1px solid var(--color-E9E9E9);
+}
+.not-found .not-found__container .not-found__img {
+  margin-bottom: 20px;
+}
+.not-found .not-found__container .not-found__title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48.92px;
+  text-align: center;
+  color: #555a5e;
+  text-transform: uppercase;
+}
+.not-found .not-found__container .not-found__text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26.91px;
+  text-align: center;
+  color: #555a5e;
+}
+.not-found .not-found__container .not-found__btns-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.not-found .not-found__container .btn {
+  width: 174px;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=style.css.map */

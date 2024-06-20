@@ -368,51 +368,51 @@ img {
     }
   }
 
-  .btn_w_81 {
-    width: 81px;
-  }
-  .btn_w_150 {
-    width: 150px;
-  }
-  .btn_w_161 {
-    width: 161px;
-  }
-  .btn_w_179 {
-    width: 179px;
-  }
-  .btn_w_195 {
-    width: 195px;
-  }
+  // .btn_w_81 {
+  //   width: 81px;
+  // }
+  // .btn_w_150 {
+  //   width: 150px;
+  // }
+  // .btn_w_161 {
+  //   width: 161px;
+  // }
+  // .btn_w_179 {
+  //   width: 179px;
+  // }
+  // .btn_w_195 {
+  //   width: 195px;
+  // }
 
-  .btn_w_201 {
-    width: 201px;
-  }
+  // .btn_w_201 {
+  //   width: 201px;
+  // }
 
-  .btn_w_229 {
-    width: 229px;
-  }
+  // .btn_w_229 {
+  //   width: 229px;
+  // }
 
-  .btn_w_230 {
-    width: 230px;
-  }
+  // .btn_w_230 {
+  //   width: 230px;
+  // }
 
-  .btn_w_240 {
-    width: 240px;
-  }
-  .btn_w_245 {
-    width: 245px;
-  }
-  .btn_w_350 {
-    width: 350px;
-  }
+  // .btn_w_240 {
+  //   width: 240px;
+  // }
+  // .btn_w_245 {
+  //   width: 245px;
+  // }
+  // .btn_w_350 {
+  //   width: 350px;
+  // }
 
-  .btn_m_0 {
-    margin: 0;
-  }
+  // .btn_m_0 {
+  //   margin: 0;
+  // }
 
-  .btn_mr_35 {
-    margin-right: 35px;
-  }
+  // .btn_mr_35 {
+  //   margin-right: 35px;
+  // }
 
   .btn_disabled {
     color: rgba($color-black, 0.55);
@@ -2954,7 +2954,6 @@ img {
       text-align: left;
       color: $color-2DA1B7;
       text-transform: uppercase;
-
     }
 
     .runner__dot {
@@ -2969,7 +2968,6 @@ img {
     @keyframes scroll-reverse {
       from {
         transform: translateX(calc(-100% + 150px));
-
       }
       to {
         transform: translateX(calc(0% + 200px));
@@ -2986,9 +2984,74 @@ img {
 // --------------------------------------- ABOUT start ---------------------------------------
 
 // --------------------------------------- ABOUT end ---------------------------------------
-// --------------------------------------- &&&&&& start ---------------------------------------
+// --------------------------------------- 404 start ---------------------------------------
 
-// --------------------------------------- &&&&&& end ---------------------------------------
+/* Изображение_WhatsApp_2024_03_25_в_15_07_44_b0f144c4 (1) 2 */
+
+// position: absolute;
+// width: 471.88px;
+// height: 631.43px;
+// left: calc(50% - 471.88px/2 + 557.06px);
+// top: 327.29px;
+
+// background: url(404.png);
+// mix-blend-mode: hard-light;
+// transform: matrix(0, -1, -1, 0, 0, 0);
+
+.not-found {
+  .not-found__container {
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 186px 10px 148px;
+    border-bottom: 1px solid var(--color-E9E9E9);
+
+    .not-found__img {
+      margin-bottom: 20px;
+
+      // width: 500px;
+      // height: 300px;
+      // background: url(@img/404.png);
+      // mix-blend-mode: hard-light;
+      // transform: matrix(0, -1, -1, 0, 0, 0);
+    }
+
+    .not-found__title {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48.92px;
+      text-align: center;      
+      color: $color-555A5E;
+      text-transform: uppercase;
+      // margin-bottom: 100px;
+    }
+
+    .not-found__text {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 26.91px;
+      text-align: center;
+      color: $color-555A5E;      
+    }
+
+    .not-found__btns-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;      
+    }
+    .btn {
+      width: 174px;
+      border-radius: 6px;
+    }
+  }
+}
+
+// --------------------------------------- 404 end ---------------------------------------
 // --------------------------------------- &&&&&& start ---------------------------------------
 
 // --------------------------------------- &&&&&& end ---------------------------------------
