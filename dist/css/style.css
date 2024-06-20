@@ -668,9 +668,25 @@ img {
 .bg_glav {
   background: url(../img/bg-glav.svg), #f3fafc;
   background-repeat: no-repeat;
-  background-attachment: local;
-  background-position: -200px 50px;
+  background-position: calc(50% - 75px) 55px;
   background-size: 2162px;
+}
+
+.bg_news {
+  background: url("../img/bg-news.svg"), #f3fafc;
+  background-repeat: no-repeat;
+  background-position: center 118px;
+  background-position: calc(50% - 420px) 319px;
+  background-size: 2921px;
+  padding-bottom: 120px;
+}
+
+.bg_catalog {
+  background: url("../img/bg-catalog.svg"), #f3fafc;
+  background-repeat: no-repeat;
+  background-position: center 118px;
+  background-size: 1915px;
+  padding-bottom: 120px;
 }
 
 .title {
@@ -1210,13 +1226,6 @@ img {
   color: #555a5e;
 }
 
-.section_catalog {
-  background: url("../img/bg-catalog.svg"), #f3fafc;
-  background-repeat: no-repeat;
-  background-position: center 115px;
-  background-size: cover;
-  padding-bottom: 120px;
-}
 .section_catalog .catalog-main__container {
   position: relative;
 }
@@ -1257,8 +1266,11 @@ img {
   background-image: url("../img/catalog-seamless.jpg");
 }
 
+.glavnaya .glavnaya__section_slider {
+  background: #f3fafc;
+}
 .glavnaya .glavnaya__container_slider {
-  max-width: 100vw;
+  max-width: 1920px;
 }
 .glavnaya .glavnaya__container_slider .glavnaya__slider .swiper {
   position: relative;
@@ -1289,9 +1301,9 @@ img {
   display: none;
 }
 .glavnaya .glavnaya__container_slider .glavnaya__slider .swiper-slide {
-  width: 100vw;
+  width: 100%;
   height: 615px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: right center;
 }
@@ -2166,13 +2178,6 @@ img {
   text-transform: uppercase;
 }
 
-.novosti .section_news {
-  background: url("../img/bg-news.svg"), #f3fafc;
-  background-repeat: no-repeat;
-  background-position: 92% 80%;
-  background-size: 150.5%;
-  padding-bottom: 120px;
-}
 .novosti .section_news .news-main__container {
   position: relative;
 }
