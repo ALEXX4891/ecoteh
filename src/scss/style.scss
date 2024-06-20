@@ -136,7 +136,6 @@ $color-B02525: #b02525;
 $color-005D6F: #005d6f;
 $color-F3F9FC: #f3fafc;
 
-
 // @include center
 @mixin center {
   display: flex;
@@ -722,7 +721,6 @@ img {
   background-repeat: no-repeat;
   background-position: calc(50% - 75px) 55px;
   background-size: 2162px;
-
 }
 
 .bg_news {
@@ -2406,8 +2404,6 @@ img {
     opacity: 1;
   }
 
-  
-
   &__body {
     min-height: 100vh;
     display: flex;
@@ -2714,15 +2710,14 @@ img {
     background: $color-white;
     border-radius: 15px;
 
-
     &__title {
       font-family: Commissioner;
       font-size: 32px;
       font-weight: 600;
       line-height: 39.14px;
       text-align: center;
-      color: $color-555A5E;   
-      text-transform: uppercase;   
+      color: $color-555A5E;
+      text-transform: uppercase;
     }
 
     &__subtitle {
@@ -2730,10 +2725,9 @@ img {
       font-size: 16px;
       font-weight: 400;
       line-height: 19.57px;
-      text-align: center;      
+      text-align: center;
       color: $color-555A5E;
     }
-
   }
 }
 
@@ -2817,15 +2811,181 @@ img {
 }
 
 // --------------------------------------- NEWS end ---------------------------------------
-// --------------------------------------- &&&&&& start ---------------------------------------
+// --------------------------------------- PORTFOLIO start ---------------------------------------
 
-// --------------------------------------- &&&&&& end ---------------------------------------
-// --------------------------------------- &&&&&& start ---------------------------------------
+.portfolio {
+  .container_portfolio {
+    padding: 86px 0 120px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 3px;
 
-// --------------------------------------- &&&&&& end ---------------------------------------
-// --------------------------------------- &&&&&& start ---------------------------------------
+    .main-block__title {
+      margin-bottom: 10px;
+    }
 
-// --------------------------------------- &&&&&& end ---------------------------------------
+    .main-block__body {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .main-block__link {
+      padding: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.57px;
+      text-align: center;
+      color: $color-2FA7BE;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: $color-36C1C9;
+      }
+    }
+
+    .main-block__card-wrap {
+      // height: 515px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .card {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 580px;
+      height: 702px;
+
+      background-image: url("@img/portfolio-img1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .card_1 {
+      // width: 380px;
+      // height: 714px;
+      background-image: url("@img/portfolio-img1.png");
+    }
+
+    .card_2 {
+      // width: 380px;
+      height: 341px;
+      min-height: unset;
+      background-image: url("@img/portfolio-img2.png");
+    }
+
+    .card_3 {
+      // width: 380px;
+      height: 341px;
+      min-height: unset;
+      background-image: url("@img/portfolio-img3.png");
+    }
+
+    .card_4 {
+      // width: 380px;
+      // height: 515px;
+      background-image: url("@img/portfolio-img4.png");
+    }
+  }
+}
+// --------------------------------------- PORTFOLIO end ---------------------------------------
+// --------------------------------------- RUNNER start ---------------------------------------
+
+.runner {
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 50px));
+    }
+  }
+
+  .runner__container {
+    max-width: 1920px;
+    padding: 55px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid var(--color-E9E9E9);
+    overflow: hidden;
+
+    .runner__wrap {
+      // flex-shrink: 0;
+      // gap: 50px;
+      // display: flex;
+      // animation: scroll 10s linear infinite;
+    }
+
+    .runner__list {
+      animation: scroll 20s linear infinite;
+      flex-shrink: 0;
+      display: flex;
+      gap: 50px;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    .runner__el {
+      // flex-shrink: 0;
+      // gap: 50px;
+      // display: flex;
+      // animation: scroll 10s linear infinite;
+      font-family: Commissioner;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 41.76px;
+      letter-spacing: 0.04em;
+      text-align: left;
+      color: $color-2DA1B7;
+      text-transform: uppercase;
+
+    }
+
+    .runner__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2da1b7;
+    }
+  }
+
+  &.runner_reverse {
+    @keyframes scroll-reverse {
+      from {
+        transform: translateX(calc(-100% + 150px));
+
+      }
+      to {
+        transform: translateX(calc(0% + 200px));
+      }
+    }
+
+    .runner__list {
+      animation: scroll-reverse 20s linear infinite;
+    }
+  }
+}
+
+// --------------------------------------- RUNNER end ---------------------------------------
+// --------------------------------------- ABOUT start ---------------------------------------
+
+// --------------------------------------- ABOUT end ---------------------------------------
 // --------------------------------------- &&&&&& start ---------------------------------------
 
 // --------------------------------------- &&&&&& end ---------------------------------------
