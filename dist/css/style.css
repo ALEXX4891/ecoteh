@@ -648,14 +648,14 @@ img {
 }
 
 .bg_glav {
-  background: url(../img/bg-glav.svg), #f3fafc;
+  background: url(../img/bg-glav.svg), #F3FAFC;
   background-repeat: no-repeat;
   background-position: calc(50% - 75px) 55px;
   background-size: 2162px;
 }
 
 .bg_news {
-  background: url("../img/bg-news.svg"), #f3fafc;
+  background: url("../img/bg-news.svg"), #F3FAFC;
   background-repeat: no-repeat;
   background-position: center 118px;
   background-position: calc(50% - 420px) 319px;
@@ -664,11 +664,18 @@ img {
 }
 
 .bg_catalog {
-  background: url("../img/bg-catalog.svg"), #f3fafc;
+  background: url("../img/bg-catalog.svg"), #F3FAFC;
   background-repeat: no-repeat;
   background-position: center 118px;
   background-size: 1915px;
   padding-bottom: 120px;
+}
+
+.bg_util {
+  background: url(../img/bg-util.svg), #F3FAFC;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 8px) -9px;
+  background-size: 2364px;
 }
 
 .title {
@@ -1117,7 +1124,7 @@ img {
 .footer {
   box-sizing: border-box;
   width: 100%;
-  background: #f3fafc;
+  background: #F3FAFC;
   border-top: 1px solid rgba(38, 138, 177, 0.7);
   backdrop-filter: blur(5px);
   border-top: 1px solid rgba(38, 138, 177, 0.7);
@@ -1249,7 +1256,7 @@ img {
 }
 
 .glavnaya .glavnaya__section_slider {
-  background: #f3fafc;
+  background: #F3FAFC;
 }
 .glavnaya .glavnaya__container_slider {
   max-width: 1920px;
@@ -2249,7 +2256,7 @@ img {
   margin-bottom: 16px;
 }
 .about .section_about {
-  background: #f3fafc;
+  background: #F3FAFC;
 }
 .about .container_about {
   padding: 86px 10px 123px;
@@ -2457,7 +2464,7 @@ img {
 
 /* Изображение_WhatsApp_2024_03_25_в_15_07_44_b0f144c4 (1) 2 */
 .not-found .not-found {
-  background: #f3fafc;
+  background: #F3FAFC;
 }
 .not-found .not-found__container {
   display: flex;
@@ -2499,7 +2506,7 @@ img {
 }
 
 .util .util-bunner {
-  padding: 100px 10px 100px;
+  padding: 176px 10px 148px;
   max-width: 100%;
   background-image: url(../img/util-bunner.jpg);
   background-repeat: no-repeat;
@@ -2509,9 +2516,10 @@ img {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 41px;
 }
 .util .util-bunner .util-bunner__title {
+  max-width: 563px;
   font-size: 50px;
   font-weight: 900;
   line-height: 61.15px;
@@ -2520,12 +2528,88 @@ img {
   text-transform: uppercase;
 }
 .util .util-bunner .util-bunner__text {
+  max-width: 563px;
   font-size: 22px;
   font-weight: 500;
   line-height: 26.91px;
   text-align: center;
   color: #fff;
 }
+.util .util-bunner .btn {
+  width: 165px;
+  border-radius: 6px;
+}
+.util .util__section_main .container {
+  padding: 105px 10px;
+}
+.util .util__section_main .util__price {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.util .util__section_main .util__price .util__title {
+  margin-bottom: 7px;
+}
+.util .util__section_main .util__price .util__subtitle {
+  display: block;
+  width: 1140px;
+  margin-bottom: 2px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26.91px;
+  text-align: left;
+  color: #333333;
+}
+.util .util__section_main .util__price .util__desc {
+  display: block;
+  width: 1140px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.57px;
+  text-align: left;
+  color: #5f5f69;
+}
+.util .util__section_main .util__price .table {
+  border-collapse: collapse;
+  width: 1140px;
+  margin-bottom: 20px;
+}
+.util .util__section_main .util__price .table .table__head .table__cell {
+  width: 380px;
+  height: 59px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.01px;
+  text-align: center;
+  background: #1f384f;
+  color: #fff;
+}
+.util .util__section_main .util__price .table .table__head .table__cell:first-child {
+  border-radius: 20px 0 0 0;
+}
+.util .util__section_main .util__price .table .table__head .table__cell:last-child {
+  border-radius: 0 20px 0 0;
+}
+.util .util__section_main .util__price .table .table__body .table__cell {
+  padding: 23px 50px;
+  gap: 10px;
+  width: 380px;
+  height: 66px;
+  border: 1px solid #d9d9d9;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.57px;
+  text-align: center;
+  color: #34343b;
+  background: #fff;
+}
+.util .util__section_main .util__price .table .table__body .table__cell:first-child {
+  text-align: left;
+}
+
 .call-form {
   margin-bottom: 119px;
   display: flex;
