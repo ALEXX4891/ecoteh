@@ -232,7 +232,8 @@ img {
   background-color: $color-white;
   cursor: pointer;
   border: 1px solid $color-black;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
   border-radius: 4px;
 
   &:focus-visible {
@@ -257,6 +258,7 @@ img {
     width: 167px;
     height: 48px;
     border-color: $color-2DA1B7;
+    background-color: $color-white;
     color: $color-2DA1B7;
 
     &:focus-visible {
@@ -273,6 +275,44 @@ img {
     &:active {
       color: $color-white;
       background-color: $color-2FA7BE;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &.btn_white {
+    width: 184px;
+    height: 48px;
+    border-color: $color-2DA1B7;
+    // color: $color-2DA1B7;
+    color: $color-white;
+
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    // transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline: 1px solid $color-2FA7BE;
+      outline-offset: 3px;
+    }
+    &:hover {
+      // color: $color-white;
+      background-color: $color-37CBD3;
+
+      // border-color: $color-37CBD3;
+      outline: none;
+      box-shadow: none;
+    }
+    &:active {
+      // color: $color-white;
+      // background-color: $color-2FA7BE;
+      background-color: $color-white;
+      border-color: $color-2DA1B7;
+      color: $color-2DA1B7;
       outline: none;
       box-shadow: none;
     }
@@ -368,52 +408,6 @@ img {
     }
   }
 
-  // .btn_w_81 {
-  //   width: 81px;
-  // }
-  // .btn_w_150 {
-  //   width: 150px;
-  // }
-  // .btn_w_161 {
-  //   width: 161px;
-  // }
-  // .btn_w_179 {
-  //   width: 179px;
-  // }
-  // .btn_w_195 {
-  //   width: 195px;
-  // }
-
-  // .btn_w_201 {
-  //   width: 201px;
-  // }
-
-  // .btn_w_229 {
-  //   width: 229px;
-  // }
-
-  // .btn_w_230 {
-  //   width: 230px;
-  // }
-
-  // .btn_w_240 {
-  //   width: 240px;
-  // }
-  // .btn_w_245 {
-  //   width: 245px;
-  // }
-  // .btn_w_350 {
-  //   width: 350px;
-  // }
-
-  // .btn_m_0 {
-  //   margin: 0;
-  // }
-
-  // .btn_mr_35 {
-  //   margin-right: 35px;
-  // }
-
   .btn_disabled {
     color: rgba($color-black, 0.55);
     // opacity: 0.55;
@@ -430,23 +424,23 @@ img {
     }
   }
 
-  &.btn_white {
-    background-color: $color-white;
-    // color: $color-225F0D;
-    padding: 14px 28px;
-    // border: 2px solid $color-225F0D;
-    border-radius: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  // &.btn_white {
+  //   background-color: $color-white;
+  //   // color: $color-225F0D;
+  //   padding: 14px 28px;
+  //   // border: 2px solid $color-225F0D;
+  //   border-radius: 10px;
+  //   display: flex;
+  //   flex-flow: row nowrap;
+  //   align-items: center;
+  //   justify-content: center;
+  //   gap: 10px;
 
-    &:hover {
-      // background: $color-143A07;
-      // border-color: $color-143A07;
-    }
-  }
+  //   &:hover {
+  //     // background: $color-143A07;
+  //     // border-color: $color-143A07;
+  //   }
+  // }
   &.btn_business {
     width: 167px;
     height: 48px;
@@ -2109,6 +2103,8 @@ img {
               }
 
               &:active {
+                background-color: $color-white;
+
                 // background-color: $color-2FA7BE;
 
                 // border: 1px solid $color-white;
@@ -3001,9 +2997,8 @@ img {
 .not-found {
   .not-found {
     background: #f3fafc;
-    }
+  }
   .not-found__container {
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -3026,7 +3021,7 @@ img {
       font-size: 40px;
       font-weight: 500;
       line-height: 48.92px;
-      text-align: center;      
+      text-align: center;
       color: $color-555A5E;
       text-transform: uppercase;
       // margin-bottom: 100px;
@@ -3037,7 +3032,7 @@ img {
       font-weight: 400;
       line-height: 26.91px;
       text-align: center;
-      color: $color-555A5E;      
+      color: $color-555A5E;
     }
 
     .not-found__btns-wrapper {
@@ -3045,7 +3040,7 @@ img {
       flex-flow: row nowrap;
       align-items: center;
       justify-content: center;
-      gap: 20px;      
+      gap: 20px;
     }
     .btn {
       width: 174px;
