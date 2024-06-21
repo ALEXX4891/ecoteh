@@ -461,7 +461,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../img/check-mark.svg);
+  background-image: url(../img/check-mark-white.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2286,6 +2286,9 @@ img {
 }
 
 /* Изображение_WhatsApp_2024_03_25_в_15_07_44_b0f144c4 (1) 2 */
+.not-found .not-found {
+  background: #f3fafc;
+}
 .not-found .not-found__container {
   display: flex;
   flex-flow: column nowrap;

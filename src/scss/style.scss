@@ -518,7 +518,7 @@ img {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        background-image: url(@img/check-mark.svg);
+        background-image: url(@img/check-mark-white.svg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -2999,6 +2999,9 @@ img {
 // transform: matrix(0, -1, -1, 0, 0, 0);
 
 .not-found {
+  .not-found {
+    background: #f3fafc;
+    }
   .not-found__container {
 
     display: flex;
