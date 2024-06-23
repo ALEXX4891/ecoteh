@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./html/head.html', {
+"title": "Экотех. Каталог",
+})
+
+<body class="catalog-all" data-page="catalog-all">
+  <p class="page" hidden>Контрагенты</p>
+  @@include('./html/header.html', {})
+
+  <main class="main">
+    <section class="section section_catalog-all catalog-all-main bg_catalog">
+      <div class="container catalog-all-main__container">
+
+        <h1 class="catalog-all-main__title title">
+          Каталог
+        </h1>
+
+        <div class="catalog-all__filter filter">
+          <div class="filter__head">
+            <ul class="filter__list filter__list_head">
+              <li class="filter__item filter__item_head">
+                Все
+              </li>
+              <li class="filter__item filter__item_head">
+                Бесшовное покрытие
+              </li>
+              <li class="filter__item filter__item_head">
+                Резиновая крошка
+              </li>
+              <li class="filter__item filter__item_head">
+                Плитка
+              </li>
+              <li class="filter__item filter__item_head">
+                Рулонное покрытие
+              </li>
+            </ul>
+          </div>
+          <div class="filter__body">
+            <ul class="filter__list filter__list_body">
+              <li class="filter__item filter__item_body">
+                <div class="filter__name-wrap">
+                  <p class="filter__name">
+                    Тип площадки
+                  </p>
+                  <span class="filter__icon">
+                    <img src="@img/arrow.svg" alt="arrow">
+                  </span>
+                </div>
+                <ul class="filter__chekbox-list">
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Детская площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивная площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Тропинки (в саду)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивный зал
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Бассейн
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Лестница (входная группа)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Площадка для
+                      выгула собак
+                    </p>
+                  </li>
+
+                </ul>
+
+              </li>
+              <li class="filter__item filter__item_body">
+                <div class="filter__name-wrap">
+                  <p class="filter__name">
+                    Цвет
+                  </p>
+                  <span class="filter__icon">
+                    <img src="@img/arrow.svg" alt="arrow">
+                  </span>
+                </div>
+                <ul class="filter__chekbox-list">
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Детская площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивная площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Тропинки (в саду)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивный зал
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Бассейн
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Лестница (входная группа)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Площадка для
+                      выгула собак
+                    </p>
+                  </li>
+
+                </ul>
+
+              </li>
+              <li class="filter__item filter__item_body">
+                <div class="filter__name-wrap">
+                  <p class="filter__name">
+                    Основание для укладки
+                  </p>
+                  <span class="filter__icon">
+                    <img src="@img/arrow.svg" alt="arrow">
+                  </span>
+                </div>
+                <ul class="filter__chekbox-list">
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Детская площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивная площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Тропинки (в саду)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивный зал
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Бассейн
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Лестница (входная группа)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Площадка для
+                      выгула собак
+                    </p>
+                  </li>
+
+                </ul>
+
+              </li>
+              <li class="filter__item filter__item_body">
+                <div class="filter__name-wrap">
+                  <p class="filter__name">
+                    Малые архитектурные формы (МАФ)
+                  </p>
+                  <span class="filter__icon">
+                    <img src="@img/arrow.svg" alt="arrow">
+                  </span>
+                </div>
+                <ul class="filter__chekbox-list">
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Детская площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивная площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Тропинки (в саду)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивный зал
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Бассейн
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Лестница (входная группа)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Площадка для
+                      выгула собак
+                    </p>
+                  </li>
+
+                </ul>
+
+              </li>
+              <li class="filter__item filter__item_body">
+                <div class="filter__name-wrap">
+                  <p class="filter__name">
+                    Высота падения МАФ
+                  </p>
+                  <span class="filter__icon">
+                    <img src="@img/arrow.svg" alt="arrow">
+                  </span>
+                </div>
+                <ul class="filter__chekbox-list">
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Детская площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивная площадка
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Тропинки (в саду)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Спортивный зал
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Бассейн
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Лестница (входная группа)
+                    </p>
+                  </li>
+                  <li class="filter__chekbox-item catalog-chekbox">
+                    <span class="catalog-chekbox__icon">
+                    </span>
+                    <p class="catalog-chekbox__name">
+                      Площадка для
+                      выгула собак
+                    </p>
+                  </li>
+
+                </ul>
+
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+
+        <div class="catalog-all-main__body">
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="catalog-all-main__card card card_goods">
+            <img class="card__image" src="@img/goods-1.jpg" alt="Бесшовное покрытие 30 мм">
+            <h2 class="card__title">
+              Бесшовное покрытие 30 мм
+            </h2>
+            <ul class="card__color-list">
+              <li class="card__color-item card__color-item_active card__color-item_1">
+                <div class="card__color-small-box card__color-small-box_1">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_2">
+                <div class="card__color-small-box card__color-small-box_2">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_3">
+                <div class="card__color-small-box card__color-small-box_3">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_4">
+                <div class="card__color-small-box card__color-small-box_4">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_5">
+                <div class="card__color-small-box card__color-small-box_5">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_6">
+                <div class="card__color-small-box card__color-small-box_6">
+                </div>
+              </li>
+              <li class="card__color-item card__color-item_7">
+                <div class="card__color-small-box card__color-small-box_7">
+                </div>
+              </li>
+            </ul>
+            <div class="card__price-wrap">
+              <span class="card__price">
+                1 900 ₽
+              </span>
+              <span class="card__price-desc">
+                / 1 м²
+              </span>
+            </div>
+            <button class="card__btn card__btn_plus">
+              + Монтаж (550 р./1 м²)
+            </button>
+            <button class="card__btn card__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+                В корзину
+            </button>
+            <div class="card__btn card__btn_in-cart in-cart">
+              <div class="in-cart-wrap">
+                <p class="in-cart__count">
+                  -
+                </p>
+                <p class="in-cart__count in-cart__count_value">
+                  2 000
+                </p>
+                <p class="in-cart__count">
+                  +
+                </p>
+              </div>
+              <p class="in-cart__price-desc">
+                1 м²
+              </p>
+              <div class="in-cart__icon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
+                    fill="#2FA7BE" />
+                  <path
+                    d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
+                    stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+            </div>
+          </article>
+          
+
+
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+
+  @@include('./html/footer.html', {})
+
+
+</body>
+
+</html>
