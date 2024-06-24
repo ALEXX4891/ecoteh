@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Экотех. Новости</title>
+  <title>Экотех. Контакты</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/style.css">  
 </head>
 
-<body class="novosti" data-page="novosti">
-  <p class="page" hidden>Контрагенты</p>
+<body class="portfolio-item" data-page="portfolio">
   <header class="header lock-padding">
   <div class="container header__container">
     <div class="header__top-block">
@@ -137,111 +136,137 @@
 
 </header>
 
-  <main class="main">
-    <section class="section section_news news-main bg_news">
-      <div class="container news-main__container">
+  <main class="main portfolio-item__main">
+    <section class="section portfolio-item__section bg_portfolio-item">
+      <div class="container portfolio-item__container">
+        <h1 class="portfolio-item__title title">
+          Детская площадка
+        </h1>
 
-        <div class="news-main__head">
-          <h1 class="news-main__title title">
-            Новости
-          </h1>
-        </div>
+        <article class="portfolio-item__article article">
 
-        <div class="news-main__body">
-          <article class="news-main__card card card_news">
-
-              <div class="card__image">
-                <img src="img/news-1.jpg" alt="Новость">
-              </div>
-
-              <div class="card__date">
-                <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-                <span class="card__new-tag">New</span>
-              </div>
-              <h2 class="card__title">
-                Новый заголовок для статьи
-              </h2>
-              <p class="card__desc">
-                Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-              </p>
-              <a href="news-item.html" class="card__link">
-                Подробнее
-              </a>
-
-          </article>
-          <article class="news-main__card card card_news">
-
-            <div class="card__image">
-              <img src="img/news-2.jpg" alt="Новость">
+          <div class="article__img-wrap">
+            <div class="article__img">
+              <img src="img/port-1.jpg" alt="новость">
             </div>
 
-            <div class="card__date">
-              <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-              <span class="card__new-tag">New</span>
+            <div class="portfolio-item__slider-wrapper">
+              <div class="slider swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="slider_img">
+                      <img src="img/port-100.jpg" alt="слайд 1">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-200.jpg" alt="слайд 2">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-300.jpg" alt="слайд 3">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-400.jpg" alt="слайд 4">
+                    </div>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <div class="slider_img">
+                      <img src="img/port-100.jpg" alt="слайд 1">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-200.jpg" alt="слайд 2">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-300.jpg" alt="слайд 3">
+                    </div>
+         
+                  </div>
+
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <!-- </div> -->
+                </div>
+
+                <div class="swiper-button-prev">
+                  <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 2L3 16L17 30" stroke="#2FA7BE" stroke-opacity="0.3" stroke-width="3" />
+                  </svg>
+
+
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L16 16L2 30" stroke="#2FA7BE" stroke-opacity="0.3" stroke-width="3" />
+                  </svg>
+
+
+                </div>
+              </div>
+
             </div>
-            <h2 class="card__title">
-              Новый заголовок для статьи
-            </h2>
-            <p class="card__desc">
-              Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
+          </div>
+
+          <div class="article__text-block">
+            <ul class="article__list">
+              <li class="article__item">
+                <p class="article__key">
+                  Площадь
+                </p>
+                <p class="article__value">
+                  40 м²
+                </p>
+              </li>
+
+              <li class="article__item">
+                <p class="article__key">
+                  Дата сдачи
+                </p>
+                <p class="article__value">
+                  2024
+                </p>
+              </li>
+
+              <li class="article__item">
+                <p class="article__key">
+                  Тип покрытия
+                </p>
+                <p class="article__value">
+                  Бесшовное покрытие
+                </p>
+              </li>
+
+              <li class="article__item">
+                <p class="article__key">
+                  Город
+                </p>
+                <p class="article__value">
+                  Тюмень
+                </p>
+              </li>
+
+              <li class="article__item">
+                <p class="article__key">
+                  Заказчик
+                </p>
+                <p class="article__value">
+                  Частный дом
+                  Детская площадка
+                </p>
+              </li>
+            </ul>
+            <p class="article__desc">
+              У вас есть свой проект или хотите такой же?
+              Заполните заявку и мы пришлем расчет стоимотси
             </p>
-            <a href="news-item.html" class="card__link">
-              Подробнее
-            </a>
+
+            <button class="btn-reset article__btn btn btn_blue">
+              Рассчитать
+            </button>
+
+
+          </div>
 
         </article>
-        <article class="news-main__card card card_news">
-
-          <div class="card__image">
-            <img src="img/news-3.jpg" alt="Новость">
-          </div>
-
-          <div class="card__date">
-            <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-            <span class="card__new-tag">New</span>
-          </div>
-          <h2 class="card__title">
-            Новый заголовок для статьи
-          </h2>
-          <p class="card__desc">
-            Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-          </p>
-          <a href="news-item.html" class="card__link">
-            Подробнее
-          </a>
-
-      </article>
-      <article class="news-main__card card card_news">
-
-        <div class="card__image">
-          <img src="img/news-4.jpg" alt="Новость">
-        </div>
-
-        <div class="card__date">
-          <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-          <span class="card__new-tag">New</span>
-        </div>
-        <h2 class="card__title">
-          Новый заголовок для статьи
-        </h2>
-        <p class="card__desc">
-          Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-        </p>
-        <a href="news-item.html" class="card__link">
-          Подробнее
-        </a>
-
-    </article>
-
-
-
-
-        </div>
-
-        <a class="news-main__link link" href="news-all.html" >
-          Все товары
-        </a>
-
       </div>
     </section>
   </main>

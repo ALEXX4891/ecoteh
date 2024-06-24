@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Экотех. Новости</title>
+  <title>Экотех. Контакты</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/style.css">  
 </head>
 
-<body class="novosti" data-page="novosti">
-  <p class="page" hidden>Контрагенты</p>
+<body class="news-item" data-page="novosti">
   <header class="header lock-padding">
   <div class="container header__container">
     <div class="header__top-block">
@@ -137,112 +136,135 @@
 
 </header>
 
-  <main class="main">
-    <section class="section section_news news-main bg_news">
-      <div class="container news-main__container">
+  <main class="main news-item__main">
+    <section class="section news-item__section bg_news-item">
+      <div class="container news-item__container">
+        <article class="news-item__article article">
+          <div class="article__img">
+            <img src="img/news-100.jpg" alt="новость">
+          </div>
+          <div class="article__text-block">
 
-        <div class="news-main__head">
-          <h1 class="news-main__title title">
-            Новости
-          </h1>
-        </div>
+            <h1 class="article__title">
+              Утилизация шин при помощи нейросети
+            </h1>
 
-        <div class="news-main__body">
-          <article class="news-main__card card card_news">
-
-              <div class="card__image">
-                <img src="img/news-1.jpg" alt="Новость">
-              </div>
-
-              <div class="card__date">
-                <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-                <span class="card__new-tag">New</span>
-              </div>
-              <h2 class="card__title">
-                Новый заголовок для статьи
-              </h2>
-              <p class="card__desc">
-                Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-              </p>
-              <a href="news-item.html" class="card__link">
-                Подробнее
-              </a>
-
-          </article>
-          <article class="news-main__card card card_news">
-
-            <div class="card__image">
-              <img src="img/news-2.jpg" alt="Новость">
-            </div>
-
-            <div class="card__date">
-              <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-              <span class="card__new-tag">New</span>
-            </div>
-            <h2 class="card__title">
-              Новый заголовок для статьи
-            </h2>
-            <p class="card__desc">
-              Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
+            <p class="article__date">
+              24 февраля 2024
             </p>
-            <a href="news-item.html" class="card__link">
-              Подробнее
-            </a>
 
+            <p class="article__text">
+              Расширение производства резиновой крошки SBR путем рециклинга автомобильных шин на основе инновационного
+              процесса резания, управляемого нейросетью
+            </p>
+
+          </div>
         </article>
-        <article class="news-main__card card card_news">
 
-          <div class="card__image">
-            <img src="img/news-3.jpg" alt="Новость">
-          </div>
 
-          <div class="card__date">
-            <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-            <span class="card__new-tag">New</span>
-          </div>
-          <h2 class="card__title">
-            Новый заголовок для статьи
-          </h2>
-          <p class="card__desc">
-            Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-          </p>
-          <a href="news-item.html" class="card__link">
-            Подробнее
-          </a>
-
-      </article>
-      <article class="news-main__card card card_news">
-
-        <div class="card__image">
-          <img src="img/news-4.jpg" alt="Новость">
-        </div>
-
-        <div class="card__date">
-          <time class="card__date-time" datetime="04.06.2024">04.06.2024</time>
-          <span class="card__new-tag">New</span>
-        </div>
-        <h2 class="card__title">
-          Новый заголовок для статьи
+        <h2 class="news-item__title title">
+          другие новости
         </h2>
-        <p class="card__desc">
-          Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи 
-        </p>
-        <a href="news-item.html" class="card__link">
-          Подробнее
-        </a>
 
-    </article>
+        <div class="news-item__slider-wrapper">
+          <div class="slider swiper">
+            <div class="swiper-wrapper">
 
+              <div class="swiper-slide">
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
 
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
 
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
+
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
+
+                <div class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- </div> -->
+            </div>
+
+          </div>
+          <div class="swiper-button-prev">
+            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 2L3 16L17 30" stroke="#616161" stroke-width="3" />
+            </svg>
+
+          </div>
+          <div class="swiper-button-next">
+            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L16 16L2 30" stroke="#616161" stroke-width="3" />
+            </svg>
+
+          </div>
 
         </div>
-
-        <a class="news-main__link link" href="news-all.html" >
-          Все товары
-        </a>
-
-      </div>
     </section>
   </main>
 

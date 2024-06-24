@@ -15,7 +15,7 @@ cartBtn.addEventListener("click", () => {
         d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
         stroke="#555A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-    Корзина`
+    Корзина`;
   }
   key = !key;
 });
@@ -23,12 +23,12 @@ cartBtn.addEventListener("click", () => {
 //подсветка активного пункта меню:---------------------------------------------------------
 const body = document.querySelector("body");
 const page = body.getAttribute("data-page");
-const navLinks = document.querySelectorAll('.nav__link');
+const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach((item) => {
   if (item.getAttribute("href") === `${page}.html`) {
-    item.classList.add("nav__link_active");    
+    item.classList.add("nav__link_active");
   }
-})
+});
 
 // start swiper -----------------------------------------------------------------------------
 // const swipers = document.querySelectorAll('.swiper');
@@ -83,7 +83,6 @@ const swiper = new Swiper(".swiper", {
 // });
 
 // end swiper -----------------------------------------------------------------------------
-
 
 // const activPage = document.querySelector(`.${page}`);
 
@@ -384,3 +383,124 @@ document.addEventListener("keydown", function (e) {
   }
 });
 // -------------------------------------------- end popup: ---------------------------------------------
+
+// -------------------------------------------- start gallery: ---------------------------------------------
+const previews = document.querySelectorAll(".slider_img");
+
+if (previews) {
+  previews.forEach((item) => {
+    item.addEventListener("click", function () {
+      const imgBox = document
+        .querySelector(".article__img")
+        .querySelector("img");
+      const img = item.querySelector("img").getAttribute("src");
+      imgBox.setAttribute("src", img);
+    });
+  });
+}
+
+// -------------------------------------------- end gallery: ---------------------------------------------
+
+// -------------------------------------------- start btn_montage: ---------------------------------------------
+
+const btnMontage = document.querySelectorAll(".btn_montage");
+if (btnMontage) {
+  btnMontage.forEach((item) => {
+    item.addEventListener("click", function () {
+      item.classList.toggle("btn_montage_active");
+    });
+  });
+}
+
+// -------------------------------------------- end btn_montage: ---------------------------------------------
+// -------------------------------------------- start counter: ---------------------------------------------
+
+// const counters = document.querySelectorAll(".card__counter");
+
+// if (counters) {
+//   counters.forEach((item) => {
+//     const plus = item.querySelector(".card__counter-btn_plus");
+//     const minus = item.querySelector(".card__counter-btn_minus");
+//     const counterValue = item.querySelector(".card__counter-value");
+//     plus.addEventListener("click", function () {
+//       counterValue.innerHTML++;
+//     });
+//     minus.addEventListener("click", function () {
+//       if (counterValue.innerHTML > 0) {
+//         counterValue.innerHTML--;
+//       }
+//     });
+//   });
+// }
+
+// -------------------------------------------- end counter: ---------------------------------------------
+
+// -------------------------------------------- start swiper: ---------------------------------------------
+
+const cards = document.querySelectorAll(".cart__card");
+
+if (cards) {
+  cards.forEach((item) => {
+    const priceText = item.querySelector(".card__price").innerHTML;
+    const price = parseInt(priceText.replace(/\s/g, ""));
+    // console.log(priceText);
+    // console.log(price);
+
+    const plus = item.querySelector(".card__counter-btn_plus");
+    const minus = item.querySelector(".card__counter-btn_minus");
+    const counterValue = item.querySelector(".card__counter-value");
+    const cost = item.querySelector(".card__cost");
+    const totalCost = document.querySelector(".form__cost-value");
+    console.log(totalCost);
+
+    let quontity = 0;
+    // console.log(counterValue);
+    plus.addEventListener("click", function () {
+      quontity++;
+      counterValue.value = quontity;
+      cost.innerHTML = price * quontity;
+      let total = 0;
+      // totalCost.innerHTML = price * quontity;
+      let allCosts = document.querySelectorAll(".card__cost");
+
+      allCosts.forEach((item) => {
+        total += parseInt(item.innerHTML.replace(/\s/g, ""));
+        totalCost.innerHTML = total;
+      });
+    });
+    minus.addEventListener("click", function () {
+      if (counterValue.value > 0) {
+        quontity--;
+        counterValue.value = quontity;
+        cost.innerHTML = price * quontity;
+
+        let total = 0;
+        // totalCost.innerHTML = price * quontity;
+        let allCosts = document.querySelectorAll(".card__cost");
+
+        allCosts.forEach((item) => {
+          total += parseInt(item.innerHTML.replace(/\s/g, ""));
+          totalCost.innerHTML = total;
+        });
+      }
+    });
+
+    // const plus = item.querySelector(".card__counter-btn_plus");
+    // const minus = item.querySelector(".card__counter-btn_minus");
+    // const counterValue = item.querySelector(".card__counter-value");
+    // const btn = item.querySelector(".card__btn");
+
+    // plus.addEventListener("click", function () {
+    //   counterValue.innerHTML++;
+    //   btn.classList.add("card__btn_active");
+    // });
+    // minus.addEventListener("click", function () {
+    //   if (counterValue.innerHTML > 0) {
+    //     counterValue.innerHTML--;
+    //     btn.classList.remove("card__btn_active");
+    //   }
+    // });
+  });
+}
+
+// -------------------------------------------- end swiper: ---------------------------------------------
