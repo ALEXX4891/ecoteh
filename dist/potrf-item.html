@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Экотех. Каталог</title>
+  <title>Экотех. Контакты</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/style.css">  
 </head>
 
-<body data-page="catalog">
-  <p class="page" hidden>Контрагенты</p>
+<body class="portfolio-item" data-page="portfolio">
   <header class="header lock-padding">
   <div class="container header__container">
     <div class="header__top-block">
@@ -137,67 +136,137 @@
 
 </header>
 
-  <main class="main">
-    <section class="section section_catalog catalog-main bg_catalog">
-      <div class="container catalog-main__container">
+  <main class="main portfolio-item__main">
+    <section class="section portfolio-item__section bg_portfolio-item">
+      <div class="container portfolio-item__container">
+        <h1 class="portfolio-item__title title">
+          Детская площадка
+        </h1>
 
-        <div class="catalog-main__head">
-          <h1 class="catalog-main__title title">
-            Каталог
-          </h1>
-        </div>
+        <article class="portfolio-item__article article">
 
-        <div class="catalog-main__body">
-          <a href="cart.html" class="catalog-main__card card card_seamless">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                бесшовное покрытие
-              </h2>
-              <p class="card__desc">
-                Бесшовное покрытие обладает высокой износостойкостью и&nbsp;долговечностью, что позволяет использовать его в&nbsp;местах с&nbsp;высокой нагрузкой
-              </p>
+          <div class="article__img-wrap">
+            <div class="article__img">
+              <img src="img/port-1.jpg" alt="новость">
             </div>
-          </a>
 
-          <a href="cart.html" class="catalog-main__card card card_tile">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                Плитка
-              </h2>
-              <p class="card__desc">
-                Лучше всего подходит для ступенек, дорожек, игровых детских площадок
-              </p>
+            <div class="portfolio-item__slider-wrapper">
+              <div class="slider swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="slider_img">
+                      <img src="img/port-100.jpg" alt="слайд 1">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-200.jpg" alt="слайд 2">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-300.jpg" alt="слайд 3">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-400.jpg" alt="слайд 4">
+                    </div>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <div class="slider_img">
+                      <img src="img/port-100.jpg" alt="слайд 1">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-200.jpg" alt="слайд 2">
+                    </div>
+                    <div class="slider_img">
+                      <img src="img/port-300.jpg" alt="слайд 3">
+                    </div>
+         
+                  </div>
+
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <!-- </div> -->
+                </div>
+
+                <div class="swiper-button-prev">
+                  <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 2L3 16L17 30" stroke="#2FA7BE" stroke-opacity="0.3" stroke-width="3" />
+                  </svg>
+
+
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L16 16L2 30" stroke="#2FA7BE" stroke-opacity="0.3" stroke-width="3" />
+                  </svg>
+
+
+                </div>
+              </div>
+
             </div>
-          </a>
+          </div>
 
-          <a href="cart.html" class="catalog-main__card card card_crumb">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                резиновая крошка
-              </h2>
-              <p class="card__desc">
-                Идеальный материал для детских и&nbsp;спортивных площадок, тренажерных залов и&nbsp;дорожек на&nbsp;загородных участках
-              </p>
-            </div>
-          </a>
+          <div class="article__text-block">
+            <ul class="article__list">
+              <li class="article__item">
+                <p class="article__key">
+                  Площадь
+                </p>
+                <p class="article__value">
+                  40 м²
+                </p>
+              </li>
 
-          <a href="cart.html" class="catalog-main__card card card_roll">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                рулонное покрытие
-              </h2>
-              <p class="card__desc">
-                Обеспечивает амортизацию при падениях, защищает пол и&nbsp;оборудование от&nbsp;повреждений, а&nbsp;также обеспечивает хорошее сцепление
-              </p>
-            </div>
-          </a>
+              <li class="article__item">
+                <p class="article__key">
+                  Дата сдачи
+                </p>
+                <p class="article__value">
+                  2024
+                </p>
+              </li>
 
-        </div>
+              <li class="article__item">
+                <p class="article__key">
+                  Тип покрытия
+                </p>
+                <p class="article__value">
+                  Бесшовное покрытие
+                </p>
+              </li>
 
-        <a class="catalog-main__link link" href="catalog-all.html" >
-          Все товары
-        </a>
+              <li class="article__item">
+                <p class="article__key">
+                  Город
+                </p>
+                <p class="article__value">
+                  Тюмень
+                </p>
+              </li>
 
+              <li class="article__item">
+                <p class="article__key">
+                  Заказчик
+                </p>
+                <p class="article__value">
+                  Частный дом
+                  Детская площадка
+                </p>
+              </li>
+            </ul>
+            <p class="article__desc">
+              У вас есть свой проект или хотите такой же?
+              Заполните заявку и мы пришлем расчет стоимотси
+            </p>
+
+            <button class="btn-reset article__btn btn btn_blue">
+              Рассчитать
+            </button>
+
+
+          </div>
+
+        </article>
       </div>
     </section>
   </main>
@@ -433,6 +502,41 @@
           <a class="checkbox__link" href="agreement.html" target="_blank">обработку персональных данных</a>
         </label>
       </form>
+      <!-- <form class="popup-form__project-form project-form" action="#" method="post" enctype="multipart/form-data">
+        <a class="project-form__close popup-close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.999999 15L8 7.92308M1 0.999999L8 7.92308M8 7.92308L14.5 0.999999M8 7.92308L14.5 15"
+              stroke="black" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </a>
+      <h2 class="project-form__title">
+        Оставьте заявку
+      </h2>
+      <p class="project-form__subtitle">
+        Мы свяжемся с вами и расскажем подробнее обо всех видах услуг
+      </p>
+
+      <div class="project-form__inputs">
+        <input class="project-form__input" type="text" name="name" placeholder="Имя" required>
+        <input class="project-form__input" type="tel" name="phone" placeholder="+7 (_____) _____ ___ ___" required>
+        <input class="project-form__input" type="email" name="email" placeholder="Email" required>
+      </div>
+
+
+      <textarea class="project-form__input project-form__input_textarea" name="textarea" rows="5" cols="96" value=""
+        placeholder="Текст сообщения"></textarea>
+
+      <div class="project-form__submit-wrap">
+        <input class="project-form__submit btn-reset" type="submit">
+        <label class="call-form__labe checkbox">
+          Соглашаюсь с условиями
+          <input class="checkbox__input" type="checkbox" name="check" value="да">
+          <span></span>
+          <a class="checkbox__link" href="agreement.html" target="_blank">обработки персональных данных</a>
+        </label>
+      </div>
+
+      </form> -->
     </div>
   </div>
 </div>
