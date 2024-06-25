@@ -354,8 +354,7 @@ img {
 }
 .btn.btn_montage:hover {
   color: #fff;
-  background-color: #37cbd3;
-  border-color: #37cbd3;
+  background-color: #136e63;
   outline: none;
   box-shadow: none;
 }
@@ -379,6 +378,12 @@ img {
 .btn.btn_montage_active .card__price-montage {
   display: inline;
   margin: 0 -18px;
+}
+.btn.btn_montage_active:hover {
+  color: #fff;
+  background-color: #62cdb4;
+  outline: none;
+  box-shadow: none;
 }
 .btn.btn_black {
   border-color: #555a5e;
@@ -3029,7 +3034,7 @@ img {
 }
 
 .catalog-all .bg_catalog {
-  background-position: -42px 140px;
+  background-position: calc(50% - 28px) 160px;
   background-size: 1948px;
 }
 .catalog-all .catalog-all-main__container {
@@ -3161,7 +3166,7 @@ img {
   text-align: left;
   color: #3a3a42;
 }
-.catalog-all .catalog-all__body {
+.catalog-all .catalog-all__body .catalog-all__list {
   max-width: 1180px;
   display: flex;
   flex-flow: row wrap;
@@ -3178,6 +3183,7 @@ img {
   padding: 30px;
   gap: 10px;
   max-width: 280px;
+  min-height: 452px;
   background: #ffffff;
   border-radius: 15px;
 }
@@ -3207,18 +3213,10 @@ img {
   line-height: 18.27px;
   letter-spacing: 0.04em;
   text-align: left;
-  color: #fff;
 }
-.catalog-all .catalog-all__body .card_goods .card__btn_plus {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 20px;
-  gap: 10px;
+.catalog-all .catalog-all__body .card_goods .btn_montage {
   width: 223px;
   height: 38px;
-  background: #62cdb4;
-  border-radius: 6px;
 }
 .catalog-all .catalog-all__body .card_goods .card__btn_to-cart {
   display: flex;
@@ -3228,11 +3226,57 @@ img {
   gap: 10px;
   width: 223px;
   height: 43px;
-  background: #2fa7be;
   border-radius: 6px;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_to-cart_hide {
+  display: none;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_to-cart svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_to-cart:active svg path {
+  stroke: #2fa7be;
 }
 .catalog-all .catalog-all__body .card_goods .card__btn_in-cart {
   display: none;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_in-cart_visible {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_in-cart_visible .card__counter {
+  padding: 9px 10px;
+  gap: 1px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 123px;
+  height: 43px;
+  background: #2FA7BE;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.27px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_in-cart_visible .card__counter .card__counter-btn {
+  padding: 5px 10px;
+}
+.catalog-all .catalog-all__body .card_goods .card__btn_in-cart_visible .card__counter .card__counter-value {
+  width: 58px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.27px;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 .catalog-all .catalog-all__body .card_goods .card__title {
   font-size: 16px;
@@ -3608,7 +3652,7 @@ img {
 .news-item .bg_news-item {
   background: url("../img/bg-news-item.svg"), #f3fafc;
   background-repeat: no-repeat;
-  background-position: 970px 522px;
+  background-position: calc(50% + 500px) 522px;
   background-size: 970px;
 }
 .news-item .news-item__container {

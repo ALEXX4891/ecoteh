@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Экотех. Каталог</title>
+  <title>Экотех. Товар</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">  
 </head>
 
-<body data-page="catalog">
+<body class="goods-item" data-page="catalog">
   <p class="page" hidden>Контрагенты</p>
   <header class="header lock-padding">
   <div class="container header__container">
@@ -137,70 +137,141 @@
 
 </header>
 
-  <main class="main">
-    <section class="section section_catalog catalog-main bg_catalog">
-      <div class="container catalog-main__container">
+  <main class="main news-item__main">
+    <section class="section news-item__section bg_news-item">
+      <div class="container news-item__container">
+        <article class="news-item__article article">
+          <div class="article__img">
+            <img src="img/news-100.jpg" alt="новость">
+          </div>
+          <div class="article__text-block">
 
-        <div class="catalog-main__head">
-          <h1 class="catalog-main__title title">
-            Каталог
-          </h1>
+            <h1 class="article__title">
+              Утилизация шин при помощи нейросети
+            </h1>
+
+            <p class="article__date">
+              24 февраля 2024
+            </p>
+
+            <p class="article__text">
+              Расширение производства резиновой крошки SBR путем рециклинга автомобильных шин на основе инновационного
+              процесса резания, управляемого нейросетью
+            </p>
+
+          </div>
+        </article>
+
+
+        <h2 class="news-item__title title">
+          другие новости
+        </h2>
+
+        <div class="news-item__slider-wrapper">
+          <div class="slider swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+              </div>
+              
+              <div class="swiper-slide">
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+
+                <a href="news-item.html" class="main-block__news-card news-card">
+                  <p class="news-card__date">
+                    04.06.2024
+                  </p>
+                  <h3 class="news-card__title">
+                    Новый заголовок для статьи
+                  </h3>
+                  <p class="news-card__desc">
+                    Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс статьи Краткий анонс
+                  </p>
+                </a>
+              </div>
+
+
+              <!-- If we need pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- </div> -->
+            </div>
+
+          </div>
+          <div class="swiper-button-prev">
+            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 2L3 16L17 30" stroke="#616161" stroke-width="3" />
+            </svg>
+
+          </div>
+          <div class="swiper-button-next">
+            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L16 16L2 30" stroke="#616161" stroke-width="3" />
+            </svg>
+
+          </div>
+
         </div>
-
-        <div class="catalog-main__body">
-          <a href="catalog-all.html" class="catalog-main__card card card_seamless">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                бесшовное покрытие
-              </h2>
-              <p class="card__desc">
-                Бесшовное покрытие обладает высокой износостойкостью и&nbsp;долговечностью, что позволяет использовать его в&nbsp;местах с&nbsp;высокой нагрузкой
-              </p>
-            </div>
-          </a>
-
-          <a href="catalog-all.html" class="catalog-main__card card card_tile">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                Плитка
-              </h2>
-              <p class="card__desc">
-                Лучше всего подходит для ступенек, дорожек, игровых детских площадок
-              </p>
-            </div>
-          </a>
-
-          <a href="catalog-all.html" class="catalog-main__card card card_crumb">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                резиновая крошка
-              </h2>
-              <p class="card__desc">
-                Идеальный материал для детских и&nbsp;спортивных площадок, тренажерных залов и&nbsp;дорожек на&nbsp;загородных участках
-              </p>
-            </div>
-          </a>
-
-          <a href="catalog-all.html" class="catalog-main__card card card_roll">
-            <div class="card__text-block">
-              <h2 class="card__title">
-                рулонное покрытие
-              </h2>
-              <p class="card__desc">
-                Обеспечивает амортизацию при падениях, защищает пол и&nbsp;оборудование от&nbsp;повреждений, а&nbsp;также обеспечивает хорошее сцепление
-              </p>
-            </div>
-          </a>
-
-        </div>
-
-        <a class="catalog-main__link link" href="catalog-all.html" >
-          Все товары
-        </a>
-
-      </div>
     </section>
   </main>
+
+
 
   <footer class="footer">
   <div class="container footer__container">

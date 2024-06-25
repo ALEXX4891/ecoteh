@@ -30,26 +30,6 @@ navLinks.forEach((item) => {
   }
 });
 
-// start swiper -----------------------------------------------------------------------------
-// const swipers = document.querySelectorAll('.swiper');
-// swipers.forEach((item) => {
-//   new Swiper(item, {
-//     // Optional parameters
-//     direction: "horizontal",
-//     loop: true,
-//     allowTouchMove: true,
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//   });
-// })
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -65,220 +45,6 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
-
-// const swiper2 = new Swiper(".swiper2", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
-//   allowTouchMove: true,
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-// end swiper -----------------------------------------------------------------------------
-
-// const activPage = document.querySelector(`.${page}`);
-
-// // import * as flsFunctions from "./modules/functions.js";
-
-// // flsFunctions.isWebp();
-
-// //пример импорта библиотеки swiper из node_modules:
-// // import Swiper, { Navigation, Pagination } from "swiper";
-
-// // const swiper = new Swiper(".swiper", {
-// //   modules: [Navigation, Pagination],
-// //   navigation: {
-// //     nextEl: ".swiper-button-next",
-// //     prevEl: ".swiper-button-prev",
-// //   },
-// //   pagination: {
-// //     el: ".swiper-pagination",
-// //     type: "bullets",
-// //   },
-// // })
-
-// //кастомный select
-// // const element1 = document.querySelector("select");
-// // const choices1 = new Choices(element1, {
-// //   // renderChoiceLimit: 3,
-// //   // maxItemCount: 3,
-// //   itemSelectText: "",
-// //   searchEnabled: false,
-// //   shouldSort: false,
-// //   noResultsText: 'ни чего не найдено',
-// //   placeholder: true,
-// // });
-
-// const fieldInput1 = document.querySelector("#field-input-1");
-// const btn1 = document.querySelector("#btn-1");
-
-// if (fieldInput1) {
-//   fieldInput1.addEventListener("input", function () {
-//     if (fieldInput1.value.length > 0) {
-//       btn1.classList.remove("btn_disabled");
-//     } else {
-//       btn1.classList.add("btn_disabled");
-//     }
-//   });
-// }
-
-// const inputSearch = document.querySelectorAll(".input_search");
-// if (inputSearch) {
-//   inputSearch.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       item.classList.add("input_search_active");
-//     });
-//   });
-// }
-
-// const inputFields = document.querySelectorAll(".input_search-field");
-
-// if (inputFields) {
-//   inputFields.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       item.classList.add("input_search-field_active");
-//     });
-//   });
-// }
-
-// const inputDate = document.querySelectorAll(".input_date");
-// if (inputDate) {
-//   inputDate.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       item.classList.add("input_date_active");
-//     });
-//   });
-// }
-
-// const selectField = document.querySelectorAll(".my-select");
-// const selectFieldMult = document.querySelectorAll(".my-select_multiple");
-
-// const selectList = document.querySelectorAll(".my-select__list");
-// const selectItem = document.querySelectorAll(".my-select__item");
-
-// if (selectFieldMult) {
-//   selectFieldMult.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       item.classList.toggle("my-select_multiple_open");
-//     });
-//   });
-//   document.addEventListener("click", function (e) {
-//     if (!e.target.closest(".my-select_multiple")) {
-//       selectFieldMult.forEach((item) => {
-//         item.classList.remove("my-select_multiple_open");
-//       });
-//     }
-//   });
-// }
-
-// if (selectField) {
-//   selectField.forEach((item) => {
-//     item.addEventListener("click", function (e) {
-//       item.classList.toggle("my-select_open");
-//     });
-//   });
-//   document.addEventListener("click", function (e) {
-//     if (!e.target.closest(".my-select")) {
-//       selectField.forEach((item) => {
-//         item.classList.remove("my-select_open");
-//       });
-//     } else {
-//     }
-//   });
-
-//   selectItem.forEach((item) => {
-//     item.addEventListener("click", function (e) {
-//       const text = item.closest(".my-select").querySelector(".my-select__text");
-//       text.innerHTML = item.innerHTML;
-//       text.classList.add("my-select__text_active");
-//       // text.setAttribute("data-value", item.getAttribute("data-value"));
-//       e.stopPropagation();
-//       // console.log(item);
-//       item.closest(".my-select").classList.remove("my-select_open");
-//       item.closest(".my-select").classList.add("my-select_active");
-//     });
-//   });
-// }
-
-// // const popupCloseIcon = document.querySelectorAll(".popup-close");
-// // if (popupCloseIcon.length > 0) {
-// //   for (let index = 0; index < popupCloseIcon.length; index++) {
-// //     const el = popupCloseIcon[index];
-// //     el.addEventListener("click", function (e) {
-// //       popupClose(el.closest(".popup")); //ближайший родитель класса popup
-// //       e.preventDefault();
-// //     });
-// //   }
-// // }
-
-// const navLlink = document.querySelectorAll(".nav__link");
-// const thisPage = document.querySelector(".page").innerHTML;
-// if (navLlink) {
-//   navLlink.forEach((item) => {
-//     if (item.innerHTML.includes(thisPage)) {
-//       item.classList.add("nav__link_active");
-//     }
-//   });
-// }
-
-// // setTimeout(function () {
-// //   document.querySelector("main").classList.add("main_active");
-// // }, 200);
-
-// // simplebar:
-// if (document.querySelector(".my-simplebar-1")) {
-//   const simpleBar1 = new SimpleBar(document.querySelector(".my-simplebar-1"), {
-//     scrollbarMaxSize: 85,
-//     autoHide: false,
-//     forceVisible: true,
-//   });
-// }
-
-// if (document.querySelector(".my-simplebar-2")) {
-//   const simpleBar2 = new SimpleBar(document.querySelector(".my-simplebar-2"), {
-//     scrollbarMaxSize: 85,
-//     autoHide: false,
-//     forceVisible: true,
-//   });
-// }
-
-// if (document.querySelectorAll(".my-simplebar-input")) {
-//   document.querySelectorAll(".my-simplebar-input").forEach((item) => {
-//     new SimpleBar(item, {
-//       scrollbarMaxSize: 45,
-//       scrollbarMinSize: 33,
-//       autoHide: false,
-//       forceVisible: true,
-//     });
-//   });
-// }
-
-// const btnVariant = document.querySelectorAll(".btn-variant");
-// if (btnVariant) {
-//   btnVariant.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       // window.location.href = item.getAttribute("href");
-//       window.location.href = "calculating-done.html";
-//     });
-//   });
-// }
-
-// const btnCancel = document.querySelectorAll(".btn-cancel");
-// if (btnCancel) {
-//   btnCancel.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       window.location.href = "calculating.html";
-//     });
-//   });
-// }
 
 // -------------------------------------------- start popup: ---------------------------------------------
 const popupLinks = document.querySelectorAll(".popup-link");
@@ -403,14 +169,14 @@ if (previews) {
 
 // -------------------------------------------- start btn_montage: ---------------------------------------------
 
-
 // -------------------------------------------- end btn_montage ---------------------------------------------
 
 // -------------------------------------------- start cart: ---------------------------------------------
 
 const cartCards = document.querySelectorAll(".cart__card");
 
-if (cartCards) {
+if (cartCards.length) {
+  console.log(cartCards);
   const btnMontage = document.querySelectorAll(".btn_montage");
   if (btnMontage) {
     btnMontage.forEach((item) => {
@@ -418,8 +184,10 @@ if (cartCards) {
       item.addEventListener("click", function () {
         item.classList.toggle("btn_montage_active");
         const cost = item.closest(".cart__card").querySelector(".card__cost");
-        let quontity = item.closest(".cart__card").querySelector(".card__counter-value").value;
-        console.log(quontity);
+        let quontity = item
+          .closest(".cart__card")
+          .querySelector(".card__counter-value").value;
+        // console.log(quontity);
         getTotalCost();
       });
     });
@@ -432,17 +200,24 @@ if (cartCards) {
     const counterValue = item.querySelector(".card__counter-value");
     let quontity = 0;
 
+    counterValue.addEventListener("input", function (e) {
+      quontity = counterValue.value;
+      counterValue.value = counterValue.value;
+      getCost(item, quontity);
+      getTotalCost();
+    });
+
     plus.addEventListener("click", function () {
       quontity++;
-      counterValue.value = quontity; 
-      getCost(item, quontity)   
+      counterValue.value = quontity;
+      getCost(item, quontity);
       getTotalCost();
     });
     minus.addEventListener("click", function () {
       if (counterValue.value > 0) {
         quontity--;
         counterValue.value = quontity;
-        getCost(item, quontity)
+        getCost(item, quontity);
         getTotalCost();
       }
     });
@@ -451,6 +226,7 @@ if (cartCards) {
 
 // вычисление стоимости товара в корзине, в зависимости от количества:
 function getCost(item, quontity) {
+  console.log("getCost");
   const cost = item.querySelector(".card__cost");
   const priceText = item.querySelector(".card__price").innerHTML;
   const price = parseInt(priceText.replace(/\s/g, ""));
@@ -478,7 +254,8 @@ const btns = document.querySelectorAll(".stage__item");
 
 const articles = document.querySelectorAll(".stage__article");
 
-if (btns) {
+if (btns.length) {
+  console.log(btns);
   btns.forEach((item) => {
     item.addEventListener("click", function () {
       btns.forEach((item) => {
@@ -490,7 +267,7 @@ if (btns) {
         if (item.getAttribute("data-id") === id) {
           item.classList.add("stage__article_active");
         }
-      })
+      });
       // document.querySelector(`.stage__article[data-id="${id}"]`).classList.add("stage__article_active");
       item.classList.toggle("stage__item_active");
     });
@@ -502,7 +279,8 @@ if (btns) {
 
 const cardsFeedback = document.querySelectorAll(".card_about");
 
-if (cardsFeedback) {
+if (cardsFeedback.length) {
+  console.log(cardsFeedback);
   const openBtns = document.querySelectorAll(".feedback-btn_open");
   openBtns.forEach((item) => {
     item.addEventListener("click", function () {
@@ -528,7 +306,7 @@ if (cardsFeedback) {
       item.classList.add("card_about_overflow");
     } else {
       item.classList.remove("card_about_overflow");
-    }     
+    }
     // item.addEventListener("click", function () {
     //   console.log(3);
     //   const card = item.closest(".card_about");
@@ -541,5 +319,136 @@ function overflow(e) {
   return e.scrollWidth > e.offsetWidth || e.scrollHeight > e.offsetHeight;
 }
 
+// -------------------------------------------- end Отзывы ---------------------------------------------
+
+// -------------------------------------------- start Каталог: ---------------------------------------------
+const catalogCards = document.querySelectorAll(".catalog-all__item");
+
+if (catalogCards.length) {
+
+  const cartBtn = document.querySelector(".in-cart__icon");
+  
+  cartBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = cartBtn.getAttribute("data-href");
+  });
+  console.log(catalogCards);
+  
+  catalogCards.forEach((item) => {
+    const colorBtn = item.querySelectorAll(".card__color-item");
+
+    if (colorBtn) {
+      colorBtn.forEach((item) => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+          colorBtn.forEach((item) => {
+            item.classList.remove("card__color-item_active");
+          })
+          item.classList.add("card__color-item_active");
+        });
+      });
+    }
+
+
+
+
+
+    const toCartBtn = item.querySelector(".card__btn_to-cart");  
+    toCartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+    const cartBtn = item.querySelector(".card__btn_in-cart");
+    cartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+
+    // счетчик количества карточек в корзине:
+    const plus = item.querySelector(".card__counter-btn_plus");
+    const minus = item.querySelector(".card__counter-btn_minus");
+    const counterValue = item.querySelector(".card__counter-value");
+    let quontity = 0;
+
+    // counterValue.addEventListener("change", function (e) {
+    //   quontity = e.target.value;
+    // });
+    counterValue.addEventListener("input", function (e) {
+      quontity = counterValue.value;
+      counterValue.value = counterValue.value;
+      // quontity = Number(counterValue.value);
+      // counterValue.value = Number(counterValue.value).toLocaleString();
+      // // console.log(counterValue.value);
+      // console.log(Number(counterValue.value).toLocaleString());
+    });
+
+
+
+
+
+    plus.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      quontity++;
+      counterValue.value = quontity;
+      // getCost(item, quontity);
+      // getTotalCost();
+    });
+    minus.addEventListener("click", function (e) {
+      if (counterValue.value > 0) {
+        e.preventDefault();
+
+        quontity--;
+        counterValue.value = quontity;
+        // getCost(item, quontity);
+        // getTotalCost();
+      }
+    });
+
+    const montageBtn = item.querySelector(".btn_montage");
+
+    montageBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      montageBtn.classList.toggle("btn_montage_active");
+    });
+
+    toCartBtn.addEventListener("click", function (e) {
+
+      console.log(cartBtn);
+      e.preventDefault();
+      console.log(2);
+      toCartBtn.classList.add("card__btn_to-cart_hide");
+      cartBtn.classList.add("card__btn_in-cart_visible");
+    });
+  });
+}
+// -------------------------------------------- end Каталог ---------------------------------------------
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+// -------------------------------------------- end Отзывы ---------------------------------------------
+// -------------------------------------------- start Отзывы: ---------------------------------------------
 
 // -------------------------------------------- end Отзывы ---------------------------------------------
