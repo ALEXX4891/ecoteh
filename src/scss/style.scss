@@ -3072,6 +3072,7 @@ img {
         align-items: center;
         justify-content: flex-start;
         gap: 26px;
+        cursor: pointer;
 
         .stage__item-text {
           display: inline-block;
@@ -3081,7 +3082,6 @@ img {
           text-align: left;
           color: $color-34343B;
           text-transform: uppercase;
-          cursor: pointer;
           transition: color 0.3s ease-in-out;
         }
 

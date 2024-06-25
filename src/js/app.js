@@ -412,30 +412,9 @@ if (btnMontage) {
   });
 }
 
-// -------------------------------------------- end btn_montage: ---------------------------------------------
-// -------------------------------------------- start counter: ---------------------------------------------
+// -------------------------------------------- end btn_montage ---------------------------------------------
 
-// const counters = document.querySelectorAll(".card__counter");
-
-// if (counters) {
-//   counters.forEach((item) => {
-//     const plus = item.querySelector(".card__counter-btn_plus");
-//     const minus = item.querySelector(".card__counter-btn_minus");
-//     const counterValue = item.querySelector(".card__counter-value");
-//     plus.addEventListener("click", function () {
-//       counterValue.innerHTML++;
-//     });
-//     minus.addEventListener("click", function () {
-//       if (counterValue.innerHTML > 0) {
-//         counterValue.innerHTML--;
-//       }
-//     });
-//   });
-// }
-
-// -------------------------------------------- end counter: ---------------------------------------------
-
-// -------------------------------------------- start swiper: ---------------------------------------------
+// -------------------------------------------- start cart: ---------------------------------------------
 
 const cards = document.querySelectorAll(".cart__card");
 
@@ -503,4 +482,30 @@ if (cards) {
   });
 }
 
-// -------------------------------------------- end swiper: ---------------------------------------------
+// -------------------------------------------- end cart ---------------------------------------------
+
+// -------------------------------------------- start О компании: ---------------------------------------------
+
+const btns = document.querySelectorAll(".stage__item");
+
+const articles = document.querySelectorAll(".stage__article");
+
+if (btns) {
+  btns.forEach((item) => {
+    item.addEventListener("click", function () {
+      btns.forEach((item) => {
+        item.classList.remove("stage__item_active");
+      });
+      const id = item.getAttribute("data-id");
+      articles.forEach((item) => {
+        item.classList.remove("stage__article_active");
+        if (item.getAttribute("data-id") === id) {
+          item.classList.add("stage__article_active");
+        }
+      })
+      // document.querySelector(`.stage__article[data-id="${id}"]`).classList.add("stage__article_active");
+      item.classList.toggle("stage__item_active");
+    });
+  });
+}
+// -------------------------------------------- end О компании ---------------------------------------------
