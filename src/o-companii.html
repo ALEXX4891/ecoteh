@@ -5,7 +5,7 @@
 })
 
 <body class="about" data-page="o-companii">
-  <p class="page" hidden>Контрагенты</p>
+
   @@include('./html/header.html', {})
 
 
@@ -566,10 +566,11 @@
               <form action="#" class="call-form__form" method="post" enctype="multipart/form-data">
                 <div class="call-form__input-block">
                   <input class="call-form__input" type="text" value="" placeholder="Имя" name="name" required>
-                  <input class="call-form__input" name="phone" type="tel" maxlength="50"
-                    required="required" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                  <input class="call-form__input" name="phone" type="tel" maxlength="50" required="required"
+                    pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
                     placeholder="+7 (_____) _____ ___ ___">
-                  <input type="submit" value="Оставить заявку" class="btn btn_blue popup-link" href="#success" name="submit">
+                  <input type="submit" value="Оставить заявку" class="btn btn_blue popup-link" href="#success"
+                    name="submit">
 
                 </div>
                 <label class="call-form__labe checkbox">
