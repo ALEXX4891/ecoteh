@@ -275,8 +275,6 @@ img {
 .btn.btn_white {
   width: 167px;
   height: 48px;
-  border-color: #2da1b7;
-  background-color: #fff;
   color: #2da1b7;
   border-radius: 6px;
   font-style: normal;
@@ -464,26 +462,6 @@ img {
 .btn.btn_red:hover {
   background: #570000;
   box-shadow: 0px 4px 7px 0px rgba(87, 0, 0, 0.4);
-}
-.btn.btn_business {
-  width: 167px;
-  height: 48px;
-  border-color: #2fa7be;
-  background-color: #2fa7be;
-  color: #fff;
-  margin: 0 auto;
-}
-.btn.btn_business:hover {
-  color: #2fa7be;
-  background-color: #fff;
-  box-shadow: none;
-}
-.btn.btn_business:active {
-  color: #37cbd3;
-  background-color: #fff;
-  border-color: #37cbd3;
-  outline: none;
-  box-shadow: none;
 }
 .btn.btn_evo {
   width: 196px;
@@ -1529,9 +1507,6 @@ img {
   line-height: 24.46px;
   text-align: left;
 }
-.glavnaya .glavnaya__section_main .main-block_evo .btn_business {
-  margin: 0 auto 0 0;
-}
 .glavnaya .glavnaya__section_main .main-block_evo .main-block__title {
   font-size: 32px;
   font-weight: 700;
@@ -1610,6 +1585,10 @@ img {
 }
 .glavnaya .glavnaya__section_main .main-block_business .main-block__title {
   margin-bottom: 10px;
+}
+.glavnaya .glavnaya__section_main .main-block_business .btn_blue {
+  width: 168px;
+  margin: 0 auto;
 }
 .glavnaya .glavnaya__section_main .main-block_prod .main-block__title {
   margin-bottom: 20px;

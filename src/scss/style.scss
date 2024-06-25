@@ -268,8 +268,8 @@ img {
   &.btn_white {
     width: 167px;
     height: 48px;
-    border-color: $color-2DA1B7;
-    background-color: $color-white;
+    // border-color: $color-2DA1B7;
+    // background-color: $color-white;
     color: $color-2DA1B7;
     border-radius: 6px;
     font-style: normal;
@@ -504,26 +504,26 @@ img {
   //     // border-color: $color-143A07;
   //   }
   // }
-  &.btn_business {
-    width: 167px;
-    height: 48px;
-    border-color: $color-2FA7BE;
-    background-color: $color-2FA7BE;
-    color: $color-white;
-    margin: 0 auto;
-    &:hover {
-      color: $color-2FA7BE;
-      background-color: $color-white;
-      box-shadow: none;
-    }
-    &:active {
-      color: $color-37CBD3;
-      background-color: $color-white;
-      border-color: $color-37CBD3;
-      outline: none;
-      box-shadow: none;
-    }
-  }
+  // &.btn_business {
+  //   width: 167px;
+  //   height: 48px;
+  //   border-color: $color-2FA7BE;
+  //   background-color: $color-2FA7BE;
+  //   color: $color-white;
+  //   margin: 0 auto;
+  //   &:hover {
+  //     color: $color-2FA7BE;
+  //     background-color: $color-white;
+  //     box-shadow: none;
+  //   }
+  //   &:active {
+  //     color: $color-37CBD3;
+  //     background-color: $color-white;
+  //     border-color: $color-37CBD3;
+  //     outline: none;
+  //     box-shadow: none;
+  //   }
+  // }
   &.btn_evo {
     // margin: 0 auto 0 0;
     width: 196px;
@@ -1957,9 +1957,9 @@ img {
           }
         }
 
-        .btn_business {
-          margin: 0 auto 0 0;
-        }
+        // .btn_business {
+        //   margin: 0 auto 0 0;
+        // }
 
         .main-block__img {
           // width: 100%;
@@ -2043,8 +2043,9 @@ img {
             }
           }
 
-          .main-block__img {
-          }
+        }
+        .btn_evo {
+          // background-color: transparent;
         }
       }
       &_business {
@@ -2064,6 +2065,10 @@ img {
         }
         .main-block__title {
           margin-bottom: 10px;
+        }
+        .btn_blue {
+          width: 168px;
+          margin: 0 auto;
         }
       }
       &_prod {
