@@ -403,82 +403,70 @@ if (previews) {
 
 // -------------------------------------------- start btn_montage: ---------------------------------------------
 
-const btnMontage = document.querySelectorAll(".btn_montage");
-if (btnMontage) {
-  btnMontage.forEach((item) => {
-    item.addEventListener("click", function () {
-      item.classList.toggle("btn_montage_active");
-    });
-  });
-}
 
 // -------------------------------------------- end btn_montage ---------------------------------------------
 
 // -------------------------------------------- start cart: ---------------------------------------------
 
-const cards = document.querySelectorAll(".cart__card");
+const cartCards = document.querySelectorAll(".cart__card");
 
-if (cards) {
-  cards.forEach((item) => {
-    const priceText = item.querySelector(".card__price").innerHTML;
-    const price = parseInt(priceText.replace(/\s/g, ""));
-    // console.log(priceText);
-    // console.log(price);
+if (cartCards) {
+  const btnMontage = document.querySelectorAll(".btn_montage");
+  if (btnMontage) {
+    btnMontage.forEach((item) => {
+      // изменение вида кнопки при клике:
+      item.addEventListener("click", function () {
+        item.classList.toggle("btn_montage_active");
+        const cost = item.closest(".cart__card").querySelector(".card__cost");
+        let quontity = item.closest(".cart__card").querySelector(".card__counter-value").value;
+        console.log(quontity);
+        getTotalCost();
+      });
+    });
+  }
 
+  cartCards.forEach((item) => {
+    // счетчик количества карточек в корзине:
     const plus = item.querySelector(".card__counter-btn_plus");
     const minus = item.querySelector(".card__counter-btn_minus");
     const counterValue = item.querySelector(".card__counter-value");
-    const cost = item.querySelector(".card__cost");
-    const totalCost = document.querySelector(".form__cost-value");
-    console.log(totalCost);
-
     let quontity = 0;
-    // console.log(counterValue);
+
     plus.addEventListener("click", function () {
       quontity++;
-      counterValue.value = quontity;
-      cost.innerHTML = price * quontity;
-      let total = 0;
-      // totalCost.innerHTML = price * quontity;
-      let allCosts = document.querySelectorAll(".card__cost");
-
-      allCosts.forEach((item) => {
-        total += parseInt(item.innerHTML.replace(/\s/g, ""));
-        totalCost.innerHTML = total;
-      });
+      counterValue.value = quontity; 
+      getCost(item, quontity)   
+      getTotalCost();
     });
     minus.addEventListener("click", function () {
       if (counterValue.value > 0) {
         quontity--;
         counterValue.value = quontity;
-        cost.innerHTML = price * quontity;
-
-        let total = 0;
-        // totalCost.innerHTML = price * quontity;
-        let allCosts = document.querySelectorAll(".card__cost");
-
-        allCosts.forEach((item) => {
-          total += parseInt(item.innerHTML.replace(/\s/g, ""));
-          totalCost.innerHTML = total;
-        });
+        getCost(item, quontity)
+        getTotalCost();
       }
     });
+  });
+}
 
-    // const plus = item.querySelector(".card__counter-btn_plus");
-    // const minus = item.querySelector(".card__counter-btn_minus");
-    // const counterValue = item.querySelector(".card__counter-value");
-    // const btn = item.querySelector(".card__btn");
+// вычисление стоимости товара в корзине, в зависимости от количества:
+function getCost(item, quontity) {
+  const cost = item.querySelector(".card__cost");
+  const priceText = item.querySelector(".card__price").innerHTML;
+  const price = parseInt(priceText.replace(/\s/g, ""));
+  cost.innerHTML = (price * quontity).toLocaleString();
+}
 
-    // plus.addEventListener("click", function () {
-    //   counterValue.innerHTML++;
-    //   btn.classList.add("card__btn_active");
-    // });
-    // minus.addEventListener("click", function () {
-    //   if (counterValue.innerHTML > 0) {
-    //     counterValue.innerHTML--;
-    //     btn.classList.remove("card__btn_active");
-    //   }
-    // });
+// вычисление общей стоимости товаров в корзине:
+function getTotalCost() {
+  // console.log(55);
+  let total = 0;
+  const totalCost = document.querySelector(".form__cost-value");
+  let allCosts = document.querySelectorAll(".card__cost");
+
+  allCosts.forEach((item) => {
+    total += parseInt(item.innerHTML.replace("&nbsp;", ""));
+    totalCost.innerHTML = total.toLocaleString();
   });
 }
 
@@ -509,3 +497,49 @@ if (btns) {
   });
 }
 // -------------------------------------------- end О компании ---------------------------------------------
+
+// -------------------------------------------- start Отзывы: ---------------------------------------------
+
+const cardsFeedback = document.querySelectorAll(".card_about");
+
+if (cardsFeedback) {
+  const openBtns = document.querySelectorAll(".feedback-btn_open");
+  openBtns.forEach((item) => {
+    item.addEventListener("click", function () {
+      console.log(1);
+      const card = item.closest(".card_about");
+      card.classList.add("card_about_open");
+      // const id = item.getAttribute("data-id");
+      // document.querySelector(`.feedback[data-id="${id}"]`).classList.add("feedback_active");
+    });
+  });
+  const closeBtns = document.querySelectorAll(".feedback-btn_close");
+  if (closeBtns) {
+    closeBtns.forEach((item) => {
+      item.addEventListener("click", function () {
+        console.log(2);
+        const card = item.closest(".card_about");
+        card.classList.remove("card_about_open");
+      });
+    });
+  }
+  cardsFeedback.forEach((item) => {
+    if (overflow(item.querySelector(".card__desc"))) {
+      item.classList.add("card_about_overflow");
+    } else {
+      item.classList.remove("card_about_overflow");
+    }     
+    // item.addEventListener("click", function () {
+    //   console.log(3);
+    //   const card = item.closest(".card_about");
+    //   card.classList.remove("card_about_open");
+    // });
+  });
+}
+
+function overflow(e) {
+  return e.scrollWidth > e.offsetWidth || e.scrollHeight > e.offsetHeight;
+}
+
+
+// -------------------------------------------- end Отзывы ---------------------------------------------

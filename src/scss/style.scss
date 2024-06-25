@@ -239,7 +239,6 @@ img {
   color: $color-white;
   font-weight: 500;
   line-height: 130%;
-  background-color: $color-white;
   cursor: pointer;
   border: 1px solid $color-black;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
@@ -268,8 +267,7 @@ img {
   &.btn_white {
     width: 167px;
     height: 48px;
-    // border-color: $color-2DA1B7;
-    // background-color: $color-white;
+    border-color: $color-2DA1B7;
     color: $color-2DA1B7;
     border-radius: 6px;
     font-style: normal;
@@ -342,6 +340,10 @@ img {
     background-color: $color-62CDB4;
     color: $color-white;
 
+    .card__price-montage {
+      margin: 0 -4px;
+    }
+
     & svg {
       display: none;
     }
@@ -377,6 +379,10 @@ img {
 
       & span {
         display: none;
+      }
+      .card__price-montage {
+        display: inline;
+        margin: 0 -18px;
       }
     }
   }
@@ -1357,8 +1363,36 @@ img {
   }
   &__search-btn {
   }
-  &__contacts {
-    padding-top: 3px;
+  & .contacts {
+    width: max-content;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    &__item {
+      // width: 142px;
+      height: 20px;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #555a5e;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $color-2FA7BE;
+      }
+    }
+    &_email {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17.12px;
+      text-align: left;
+    }
   }
   &__btn {
   }
@@ -2042,7 +2076,6 @@ img {
               }
             }
           }
-
         }
         .btn_evo {
           // background-color: transparent;
@@ -2078,6 +2111,8 @@ img {
       }
 
       &_about {
+        min-height: 750px;
+        position: relative;
         // padding-top: 80px;
 
         .main-block__title {
@@ -2111,6 +2146,11 @@ img {
           }
         }
         .main-block__call-form {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           margin-bottom: 119px;
           display: flex;
           flex-flow: row wrap;
@@ -2151,7 +2191,7 @@ img {
             flex-flow: row nowrap;
             // width: 100%;
 
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             gap: 5px;
             // flex: 0 1 730px;
@@ -2197,7 +2237,7 @@ img {
               min-height: unset;
               background: $color-white;
               box-shadow: 0px 4px 8px rgba(178, 178, 178, 0.3);
-              border-radius: 15px;
+              // border-radius: 15px;
 
               display: flex;
               flex-flow: column nowrap;
@@ -2205,9 +2245,56 @@ img {
               align-items: flex-start;
               padding: 33px 30px 15px;
               gap: 20px;
-              background: rgba(255, 255, 255, 0.3);
-              backdrop-filter: blur(10px);
+              // background: rgba(255, 255, 255, 0.3);
+              // backdrop-filter: blur(10px);
               border-radius: 10px;
+
+              &.card_about_open {
+                height: unset;
+
+                .card__title {
+                  // color: $color-555A5E;
+                }
+                .card__desc {
+                  width: 321px;
+                  height: unset;
+                  text-overflow: unset;
+                  overflow: unset;
+                  white-space: unset;
+
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 19.57px;
+                  text-align: left;
+                  color: $color-56565E;
+                  transition: color 0.3s ease-in-out;
+                }
+                .card__link {
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                }
+                .feedback-btn_open {
+                  display: none;
+                }
+                .feedback-btn_close {
+                  display: block;
+                }
+              }
+              .feedback-btn_open {
+                display: none;
+              }
+              .feedback-btn_close {
+                display: none;
+              }
+              &_overflow {
+                .feedback-btn_open {
+                  display: block;
+                }
+                .feedback-btn_close {
+                  display: none;
+                }
+              }
 
               &:hover {
                 .card__title {
@@ -2233,8 +2320,8 @@ img {
                 width: 321px;
                 height: 60px;
                 text-overflow: ellipsis;
-                // overflow: hidden;
-                // white-space: nowrap;
+                overflow: hidden;
+                white-space: nowrap;
 
                 font-size: 16px;
                 font-weight: 400;
@@ -2248,7 +2335,7 @@ img {
                 position: absolute;
                 bottom: 23px;
                 left: 30px;
-                display: none;
+                // display: none;
                 font-family: Manrope;
                 font-size: 16px;
                 font-weight: 500;
@@ -2258,26 +2345,25 @@ img {
                 transition: color 0.3s ease-in-out;
 
                 &::after {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
+                  // content: "";
+                  // position: absolute;
+                  // top: 0;
+                  // left: 0;
+                  // right: 0;
+                  // bottom: 0;
 
                   // width: 100%;
                   // height: 1px;
                   // background-color: $color-0FA5AD;
                 }
-                &_active {
-                  display: block;
-                }
-                &:hover {
-                  // color: $color-268AB1;
-                }
-                &:active {
-                  // color: $color-2073A8;
-                }
+
+                // display: block;
+              }
+              &:hover {
+                // color: $color-268AB1;
+              }
+              &:active {
+                // color: $color-2073A8;
               }
             }
           }
@@ -3727,7 +3813,7 @@ img {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 60px 87px;
-  gap: 40px;
+  gap: 60px;
   max-width: 1180px;
   // height: 206px;
   margin: 0 auto;
@@ -3834,6 +3920,12 @@ img {
 // --------------------------------------- CATALOG-ALL start ---------------------------------------
 
 .catalog-all {
+
+  .bg_catalog {
+    background-position: -42px 140px;
+    background-size: 1948px;
+  }
+
   .catalog-all-main__container {
     padding: 85px 10px 80px;
     .catalog-all-main__title {
@@ -3995,14 +4087,16 @@ img {
     }
   }
 
-  .catalog-all-main__body {
+  .catalog-all__body {
     max-width: 1180px;
-
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: stretch;
     gap: 20px;
+    margin-bottom: 40px;
+
+
 
     .card_goods {
       display: flex;
@@ -4014,20 +4108,11 @@ img {
       max-width: 280px;
 
       background: #ffffff;
-      // backdrop-filter: blur(10px);
-      /* Note: backdrop-filter has minimal browser support */
       border-radius: 15px;
 
       .card__image {
-        /* image 16 */
-
-        // position: absolute;
         width: 220px;
         height: 157px;
-        // left: calc(50% - 220px/2);
-        // top: 29px;
-
-        // background: url(image.png);
         border-radius: 10px;
       }
       .card__price-wrap {
@@ -4166,6 +4251,46 @@ img {
       }
     }
   }
+  .pagination {
+    .pagination-wrap {
+    }
+    .pagination__list {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 12px;
+    }
+    .pagination__item {
+    }
+    .pagination__link {
+      width: 42px;
+      height: 42px;
+      background: #ffffff;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 19.57px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: $color-34343B;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pagination__item_active {
+      .pagination__link {
+        background: rgba(47, 167, 190, 0.3);
+        pointer-events: none;
+      }
+    }
+    .pagination__item_dots {
+      .pagination__link {
+        background: transparent;
+      }
+    }
+  }
 }
 
 // --------------------------------------- CATALOG-ALL end ---------------------------------------
@@ -4180,7 +4305,7 @@ img {
 // --------------------------------------- &&&&&& end ---------------------------------------
 // --------------------------------------- CONTACTS start ---------------------------------------
 
-.contacts {
+.contacts-page {
   .bg_contacts {
     background: url("@img/bg-contacts.svg"), $color-F3FAFC;
     background-repeat: no-repeat;
@@ -4212,7 +4337,7 @@ img {
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 17px;
+        gap: 11px;
 
         position: relative;
         width: unset;
@@ -4223,6 +4348,12 @@ img {
         // border-radius: 15px;
       }
       .card__key {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3px;
+        margin-bottom: 10px;
         font-size: 16px;
         font-weight: 600;
         line-height: 19.57px;
@@ -4242,6 +4373,14 @@ img {
         text-wrap: nowrap;
 
         color: $color-555A5E;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-2FA7BE;
+        }
+        &:active {
+          // color: $color-2FA7BE;
+        }
       }
     }
 

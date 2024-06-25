@@ -4,7 +4,7 @@
 "title": "Экотех. Контакты",
 })
 
-<body class="contacts" data-page="kontakty">
+<body class="contacts-page" data-page="kontakty">
   @@include('./html/header.html', {})
 
   <main class="main contacts__main">
@@ -102,7 +102,7 @@
             placeholder="Текст сообщения"></textarea>
 
           <div class="project-form__submit-wrap">
-            <input class="project-form__submit btn-reset" type="submit">
+            <input class="project-form__submit btn-reset popup-link" type="submit" href="#success">
             <label class="call-form__labe checkbox">
               Соглашаюсь с условиями
               <input class="checkbox__input" type="checkbox" name="check" value="да">
