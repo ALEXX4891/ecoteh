@@ -142,7 +142,7 @@ $color-BDBDBD: #bdbdbd;
 $color-333333: #333333;
 $color-1F384F: #1f384f;
 $color-62CDB4: #62cdb4;
-$color-136E63: #136E63;
+$color-136E63: #136e63;
 
 $color-3A3A42: #3a3a42;
 
@@ -342,8 +342,6 @@ img {
     background-color: $color-62CDB4;
     color: $color-white;
 
-
-
     & svg {
       display: none;
     }
@@ -376,11 +374,10 @@ img {
       & svg {
         display: block;
       }
-  
-      & span {
-        display: none;  
-      }
 
+      & span {
+        display: none;
+      }
     }
   }
 
@@ -2285,8 +2282,8 @@ img {
   }
   .glavnaya__pic {
     // background-image: url("@img/crumbs.png");
-    background: linear-gradient(180deg, #fff 0%, rgba(102, 102, 102, 0) 82.31%),
-      url("@img/crumbs.png");
+    background: url("@img/crumbs2.png");
+    mix-blend-mode: hard-light;
 
     max-width: 1300px;
     margin: 0 auto;
@@ -2920,7 +2917,7 @@ img {
       }
 
       .runner__list {
-        animation: scroll 20s linear infinite;
+        animation: scroll 60s linear infinite;
         flex-shrink: 0;
         display: flex;
         gap: 50px;
@@ -2933,7 +2930,6 @@ img {
         // gap: 50px;
         // display: flex;
         // animation: scroll 10s linear infinite;
-        font-family: Commissioner;
         font-size: 32px;
         font-weight: 300;
         line-height: 41.76px;
@@ -2962,7 +2958,7 @@ img {
       }
 
       .runner__list {
-        animation: scroll-reverse 20s linear infinite;
+        animation: scroll-reverse 60s linear infinite;
       }
     }
   }
@@ -3275,6 +3271,9 @@ img {
       // background: url(@img/404.png);
       // mix-blend-mode: hard-light;
       // transform: matrix(0, -1, -1, 0, 0, 0);
+      & img {
+        mix-blend-mode: hard-light;
+      }
     }
 
     .not-found__title {
@@ -3758,7 +3757,7 @@ img {
     line-height: 39px;
     letter-spacing: 0.04em;
     // text-wrap: wrap;
-    word-break: break-all;
+    // word-break: break-all;
     text-transform: uppercase;
     // margin-bottom: 50px;
 
@@ -3999,7 +3998,6 @@ img {
     justify-content: flex-start;
     align-items: stretch;
     gap: 20px;
-
 
     .card_goods {
       display: flex;
@@ -5083,7 +5081,6 @@ img {
         text-align: left;
         color: $color-555A5E;
         margin-left: -10px;
-
       }
     }
     .form__inputs-wrap {
