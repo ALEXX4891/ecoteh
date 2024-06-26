@@ -1145,7 +1145,7 @@ img {
 .header .contacts__item:hover {
   color: #2fa7be;
 }
-.header .contacts_email {
+.header .contacts__item_email {
   font-size: 14px;
   font-weight: 500;
   line-height: 17.12px;
