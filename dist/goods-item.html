@@ -137,14 +137,14 @@
 </header>
 
   <main class="main goods-item__main">
-    <section class="section goods-item__section bg_goods-item">
+    <section class="section goods-item__section bg_news">
       <div class="container goods-item__container">
-        
+
         <div class="goods-item__img-box">
           <div class="goods-item__img">
             <img src="img/goods-img.png" alt="новость">
           </div>
-          
+
           <div class="goods-item_small-img-wrap small-img-wrap">
             <div class="small-img-wrap__img">
               <img src="img/goods-prev-1.png" alt="слайд 1">
@@ -157,25 +157,27 @@
             </div>
             <div class="small-img-wrap__img">
               <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40Z" fill="#36C1C9" fill-opacity="0.3"/>
-                <path d="M59.2 40.7181L28.8 57.4361V24L59.2 40.7181Z" fill="white"/>
-              </svg>                
+                <path
+                  d="M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40Z"
+                  fill="#36C1C9" fill-opacity="0.3" />
+                <path d="M59.2 40.7181L28.8 57.4361V24L59.2 40.7181Z" fill="white" />
+              </svg>
             </div>
           </div>
         </div>
-        
-        <div class="goods-item__text-block">
-          <h1 class="goods-item__title">
+
+        <div class="goods-item__text-block text-block">
+          <h1 class="text-block__title">
             Рулонное резиновое
             покрытие 10 мм
           </h1>
 
-          <ul class="goods-item__color-list color-list">
-            <li class="color-list__color-item color-list__color-item_active color-list__color-item_1">
+          <ul class="text-block__color-list color-list">
+            <li class="color-list__color-item  color-list__color-item_1">
               <div class="color-list__color-small-box color-list__color-small-box_1">
               </div>
             </li>
-            <li class="color-list__color-item color-list__color-item_2">
+            <li class="color-list__color-item color-list__color-item_2 color-list__color-item_active">
               <div class="color-list__color-small-box color-list__color-small-box_2">
               </div>
             </li>
@@ -201,97 +203,97 @@
             </li>
           </ul>
 
-          <div class="card__btn card__btn_in-cart in-cart">
-            <div class="card__counter">
-              <button class="card__counter-btn card__counter-btn_minus btn-reset">
+          <div class="text-block__btn in-cart">
+            <div class="in-cart__counter">
+              <button class="in-cart__counter-btn in-cart__counter-btn_minus btn-reset">
                 -
               </button>
-              <input class="card__counter-value" value="0" type="number">
+              <input class="in-cart__counter-value" value="0" type="number">
               </input>
-              <button class="card__counter-btn card__counter-btn_plus btn-reset">
+              <button class="in-cart__counter-btn in-cart__counter-btn_plus btn-reset">
                 +
               </button>
             </div>
-            <p class="in-cart__price-desc">
-              1 м²
-            </p>
-            <div class="in-cart__icon">
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5Z"
-                  fill="#2FA7BE" />
-                <path
-                  d="M4.03354 5.5H17.9777C18.2603 5.50001 18.5397 5.55857 18.7979 5.67191C19.0562 5.78524 19.2876 5.95083 19.4771 6.15801C19.6667 6.36519 19.8103 6.60936 19.8986 6.87478C19.987 7.14019 20.0181 7.42097 19.99 7.699L19.3833 13.699C19.3334 14.1925 19.0998 14.6501 18.728 14.9829C18.3561 15.3157 17.8725 15.5 17.371 15.5H7.71424C7.24654 15.5002 6.79323 15.34 6.4315 15.0469C6.06976 14.7537 5.82197 14.3456 5.7303 13.892L4.03354 5.5ZM4.03354 5.5L3.21448 2.257C3.15971 2.04075 3.03343 1.84881 2.85573 1.71166C2.67802 1.5745 2.45906 1.50001 2.23364 1.5H1M7.06708 19.5H9.08944M15.1565 19.5H17.1789"
-                  stroke="#2FA7BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+            <div class="in-cart__price-wrap">
+              <span class="in-cart__price">
+                1 900 ₽
+              </span>
+              <span class="in-cart__price-desc">
+                / 1 м²
+              </span>
             </div>
-
           </div>
 
 
+          <!-- <div class="form__cost"> -->
+          <div class="goods-item__cost cost">
+            <p class="cost__cost-value">
+              100 000
+            </p>
+            <span class="cost__cost-value cost__cost-value_desc">р</span>
+
+          </div>
+
+          <div class="goods-item__btn-wrap">
+            <button class="goods-item__del-btn btn_reset btn btn_montage">
+              <span>+</span>
+              Монтаж (450 р./1 м²)
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.923692 0.675421C0.725256 0.455189 0.388904 0.440311 0.172429 0.64219C-0.0440471 0.844068 -0.0586708 1.18626 0.139765 1.40649L4.27868 6.00001L0.139775 10.5935C-0.0586609 10.8137 -0.044038 11.1559 0.172438 11.3578C0.388914 11.5597 0.725266 11.5448 0.923702 11.3246L5 6.80056L9.0763 11.3246C9.27473 11.5448 9.61109 11.5597 9.82756 11.3578C10.044 11.1559 10.0587 10.8137 9.86022 10.5935L5.72132 6.00001L9.86024 1.40649C10.0587 1.18626 10.044 0.844068 9.82757 0.64219C9.6111 0.440311 9.27474 0.455189 9.07631 0.675421L5 5.19946L0.923692 0.675421Z"
+                  fill="white" />
+              </svg>
+            </button>
+  
+            <button class="goods-item__btn btn btn_blue btn_reset goods-item__btn_to-cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              В корзину
+            </button>
+          </div>
+
+          <div class="goods-item__bot-text-wrap">
+            <p class="goods-item__bot-text">
+              Согласно ГОСТ Р&nbsp;58726-2019, толщина готового изделия может отличаться от&nbsp;заявленной на&nbsp;&plusmn;2&nbsp;мм
+            </p>
+            <p class="goods-item__bot-text">
+              Мы&nbsp;же стараемся выдерживать отклонение не&nbsp;более 1&nbsp;мм
+            </p>
 
 
-
-          <ul class="article__list">
-            <li class="article__item">
-              <p class="article__key">
-                Площадь
-              </p>
-              <p class="article__value">
-                40 м²
-              </p>
-            </li>
-
-            <li class="article__item">
-              <p class="article__key">
-                Дата сдачи
-              </p>
-              <p class="article__value">
-                2024
-              </p>
-            </li>
-
-            <li class="article__item">
-              <p class="article__key">
-                Тип покрытия
-              </p>
-              <p class="article__value">
-                Бесшовное покрытие
-              </p>
-            </li>
-
-            <li class="article__item">
-              <p class="article__key">
-                Город
-              </p>
-              <p class="article__value">
-                Тюмень
-              </p>
-            </li>
-
-            <li class="article__item">
-              <p class="article__key">
-                Заказчик
-              </p>
-              <p class="article__value">
-                Частный дом
-                Детская площадка
-              </p>
-            </li>
-          </ul>
-          <p class="article__desc">
-            У вас есть свой проект или хотите такой же?
-            Заполните заявку и мы пришлем расчет стоимотси
+          </div>
+          <p class="goods-item__bot-text goods-item__bot-text_desc">
+            Цвет изделия может в&nbsp;значительной степени отличаться от&nbsp;изображения на&nbsp;экране
           </p>
 
-          <button class="btn-reset article__btn btn btn_blue popup-link" href="#popup-form">
-            Рассчитать
-          </button>
 
+          
+        </div>
+
+        <div class="goods-item__bot-block bot-block"> 
+          <ul class="bot-block__menu-list">
+            <li class="bot-block__menu-item bot-block__menu-item_active">
+              Описание
+            </li>
+            <li class="bot-block__menu-item">
+              Характеристики
+            </li>
+          </ul>
+
+          <div class="bot-block__text bot-block__text_active">
+            Покрытие применяется для мощения открытых площадок и&nbsp;проездов в&nbsp;производственных зонах, используется при оборудовании спортивных площадок, детских игровых зон, площадок для занятия силовыми видами спорта, входных групп офисов, магазинов. Покрытие может использоваться как на&nbsp;бетонную поверхность, так и&nbsp;на&nbsp;асфальтовое покрытие. Покрытие укладывается на&nbsp;ровную поверхность толщиной 10&nbsp;мм. Покрытия из&nbsp;резиновой крошки легки в&nbsp;монтаже, не&nbsp;требуют специальных навыков
+          </div>
+          <div class="bot-block__text">
+            Покрытие укладывается на&nbsp;ровную поверхность толщиной 10&nbsp;мм. Покрытия из&nbsp;резиновой крошки легки в&nbsp;монтаже, не&nbsp;требуют специальных навыков
+          </div>
 
         </div>
 
-        </article>
+
+
       </div>
     </section>
   </main>

@@ -176,7 +176,7 @@ if (previews) {
 const cartCards = document.querySelectorAll(".cart__card");
 
 if (cartCards.length) {
-  console.log(cartCards);
+  // console.log(cartCards);
   const btnMontage = document.querySelectorAll(".btn_montage");
   if (btnMontage) {
     btnMontage.forEach((item) => {
@@ -325,18 +325,16 @@ function overflow(e) {
 const catalogCards = document.querySelectorAll(".catalog-all__item");
 
 if (catalogCards.length) {
-
-  const cartBtn = document.querySelector(".in-cart__icon");
-  
-  cartBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = cartBtn.getAttribute("data-href");
-  });
-  console.log(catalogCards);
-  
+  // console.log(catalogCards);  
   catalogCards.forEach((item) => {
-    const colorBtn = item.querySelectorAll(".card__color-item");
 
+    const cartLinkBtn = item.querySelector(".in-cart__icon");    
+    cartLinkBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = cartLinkBtn.getAttribute("data-href");
+    });
+
+    const colorBtn = item.querySelectorAll(".card__color-item");
     if (colorBtn) {
       colorBtn.forEach((item) => {
         item.addEventListener("click", function (e) {
@@ -348,10 +346,6 @@ if (catalogCards.length) {
         });
       });
     }
-
-
-
-
 
     const toCartBtn = item.querySelector(".card__btn_to-cart");  
     toCartBtn.addEventListener("click", function (e) {
@@ -421,9 +415,11 @@ if (catalogCards.length) {
   });
 }
 // -------------------------------------------- end Каталог ---------------------------------------------
-// -------------------------------------------- start Отзывы: ---------------------------------------------
+// -------------------------------------------- start Описание товара: ---------------------------------------------
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
+const 
+
+// -------------------------------------------- end Описание товара ---------------------------------------------
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 
 // -------------------------------------------- end Отзывы ---------------------------------------------
