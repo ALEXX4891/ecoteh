@@ -325,10 +325,9 @@ function overflow(e) {
 const catalogCards = document.querySelectorAll(".catalog-all__item");
 
 if (catalogCards.length) {
-  // console.log(catalogCards);  
+  // console.log(catalogCards);
   catalogCards.forEach((item) => {
-
-    const cartLinkBtn = item.querySelector(".in-cart__icon");    
+    const cartLinkBtn = item.querySelector(".in-cart__icon");
     cartLinkBtn.addEventListener("click", function (e) {
       e.preventDefault();
       window.location.href = cartLinkBtn.getAttribute("data-href");
@@ -341,13 +340,13 @@ if (catalogCards.length) {
           e.preventDefault();
           colorBtn.forEach((item) => {
             item.classList.remove("card__color-item_active");
-          })
+          });
           item.classList.add("card__color-item_active");
         });
       });
     }
 
-    const toCartBtn = item.querySelector(".card__btn_to-cart");  
+    const toCartBtn = item.querySelector(".card__btn_to-cart");
     toCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
     });
@@ -373,10 +372,6 @@ if (catalogCards.length) {
       // // console.log(counterValue.value);
       // console.log(Number(counterValue.value).toLocaleString());
     });
-
-
-
-
 
     plus.addEventListener("click", function (e) {
       e.preventDefault();
@@ -405,7 +400,6 @@ if (catalogCards.length) {
     });
 
     toCartBtn.addEventListener("click", function (e) {
-
       console.log(cartBtn);
       e.preventDefault();
       console.log(2);
@@ -417,7 +411,97 @@ if (catalogCards.length) {
 // -------------------------------------------- end Каталог ---------------------------------------------
 // -------------------------------------------- start Описание товара: ---------------------------------------------
 
-const 
+const goodsItem = document.querySelector(".goods-item__main");
+if (goodsItem) {
+  const montageBtn = goodsItem.querySelector(".btn_montage");
+
+  montageBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    montageBtn.classList.toggle("btn_montage_active");
+  });
+
+  const botMenu = goodsItem.querySelectorAll(".bot-block__menu-item");
+  const botText = goodsItem.querySelectorAll(".bot-block__text");
+  botMenu.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const id = item.getAttribute("data-id");
+      botMenu.forEach((item) => {
+        item.classList.remove("bot-block__menu-item_active");
+      });
+      item.classList.add("bot-block__menu-item_active");
+
+      botText.forEach((item) => {
+        item.classList.remove("bot-block__text_active");
+        if (item.getAttribute("data-id") === id) {
+          item.classList.add("bot-block__text_active");
+        }
+      });
+    });
+  });
+
+  const previews = document.querySelectorAll(".small-img-wrap__img");
+
+  if (previews) {
+    previews.forEach((item) => {
+      item.addEventListener("click", function () {
+        const imgBox = document
+          .querySelector(".goods-item__img")
+          .querySelector("img");
+        const img = item.querySelector("img").getAttribute("src");
+        imgBox.setAttribute("src", img);
+      });
+    });
+  }
+
+  // счетчик количества карточек в корзине:
+  const plus = goodsItem.querySelector(".in-cart__counter-btn_plus");
+  const minus = goodsItem.querySelector(".in-cart__counter-btn_minus");
+  const counterValue = goodsItem.querySelector(".in-cart__counter-value");
+  const totalCost = goodsItem.querySelector(".cost__cost-value");
+  const priceEl = goodsItem.querySelector(".in-cart__price").innerHTML;
+  let price = parseInt(priceEl.replace(/\s/g, ""));
+  console.log(totalCost);
+
+  let quontity = 0;
+  counterValue.addEventListener("input", function (e) {
+    quontity = counterValue.value;
+    counterValue.value = counterValue.value;
+    console.log((quontity * price));
+    totalCost.innerHTML = (quontity * price).toLocaleString();
+  });
+
+  plus.addEventListener("click", function (e) {
+    quontity++;
+    counterValue.value = quontity;
+    console.log((quontity * price));
+    totalCost.innerHTML = (quontity * price).toLocaleString();
+  });
+
+
+  minus.addEventListener("click", function (e) {
+    if (counterValue.value > 0) {
+      quontity--;
+      counterValue.value = quontity;
+      totalCost.innerHTML = (quontity * price).toLocaleString();
+      console.log((quontity * price));
+      totalCost.innerHTML = (quontity * price).toLocaleString();
+    }
+  });
+
+
+  const colorBtn = goodsItem.querySelectorAll(".color-list__color-item");
+  if (colorBtn) {
+    colorBtn.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        colorBtn.forEach((item) => {
+          item.classList.remove("color-list__color-item_active");
+        });
+        item.classList.add("color-list__color-item_active");
+      });
+    });
+  }
+}
 
 // -------------------------------------------- end Описание товара ---------------------------------------------
 // -------------------------------------------- start Отзывы: ---------------------------------------------

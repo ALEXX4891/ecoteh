@@ -4413,6 +4413,7 @@ img {
   line-height: 19.57px;
   text-align: left;
   color: #898994;
+  cursor: pointer;
 }
 .goods-item .goods-item__container .bot-block .bot-block__menu-item_active {
   font-weight: 700;
