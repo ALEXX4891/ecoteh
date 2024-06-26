@@ -605,9 +605,6 @@ img {
   font-weight: 500;
   line-height: 19.57px;
 }
-.nav__list .nav__link_active {
-  pointer-events: none;
-}
 .nav__list .nav__link_active .nav__text {
   font-weight: 700;
   color: #2fa7be;
@@ -1183,6 +1180,13 @@ img {
   flex-grow: 0;
   transition: color 0.3s ease-in-out;
 }
+.footer .contacts__item_email {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.12px;
+  text-align: left;
+  color: #555a5e;
+}
 .footer .contacts__item:hover {
   color: #2fa7be;
 }
@@ -1246,8 +1250,12 @@ img {
   justify-content: space-between;
   gap: 20px;
 }
-.footer .nav .nav__list .nav__dot {
-  display: none;
+.footer .nav .nav__list .nav__link_footer {
+  color: #89899a;
+}
+.footer .nav .nav__list .nav__link_footer.nav__link_active .nav__text {
+  font-weight: 500;
+  color: #555a5e;
 }
 .footer .footer__bottom-block {
   display: flex;
@@ -1270,6 +1278,10 @@ img {
   color: #828282;
 }
 .footer .footer__bottom-block .footer__policy-block .footer__policy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.12px;
+  text-align: right;
   align-self: flex-end;
   letter-spacing: 1.1px;
   color: #828282;

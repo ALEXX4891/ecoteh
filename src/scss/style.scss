@@ -145,6 +145,7 @@ $color-62CDB4: #62cdb4;
 $color-136E63: #136e63;
 $color-898994: #898994;
 $color-3A3A42: #3a3a42;
+$color-89899A: #89899a;
 
 // @include center
 @mixin center {
@@ -683,7 +684,7 @@ img {
     }
     &_active {
       // background: rgba(255, 255, 255, 0.85);
-      pointer-events: none;
+      // pointer-events: none;
       .nav__text {
         font-weight: 700;
         color: $color-2FA7BE;
@@ -1440,6 +1441,14 @@ img {
       order: 0;
       flex-grow: 0;
       transition: color 0.3s ease-in-out;
+
+      &_email {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.12px;
+        text-align: left;
+        color: #555a5e;
+      }
       &:hover {
         color: $color-2FA7BE;
       }
@@ -1523,10 +1532,6 @@ img {
     }
   }
 
-  .nav__link_footer {
-    // color: var(--color-black);
-  }
-
   .footer__container {
     // border-top: 1px solid var(--color-E9E9E9);
   }
@@ -1571,8 +1576,19 @@ img {
       flex: auto;
       gap: 5px;
 
+      .nav__link_footer {
+        color: $color-89899A;
+
+        &.nav__link_active {
+          .nav__text {
+            font-weight: 500;
+            color: $color-555A5E;
+          }
+        }
+      }
+
       .nav__dot {
-        display: none;
+        // display: none;
       }
 
       flex-flow: row nowrap;
@@ -1630,6 +1646,11 @@ img {
       color: $color-828282;
 
       .footer__policy {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.12px;
+        text-align: right;
+
         align-self: flex-end;
         letter-spacing: 1.1px;
         color: $color-828282;
