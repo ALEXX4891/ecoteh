@@ -1748,6 +1748,7 @@ img {
 }
 .glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open {
   height: unset;
+  min-height: 192px;
 }
 .glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open .card__desc {
   width: 321px;

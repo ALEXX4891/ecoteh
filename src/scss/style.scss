@@ -2279,6 +2279,7 @@ img {
 
               &.card_about_open {
                 height: unset;
+                min-height: 192px;
 
                 .card__title {
                   // color: $color-555A5E;
