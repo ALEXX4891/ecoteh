@@ -3984,7 +3984,9 @@ img {
         text-align: left;
         color: $color-555A5E;
         cursor: pointer;
-        transition: color 0.3s ease-in-out &_active {
+        transition: color 0.3s ease-in-out;
+        
+        &_active {
           color: $color-2FA7BE;
         }
 
@@ -4008,9 +4010,13 @@ img {
         border-radius: 20px;
 
         transition: border 0.3s ease-in-out;
+        cursor: pointer;
 
         &_active {
           border: 1px solid #2fa7be;
+          .filter__chekbox-list {
+            display: flex;
+          }
         }
 
         &:hover {
@@ -4018,6 +4024,7 @@ img {
         }
 
         &:active {
+
           // box-shadow: 0px 4px 7px 0px rgba(87, 0, 0, 0.4);
         }
       }
@@ -4045,13 +4052,13 @@ img {
         position: absolute;
         top: 100%;
         left: 0;
-        width: max-content;
+        width: 205px;
         // height: 100%;
         // display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 10px;
+        gap: 13px;
         padding: 20px;
         z-index: 10;
         background: #ffffff;
@@ -4063,7 +4070,7 @@ img {
       .filter__chekbox-item {
         width: 100%;
         position: relative;
-        padding: 3px 3px 3px 30px;
+        // padding: 3px 3px 3px 30px;
         cursor: pointer;
 
         &:hover {
@@ -4073,44 +4080,77 @@ img {
         }
       }
       .catalog-chekbox {
-        & span {
-          position: absolute;
-          top: 2px;
-          left: 0;
-          // text-align: center;
-          border-radius: 2px;
-          width: 19px;
-          height: 19px;
-          border: 1px solid #5f5f69;
-          transition: all 0.3s ease-in-out;
+        .checkbox {
+          position: relative;
+          display: block;
+          padding-left: 25px;
+          cursor: pointer;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: rgba(255, 255, 255, 0.8);
 
-          &::before {
+          &::after {
             content: "";
-            width: 18px;
-            height: 18px;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            background-image: url(@img/check-mark-white.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
+            inset: -6px -20px;
+          }
+        
+          &__link {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.66px;
+            letter-spacing: 0.04em;
+            text-align: left;            
+            color: $color-3A3A42;
+            // color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease-in-out;
+        
+            &:hover {
+              color: $color-828282;
+              text-decoration: none;
+            }
+          }
+        
+          &__input {
+            display: none;
+        
+            & + span {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-431%, -43%);
+              text-align: center;
+              border-radius: 2px;
+              transition: all 0.3s ease-in-out;
+              width: 19px;
+              height: 19px;
+              border: 1px solid #5f5f69;
+        
+              &::before {
+                content: "";
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        
+                background-image: url(@img/check-mark.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+        
+            &:checked + span::before {
+              opacity: 1;
+            }
           }
         }
-      }
-      .catalog-chekbox__icon {
-      }
-      .catalog-chekbox__name {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 15.66px;
-        letter-spacing: 0.04em;
-        text-align: left;
-        color: $color-3A3A42;
       }
     }
   }
@@ -4297,6 +4337,12 @@ img {
           border: 1px solid #989898;
           cursor: pointer;
 
+          &::after {
+            content: "";
+            position: absolute;
+            inset: -5px;
+          }
+
           .card__color-small-box {
             position: absolute;
             top: 50%;
@@ -4305,7 +4351,9 @@ img {
 
             width: 21px;
             height: 21px;
+            
             border-radius: 50%;
+
 
             &_1 {
               background: #00c27c;

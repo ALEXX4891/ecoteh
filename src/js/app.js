@@ -322,92 +322,123 @@ function overflow(e) {
 // -------------------------------------------- end Отзывы ---------------------------------------------
 
 // -------------------------------------------- start Каталог: ---------------------------------------------
-const catalogCards = document.querySelectorAll(".catalog-all__item");
-
-if (catalogCards.length) {
-  // console.log(catalogCards);
-  catalogCards.forEach((item) => {
-    const cartLinkBtn = item.querySelector(".in-cart__icon");
-    cartLinkBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.location.href = cartLinkBtn.getAttribute("data-href");
+const catalog = document.querySelector(".catalog-all-main");
+if (catalog) {
+  const menuItem = catalog.querySelectorAll(".filter__item_head");
+  menuItem.forEach((item) => {
+    item.addEventListener("click", function () {
+      menuItem.forEach((item) => {
+        item.classList.remove("filter__item_head_active");
+      })
+      item.classList.add("filter__item_head_active");
     });
+  });
 
-    const colorBtn = item.querySelectorAll(".card__color-item");
-    if (colorBtn) {
-      colorBtn.forEach((item) => {
-        item.addEventListener("click", function (e) {
-          e.preventDefault();
-          colorBtn.forEach((item) => {
-            item.classList.remove("card__color-item_active");
-          });
-          item.classList.add("card__color-item_active");
-        });
-      });
-    }
-
-    const toCartBtn = item.querySelector(".card__btn_to-cart");
-    toCartBtn.addEventListener("click", function (e) {
-      e.preventDefault();
+  const filterItem = catalog.querySelectorAll(".filter__item_body");
+  filterItem.forEach((item) => {    
+    item.addEventListener("click", function (e) {
+      item.classList.toggle("filter__item_body_active");      
     });
-    const cartBtn = item.querySelector(".card__btn_in-cart");
-    cartBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-    });
+  });
 
-    // счетчик количества карточек в корзине:
-    const plus = item.querySelector(".card__counter-btn_plus");
-    const minus = item.querySelector(".card__counter-btn_minus");
-    const counterValue = item.querySelector(".card__counter-value");
-    let quontity = 0;
 
-    // counterValue.addEventListener("change", function (e) {
-    //   quontity = e.target.value;
-    // });
-    counterValue.addEventListener("input", function (e) {
-      quontity = counterValue.value;
-      counterValue.value = counterValue.value;
-      // quontity = Number(counterValue.value);
-      // counterValue.value = Number(counterValue.value).toLocaleString();
-      // // console.log(counterValue.value);
-      // console.log(Number(counterValue.value).toLocaleString());
-    });
 
-    plus.addEventListener("click", function (e) {
-      e.preventDefault();
 
-      quontity++;
-      counterValue.value = quontity;
-      // getCost(item, quontity);
-      // getTotalCost();
-    });
-    minus.addEventListener("click", function (e) {
-      if (counterValue.value > 0) {
+
+
+  const catalogCards = document.querySelectorAll(".catalog-all__item");
+  
+  if (catalogCards.length) {
+    // console.log(catalogCards);
+    catalogCards.forEach((item) => {
+      const cartLinkBtn = item.querySelector(".in-cart__icon");
+      cartLinkBtn.addEventListener("click", function (e) {
         e.preventDefault();
-
-        quontity--;
+        window.location.href = cartLinkBtn.getAttribute("data-href");
+      });
+  
+      const colorBtn = item.querySelectorAll(".card__color-item");
+      if (colorBtn) {
+        colorBtn.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+            colorBtn.forEach((item) => {
+              item.classList.remove("card__color-item_active");
+            });
+            item.classList.add("card__color-item_active");
+          });
+        });
+      }
+  
+      const toCartBtn = item.querySelector(".card__btn_to-cart");
+      toCartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+      const cartBtn = item.querySelector(".card__btn_in-cart");
+      cartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+  
+      // счетчик количества карточек в корзине:
+      const plus = item.querySelector(".card__counter-btn_plus");
+      const minus = item.querySelector(".card__counter-btn_minus");
+      const counterValue = item.querySelector(".card__counter-value");
+      let quontity = 0;
+  
+      // counterValue.addEventListener("change", function (e) {
+      //   quontity = e.target.value;
+      // });
+      counterValue.addEventListener("input", function (e) {
+        quontity = counterValue.value;
+        counterValue.value = counterValue.value;
+        // quontity = Number(counterValue.value);
+        // counterValue.value = Number(counterValue.value).toLocaleString();
+        // // console.log(counterValue.value);
+        // console.log(Number(counterValue.value).toLocaleString());
+      });
+  
+      plus.addEventListener("click", function (e) {
+        e.preventDefault();
+  
+        quontity++;
         counterValue.value = quontity;
         // getCost(item, quontity);
         // getTotalCost();
-      }
+      });
+      minus.addEventListener("click", function (e) {
+        if (counterValue.value > 0) {
+          e.preventDefault();
+  
+          quontity--;
+          counterValue.value = quontity;
+          // getCost(item, quontity);
+          // getTotalCost();
+        }
+      });
+  
+      const montageBtn = item.querySelector(".btn_montage");
+  
+      montageBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        montageBtn.classList.toggle("btn_montage_active");
+      });
+  
+      toCartBtn.addEventListener("click", function (e) {
+        console.log(cartBtn);
+        e.preventDefault();
+        console.log(2);
+        toCartBtn.classList.add("card__btn_to-cart_hide");
+        cartBtn.classList.add("card__btn_in-cart_visible");
+      });
     });
-
-    const montageBtn = item.querySelector(".btn_montage");
-
-    montageBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      montageBtn.classList.toggle("btn_montage_active");
-    });
-
-    toCartBtn.addEventListener("click", function (e) {
-      console.log(cartBtn);
-      e.preventDefault();
-      console.log(2);
-      toCartBtn.classList.add("card__btn_to-cart_hide");
-      cartBtn.classList.add("card__btn_in-cart_visible");
-    });
-  });
+  
+  
+  
+  
+  }
 }
+
+
 // -------------------------------------------- end Каталог ---------------------------------------------
 // -------------------------------------------- start Описание товара: ---------------------------------------------
 

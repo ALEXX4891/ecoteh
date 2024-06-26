@@ -3077,8 +3077,10 @@ img {
   text-align: left;
   color: #555a5e;
   cursor: pointer;
-  transition: color 0.3s ease-in-out .catalog-all .catalog-all-main__container .filter .filter__item_head _active;
-  transition-color: #2fa7be;
+  transition: color 0.3s ease-in-out;
+}
+.catalog-all .catalog-all-main__container .filter .filter__item_head_active {
+  color: #2fa7be;
 }
 .catalog-all .catalog-all-main__container .filter .filter__item_head:hover {
   color: #2fa7be;
@@ -3093,9 +3095,13 @@ img {
   border: 1px solid rgba(54, 193, 201, 0.3);
   border-radius: 20px;
   transition: border 0.3s ease-in-out;
+  cursor: pointer;
 }
 .catalog-all .catalog-all-main__container .filter .filter__item_body_active {
   border: 1px solid #2fa7be;
+}
+.catalog-all .catalog-all-main__container .filter .filter__item_body_active .filter__chekbox-list {
+  display: flex;
 }
 .catalog-all .catalog-all-main__container .filter .filter__item_body:hover {
   border: 1px solid #2fa7be;
@@ -3124,11 +3130,11 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  width: max-content;
+  width: 205px;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
+  gap: 13px;
   padding: 20px;
   z-index: 10;
   background: #ffffff;
@@ -3140,23 +3146,56 @@ img {
 .catalog-all .catalog-all-main__container .filter .filter__chekbox-item {
   width: 100%;
   position: relative;
-  padding: 3px 3px 3px 30px;
   cursor: pointer;
 }
 .catalog-all .catalog-all-main__container .filter .filter__chekbox-item:hover .catalog-chekbox__name {
   color: #828282;
 }
-.catalog-all .catalog-all-main__container .filter .catalog-chekbox span {
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox::after {
+  content: "";
   position: absolute;
-  top: 2px;
-  left: 0;
+  inset: -6px -20px;
+}
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.66px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #3a3a42;
+  transition: color 0.3s ease-in-out;
+}
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__link:hover {
+  color: #828282;
+  text-decoration: none;
+}
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__input {
+  display: none;
+}
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__input + span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-431%, -43%);
+  text-align: center;
   border-radius: 2px;
+  transition: all 0.3s ease-in-out;
   width: 19px;
   height: 19px;
   border: 1px solid #5f5f69;
-  transition: all 0.3s ease-in-out;
 }
-.catalog-all .catalog-all-main__container .filter .catalog-chekbox span::before {
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__input + span::before {
   content: "";
   width: 18px;
   height: 18px;
@@ -3164,20 +3203,15 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../img/check-mark-white.svg);
+  background-image: url(../img/check-mark.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.catalog-all .catalog-all-main__container .filter .catalog-chekbox__name {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15.66px;
-  letter-spacing: 0.04em;
-  text-align: left;
-  color: #3a3a42;
+.catalog-all .catalog-all-main__container .filter .catalog-chekbox .checkbox__input:checked + span::before {
+  opacity: 1;
 }
 .catalog-all .catalog-all__body .catalog-all__list {
   max-width: 1180px;
@@ -3315,6 +3349,11 @@ img {
   border-radius: 50%;
   border: 1px solid #989898;
   cursor: pointer;
+}
+.catalog-all .catalog-all__body .card_goods .card__color-list .card__color-item::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
 }
 .catalog-all .catalog-all__body .card_goods .card__color-list .card__color-item .card__color-small-box {
   position: absolute;
