@@ -3404,7 +3404,7 @@ img {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 116px;
   margin-bottom: 30px;
 }
 .contacts-page .contacts__container .contacts__list .card {
@@ -3435,11 +3435,10 @@ img {
   margin-right: 12px;
 }
 .contacts-page .contacts__container .contacts__list .card__value {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 24.46px;
+  line-height: 22.01px;
   text-align: left;
-  text-wrap: nowrap;
   color: #555a5e;
   transition: color 0.3s ease-in-out;
 }

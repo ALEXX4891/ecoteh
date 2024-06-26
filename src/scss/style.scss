@@ -4423,7 +4423,7 @@ img {
       flex-flow: row nowrap;
       align-items: center;
       justify-content: flex-start;
-      gap: 100px;
+      gap: 116px;
       margin-bottom: 30px;
 
       .card {
@@ -4460,12 +4460,10 @@ img {
         }
       }
       .card__value {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
-        line-height: 24.46px;
-        text-align: left;
-        text-wrap: nowrap;
-
+        line-height: 22.01px;
+        text-align: left;       
         color: $color-555A5E;
         transition: color 0.3s ease-in-out;
 
