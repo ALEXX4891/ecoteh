@@ -540,15 +540,41 @@ img {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 700px) {
+  .logo {
+    flex: 1 1 100%;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+}
 .logo__ecoteh {
   width: 156px;
   height: 26px;
+}
+@media (max-width: 700px) {
+  .logo__ecoteh {
+    width: 136px;
+    height: 23px;
+  }
 }
 .logo__sk {
   width: 88px;
   height: 26px;
 }
+@media (max-width: 700px) {
+  .logo__sk {
+    width: 77px;
+    height: 22px;
+  }
+}
 
+@media (max-width: 700px) {
+  .header__search-form-wrap {
+    flex: none;
+  }
+}
 .header__search-form-wrap .search-form {
   flex: auto;
   position: relative;
@@ -626,6 +652,11 @@ img {
   max-width: 100%;
   width: 70%;
   z-index: 30;
+}
+@media (max-width: 700px) {
+  .header__search-form-wrap_active .search-form {
+    width: 80%;
+  }
 }
 .header__search-form-wrap_active .search-form .search-form__input {
   padding: 0 45px 0 20px;
@@ -1191,6 +1222,12 @@ img {
     padding: 18px 30px;
   }
 }
+@media (max-width: 700px) {
+  .header__top-block {
+    padding: 17px 15px;
+    gap: 20px;
+  }
+}
 .header__top-block .header__top-right-block {
   flex: none;
   display: flex;
@@ -1202,6 +1239,33 @@ img {
 @media (max-width: 850px) {
   .header__top-block .header__top-right-block .contacts {
     display: none;
+  }
+}
+@media (max-width: 850px) and (max-width: 700px) {
+  .header__top-block .header__top-right-block {
+    flex: 1 1 10%;
+  }
+}
+@media (max-width: 700px) {
+  .header__top-block .header__top-right-block .popup-link {
+    display: none;
+  }
+  .header__top-block .header__top-right-block .btn__cart {
+    width: 52px;
+    height: 48px;
+  }
+  .header__top-block .header__top-right-block .btn__cart svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header__top-block .header__top-right-block .btn__cart .btn__cart-text {
+    display: none;
+  }
+}
+@media (max-width: 290px) {
+  .header__top-block .header__top-right-block .btn__cart {
+    width: auto;
   }
 }
 .header__bot-block {
@@ -1217,6 +1281,11 @@ img {
 @media (max-width: 850px) {
   .header__bot-block {
     padding: 14px 30px;
+  }
+}
+@media (max-width: 700px) {
+  .header__bot-block {
+    padding: 14px 15px;
   }
 }
 .header__bot-block .container {
@@ -1265,6 +1334,11 @@ img {
     gap: 24px;
   }
 }
+@media (max-width: 700px) {
+  .header__bot-block .container .contacts {
+    gap: 26px;
+  }
+}
 .header__bot-block .container .nav {
   width: 100%;
 }
@@ -1309,6 +1383,20 @@ img {
     display: none;
   }
 }
+@media (max-width: 700px) {
+  .header__bot-block .container .nav {
+    height: calc(100vh - 132px);
+    padding: 14px 15px 20px;
+  }
+  .header__bot-block .container .nav .nav__list {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .header__bot-block .container .nav .nav__list .nav__item_arrow .nav__arrow {
+    left: 255%;
+  }
+}
 .header__bot-block .container .nav.nav_active {
   display: flex;
   opacity: 1;
@@ -1344,6 +1432,17 @@ img {
   font-weight: 500;
   line-height: 17.12px;
   text-align: left;
+}
+.header .contacts__item .contacts__icon {
+  display: none;
+}
+@media (max-width: 440px) {
+  .header .contacts__item .contacts__text {
+    display: none;
+  }
+  .header .contacts__item .contacts__icon {
+    display: inline;
+  }
 }
 .footer {
   box-sizing: border-box;
