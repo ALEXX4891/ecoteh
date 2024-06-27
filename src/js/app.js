@@ -330,25 +330,20 @@ if (catalog) {
     item.addEventListener("click", function () {
       menuItem.forEach((item) => {
         item.classList.remove("filter__item_head_active");
-      })
+      });
       item.classList.add("filter__item_head_active");
     });
   });
 
   const filterItem = catalog.querySelectorAll(".filter__item_body");
-  filterItem.forEach((item) => {    
+  filterItem.forEach((item) => {
     item.addEventListener("click", function (e) {
-      item.classList.toggle("filter__item_body_active");      
+      item.classList.toggle("filter__item_body_active");
     });
   });
 
-
-
-
-
-
   const catalogCards = document.querySelectorAll(".catalog-all__item");
-  
+
   if (catalogCards.length) {
     // console.log(catalogCards);
     catalogCards.forEach((item) => {
@@ -357,7 +352,7 @@ if (catalog) {
         e.preventDefault();
         window.location.href = cartLinkBtn.getAttribute("data-href");
       });
-  
+
       const colorBtn = item.querySelectorAll(".card__color-item");
       if (colorBtn) {
         colorBtn.forEach((item) => {
@@ -370,7 +365,7 @@ if (catalog) {
           });
         });
       }
-  
+
       const toCartBtn = item.querySelector(".card__btn_to-cart");
       toCartBtn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -379,13 +374,13 @@ if (catalog) {
       cartBtn.addEventListener("click", function (e) {
         e.preventDefault();
       });
-  
+
       // счетчик количества карточек в корзине:
       const plus = item.querySelector(".card__counter-btn_plus");
       const minus = item.querySelector(".card__counter-btn_minus");
       const counterValue = item.querySelector(".card__counter-value");
       let quontity = 0;
-  
+
       // counterValue.addEventListener("change", function (e) {
       //   quontity = e.target.value;
       // });
@@ -397,10 +392,10 @@ if (catalog) {
         // // console.log(counterValue.value);
         // console.log(Number(counterValue.value).toLocaleString());
       });
-  
+
       plus.addEventListener("click", function (e) {
         e.preventDefault();
-  
+
         quontity++;
         counterValue.value = quontity;
         // getCost(item, quontity);
@@ -409,21 +404,21 @@ if (catalog) {
       minus.addEventListener("click", function (e) {
         if (counterValue.value > 0) {
           e.preventDefault();
-  
+
           quontity--;
           counterValue.value = quontity;
           // getCost(item, quontity);
           // getTotalCost();
         }
       });
-  
+
       const montageBtn = item.querySelector(".btn_montage");
-  
+
       montageBtn.addEventListener("click", function (e) {
         e.preventDefault();
         montageBtn.classList.toggle("btn_montage_active");
       });
-  
+
       toCartBtn.addEventListener("click", function (e) {
         console.log(cartBtn);
         e.preventDefault();
@@ -432,13 +427,8 @@ if (catalog) {
         cartBtn.classList.add("card__btn_in-cart_visible");
       });
     });
-  
-  
-  
-  
   }
 }
-
 
 // -------------------------------------------- end Каталог ---------------------------------------------
 // -------------------------------------------- start Описание товара: ---------------------------------------------
@@ -498,28 +488,26 @@ if (goodsItem) {
   counterValue.addEventListener("input", function (e) {
     quontity = counterValue.value;
     counterValue.value = counterValue.value;
-    console.log((quontity * price));
+    console.log(quontity * price);
     totalCost.innerHTML = (quontity * price).toLocaleString();
   });
 
   plus.addEventListener("click", function (e) {
     quontity++;
     counterValue.value = quontity;
-    console.log((quontity * price));
+    console.log(quontity * price);
     totalCost.innerHTML = (quontity * price).toLocaleString();
   });
-
 
   minus.addEventListener("click", function (e) {
     if (counterValue.value > 0) {
       quontity--;
       counterValue.value = quontity;
       totalCost.innerHTML = (quontity * price).toLocaleString();
-      console.log((quontity * price));
+      console.log(quontity * price);
       totalCost.innerHTML = (quontity * price).toLocaleString();
     }
   });
-
 
   const colorBtn = goodsItem.querySelectorAll(".color-list__color-item");
   if (colorBtn) {
@@ -561,18 +549,15 @@ jQuery(($) => {
       responsive: {
         0: {
           nav: false,
-      items: 2.5,
-
+          items: 2.5,
         },
         1300: {
           // items: 4
         },
-      }
+      },
     });
   }
 });
-
-
 
 // -------------------------------------------- end OWL ---------------------------------------------
 
@@ -586,12 +571,56 @@ if (burger) {
     burger.classList.toggle("burger_active");
     headerNav.classList.toggle("nav_active");
   });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".headerNav") && !e.target.closest(".burger")) {
+      burger.classList.remove("burger_active");
+      headerNav.classList.remove("nav_active");
+    }
+  });
 }
 // -------------------------------------------- end BURGER ---------------------------------------------
 
-// -------------------------------------------- start Отзывы: ---------------------------------------------
+// -------------------------------------------- start Search: ---------------------------------------------
+const headerSearchWrap = document.querySelector(".header__search-form-wrap");
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
+if (headerSearchWrap) {
+  if (window.screen.width <= 920) {
+    headerSearchWrap.addEventListener("click", function (e) {
+      headerSearchWrap.classList.add("header__search-form-wrap_active");
+      console.log("200");
+
+    });
+  }
+
+  const closeSearchBtn = headerSearchWrap.querySelector(".search-form__close-btn");
+  const inputField = headerSearchWrap.querySelector(".search-form__input");
+  
+  if (closeSearchBtn) {
+    closeSearchBtn.addEventListener("click", function (e) {
+      // e.preventDefault();
+      headerSearchWrap.classList.remove("header__search-form-wrap_active");
+      inputField.value = "";
+      console.log("100");
+      e.stopPropagation();
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".search-form") && headerSearchWrap.classList.contains("header__search-form-wrap_active")) {
+    headerSearchWrap.classList.remove("header__search-form-wrap_active");    
+    inputField.value = "";
+    console.log("400");
+
+    }
+  });
+}
+
+
+
+
+
+// -------------------------------------------- end Search ---------------------------------------------
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 

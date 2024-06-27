@@ -621,56 +621,110 @@ img {
   }
 }
 
-.search-form {
-  flex: auto;
-  position: relative;
-  max-width: 290px;
+.header__search-form-wrap {
 
-  @media (max-width: 920px) {
-    max-width: 40px;
-  }
+  .search-form {
+    flex: auto;
+    position: relative;
+    max-width: 290px;
 
-  .search-form__input {
-    background-color: rgba($color-B3DBFF, 0.3);
-    border-radius: 50px;
-    color: $color-555A5E;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 0 20px;
-    width: 100%;
-    height: 40px;
-    transition: background-color 0.3s ease-in-out;
+    .search-form__close-btn {
+      display: none;
+    }
 
     @media (max-width: 920px) {
+      max-width: 40px;
+      cursor: pointer;
     }
 
-    // background-color: $color-B3DBFF !important;
-    &:hover {
-      background-color: rgba($color-B3DBFF, 0.5);
-    }
-    &::placeholder {
-      color: $color-828282;
+    .search-form__input {
+      background-color: rgba($color-B3DBFF, 0.3);
+      border-radius: 50px;
+      color: $color-555A5E;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 45px 0 20px;
+      width: 100%;
+      height: 40px;
+      transition: background-color 0.3s ease-in-out;
 
       @media (max-width: 920px) {
-        color: transparent;
+        padding: 0;
+        pointer-events: none;
+      }
+
+      // background-color: $color-B3DBFF !important;
+      &:hover {
+        background-color: rgba($color-B3DBFF, 0.5);
+      }
+      &::placeholder {
+        color: $color-828282;
+
+        @media (max-width: 920px) {
+          color: transparent;
+        }
+      }
+    }
+    .search-form__submit-btn {
+      position: absolute;
+      top: 6px;
+      right: 21px;
+      padding-top: 5px;
+      @media (max-width: 920px) {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        pointer-events: none;
       }
     }
   }
-  .search-form__submit-btn {
+  &_active {
     position: absolute;
-    top: 6px;
-    right: 21px;
-    padding-top: 5px;
-    @media (max-width: 920px) {
+    inset: 0px;
+    max-width: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+
+    .search-form {
+      position: absolute;
       top: 50%;
-      right: 50%;
-      transform: translate(50%, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      width: 70%;
+      z-index: 30;
+      // flex: none;
+      // max-width: 100%;
+      // pointer-events: none;
+      
+    .search-form__input {
+      padding: 0 45px 0 20px;
+      pointer-events: all;
+      &::placeholder {
+        color: $color-828282;
+      }
     }
+
+    .search-form__close-btn {
+      position: absolute;
+      top: 52%;
+      right: 4%;
+      transform: translateY(-50%);
+      display: block;
+      pointer-events: all;
+    }
+    .search-form__submit-btn {
+      display: none;
+    }
+      }
   }
 }
-
 .nav__list {
   display: flex;
   flex-flow: row nowrap;
@@ -1357,6 +1411,7 @@ img {
   z-index: 100;
   background-color: $color-white;
   // padding-top: 18px;
+
   &__container {
     // max-width: 1180px;
     // position: relative;
@@ -1364,7 +1419,9 @@ img {
       // padding: 0 20px;
     }
   }
+
   &__top-block {
+    position: relative;
     padding: 18px 10px;
     // padding: 18px 0;
     display: flex;
@@ -1437,12 +1494,11 @@ img {
           .burger__open-btn {
             display: none;
           }
-  
+
           .burger__close-btn {
             display: block;
           }
         }
-
 
         @media (max-width: 850px) {
           display: flex;
@@ -1470,7 +1526,6 @@ img {
           .nav__arrow {
             display: none;
           }
-
         }
 
         @media (max-width: 850px) {
@@ -1485,13 +1540,12 @@ img {
           gap: 10px;
           background: $color-white;
           border-radius: 0px 0px 15px 0px;
-          // display: none; 
+          // display: none;
           opacity: 0;
-          visibility: hidden;         
+          visibility: hidden;
           transform: translateX(-120%);
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-
-
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
 
           .nav__list {
             flex-flow: column nowrap;
@@ -1507,9 +1561,7 @@ img {
                 transform: translate(0, -50%);
                 display: block;
               }
-
             }
-
           }
           .nav__dot {
             display: none;
@@ -1521,7 +1573,6 @@ img {
           opacity: 1;
           visibility: visible;
           transform: translateX(0%);
-
         }
       }
     }

@@ -29,17 +29,24 @@
           <img class="logo__sk" width="241" height="45" src="img/sk.png" alt="Логотип Экотех">
         </a>
       </div>
-      <form id="search-form" action="" method="get" class="header__search-form search-form"
-        enctype="multipart/form-data">
-        <input id="searchInput" type="text" class="search-form__input" placeholder="Поиск" name="search">
-        <button id="searchBtn" type="submit" class="search-form__submit-btn" name="submit" value="submit" name="submit">
-          <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M16.25 16.25L12.8855 12.8795M14.75 8.375C14.75 10.0658 14.0784 11.6873 12.8828 12.8828C11.6873 14.0784 10.0658 14.75 8.375 14.75C6.68424 14.75 5.06274 14.0784 3.86719 12.8828C2.67165 11.6873 2 10.0658 2 8.375C2 6.68424 2.67165 5.06274 3.86719 3.86719C5.06274 2.67165 6.68424 2 8.375 2C10.0658 2 11.6873 2.67165 12.8828 3.86719C14.0784 5.06274 14.75 6.68424 14.75 8.375Z"
-              stroke="#555A5E" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </button>
-      </form>
+      <div class="header__search-form-wrap">
+        <form id="search-form" action="" method="get" class="header__search-form search-form"
+          enctype="multipart/form-data">
+          <input id="searchInput" type="text" class="search-form__input" placeholder="Поиск" name="search" value="">
+          <button id="searchBtn" type="submit" class="search-form__submit-btn" name="submit" value="submit" name="submit">
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.25 16.25L12.8855 12.8795M14.75 8.375C14.75 10.0658 14.0784 11.6873 12.8828 12.8828C11.6873 14.0784 10.0658 14.75 8.375 14.75C6.68424 14.75 5.06274 14.0784 3.86719 12.8828C2.67165 11.6873 2 10.0658 2 8.375C2 6.68424 2.67165 5.06274 3.86719 3.86719C5.06274 2.67165 6.68424 2 8.375 2C10.0658 2 11.6873 2.67165 12.8828 3.86719C14.0784 5.06274 14.75 6.68424 14.75 8.375Z"
+                stroke="#555A5E" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="search-form__close-btn">
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.23802 1.19466C3.53684 0.918286 4.00114 0.938655 4.27506 1.24015L9.90196 7.43348L15.5289 1.24015C15.8028 0.938655 16.2671 0.918286 16.5659 1.19466C16.8647 1.47102 16.8849 1.93947 16.611 2.24097L10.8977 8.52942L16.611 14.8179C16.8849 15.1193 16.8647 15.5878 16.5659 15.8642C16.2671 16.1405 15.8028 16.1202 15.5289 15.8187L9.90196 9.62536L4.27507 15.8187C4.00115 16.1202 3.53685 16.1405 3.23803 15.8642C2.93921 15.5878 2.91902 15.1193 3.19294 14.8179L8.90626 8.52942L3.19293 2.24097C2.91901 1.93947 2.9392 1.47102 3.23802 1.19466Z" fill="#555A5E"/>
+            </svg>            
+          </div>
+        </form>
+      </div>
 
       <div class="header__top-right-block">
         <div class="header__contacts contacts">
