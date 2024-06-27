@@ -605,6 +605,7 @@ img {
 }
 
 .logo {
+  flex: none;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -621,11 +622,15 @@ img {
 }
 
 .search-form {
+  flex: auto;
   position: relative;
+  max-width: 290px;
+
+  @media (max-width: 920px) {
+    max-width: 40px;
+  }
 
   .search-form__input {
-    width: 285px;
-    height: 44px;
     background-color: rgba($color-B3DBFF, 0.3);
     border-radius: 50px;
     color: $color-555A5E;
@@ -634,15 +639,23 @@ img {
     justify-content: space-between;
     gap: 10px;
     padding: 0 20px;
-    width: 290px;
+    width: 100%;
     height: 40px;
     transition: background-color 0.3s ease-in-out;
+
+    @media (max-width: 920px) {
+    }
+
     // background-color: $color-B3DBFF !important;
     &:hover {
       background-color: rgba($color-B3DBFF, 0.5);
     }
     &::placeholder {
       color: $color-828282;
+
+      @media (max-width: 920px) {
+        color: transparent;
+      }
     }
   }
   .search-form__submit-btn {
@@ -650,6 +663,11 @@ img {
     top: 6px;
     right: 21px;
     padding-top: 5px;
+    @media (max-width: 920px) {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
   }
 }
 
@@ -1353,9 +1371,28 @@ img {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 15px;
+
     @media (max-width: 1280px) {
       padding: 18px 20px;
+    }
+
+    @media (max-width: 850px) {
+      padding: 18px 30px;
+    }
+
+    .header__top-right-block {
+      flex: none;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @media (max-width: 850px) {
+        .contacts {
+          display: none;
+        }
+      }
     }
   }
   &__bot-block {
@@ -1368,16 +1405,126 @@ img {
     // padding: 14px 0;
     background-color: rgba($color-white, 0.85);
     backdrop-filter: blur(10px);
-    .container {
-      max-width: 1178px;
+    @media (max-width: 850px) {
+      padding: 14px 30px;
     }
-  }
-  &__top-right-block {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      max-width: 1178px;
+
+      .burger {
+        position: relative;
+
+        // width: 30px;
+        // height: 30px;
+        // background-color: #aab3b9;
+        display: none;
+        .burger__close-btn {
+          display: none;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          inset: -15px -2px;
+        }
+
+        &.burger_active {
+          .burger__open-btn {
+            display: none;
+          }
+  
+          .burger__close-btn {
+            display: block;
+          }
+        }
+
+
+        @media (max-width: 850px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .contacts {
+        flex-flow: row-reverse nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        display: none;
+
+        @media (max-width: 850px) {
+          display: flex;
+          gap: 24px;
+        }
+      }
+
+      .nav {
+        width: 100%;
+
+        .nav__item_arrow {
+          .nav__arrow {
+            display: none;
+          }
+
+        }
+
+        @media (max-width: 850px) {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 245px;
+          height: 385px;
+          z-index: 5;
+          padding: 30px;
+          padding: 14px 32px 20px;
+          gap: 10px;
+          background: $color-white;
+          border-radius: 0px 0px 15px 0px;
+          // display: none; 
+          opacity: 0;
+          visibility: hidden;         
+          transform: translateX(-120%);
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+
+
+          .nav__list {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 15px;
+            .nav__item_arrow {
+              position: relative;
+              .nav__arrow {
+                position: absolute;
+                left: 312%;
+                top: 50%;
+                transform: translate(0, -50%);
+                display: block;
+              }
+
+            }
+
+          }
+          .nav__dot {
+            display: none;
+          }
+        }
+
+        &.nav_active {
+          display: flex;
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0%);
+
+        }
+      }
+    }
   }
   &__logo {
   }
@@ -2282,10 +2429,10 @@ img {
 
         // --------------- slider start ---------------
 
-          .owl-carousel {
+        .owl-carousel {
           padding: 2px;
           height: 192px;
-          
+
           .owl-nav {
             position: absolute;
             top: 50%;
@@ -2296,7 +2443,7 @@ img {
             justify-content: space-between;
             gap: 40px;
             align-items: center;
-  
+
             .owl-prev {
               position: absolute;
               top: 0;
@@ -2305,13 +2452,13 @@ img {
               background: url("@img/owl-index-prew-btn.svg") !important;
               width: 32px;
               height: 29px;
-  
+
               background-size: cover !important;
               background-repeat: no-repeat !important;
               background-position: center !important;
-  
+
               cursor: pointer;
-  
+
               & span {
                 display: none;
                 /* background-image: url("../img/owl_prev.svg");
@@ -2321,7 +2468,7 @@ img {
         cursor: pointer; */
               }
             }
-  
+
             .owl-next {
               position: absolute;
               top: 0;
@@ -2333,12 +2480,12 @@ img {
               background-repeat: no-repeat !important;
               background-position: center !important;
               cursor: pointer;
-  
+
               & span {
                 display: none;
-  
+
                 /* display: block; */
-  
+
                 /* background-image: url("../img/owl_next.svg");
         width: 50px;
         height: 50px;

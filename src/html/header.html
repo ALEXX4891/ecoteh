@@ -54,11 +54,17 @@
             <li class="nav__item">
               <div class="nav__dot"></div>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item_arrow">
               <a href="catalog.html" class="nav__link">
                 <p class="nav__text">
                   Каталог
                 </p>
+                <div class="nav__arrow">
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.5L6 5.5L1 10.5" stroke="#555A5E"/>
+                  </svg>                    
+                </div>
+
               </a>
             </li>
             <li class="nav__item">
@@ -113,6 +119,30 @@
             </li>
           </ul>
         </nav>
+
+        <button class="header__burger burger">
+          <div class="burger__open-btn">
+            <svg width="37" height="11" viewBox="0 0 37 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H36" stroke="#555A5E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 7H36" stroke="#555A5E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+          </div>
+
+          <div class="burger__close-btn">
+            <svg width="37" height="11" viewBox="0 0 37 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H36" stroke="#555A5E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 9.0957L18.1193 5.4654L36 9.26562" stroke="#555A5E" stroke-width="2" stroke-linecap="round"/>
+              </svg>              
+          </div>
+
+        </button>
+
+        <div class="header__contacts contacts">
+          <a href="tel:+7 (3452) 55-11-30" class="contacts__item contacts__item_phone">+7 (3452) 55-11-30</a>
+          <a href="mailto:ecoteh.72@gmail.com" class="contacts__item contacts__item_email">ecoteh.72@gmail.com</a>
+        </div>
+
+
       </div>
     </div>
 
