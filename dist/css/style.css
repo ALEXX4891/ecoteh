@@ -1791,44 +1791,66 @@ img {
   background: #2fa7be;
   border-radius: 15px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider {
-  max-width: 100vw;
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel {
+  padding: 2px;
+  height: 192px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper {
-  position: relative;
-}
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper::before {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav {
   position: absolute;
-  content: "";
-  z-index: 10;
-  height: 100%;
-  display: block;
-}
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide {
-  padding: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  width: auto !important;
-  align-items: flex-start;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
+  align-items: center;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .slider__title {
-  max-width: 796px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 70px;
-  line-height: 83px;
-  color: #ffffff;
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px solid #000; */
+  background: url("../img/owl-index-prew-btn.svg") !important;
+  width: 32px;
+  height: 29px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  cursor: pointer;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .slider__card-block {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: 47px;
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav .owl-prev span {
+  display: none;
+  /* background-image: url("../img/owl_prev.svg");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  cursor: pointer; */
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/owl-index-next-btn.svg") !important;
+  width: 32px;
+  height: 29px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  cursor: pointer;
+}
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav .owl-next span {
+  display: none;
+  /* display: block; */
+  /* background-image: url("../img/owl_next.svg");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  cursor: pointer; */
+}
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-stage-outer {
+  padding: 7px;
+}
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about {
   position: relative;
   width: 380px;
   height: 192px;
@@ -1842,12 +1864,13 @@ img {
   padding: 33px 30px 15px;
   gap: 20px;
   border-radius: 10px;
+  cursor: grab;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open {
   height: unset;
   min-height: 192px;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open .card__desc {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open .card__desc {
   width: 321px;
   height: unset;
   text-overflow: unset;
@@ -1860,39 +1883,39 @@ img {
   color: #56565e;
   transition: color 0.3s ease-in-out;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open .card__link {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open .card__link {
   position: relative;
   top: 0;
   left: 0;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open .feedback-btn_open {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open .feedback-btn_open {
   display: none;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about.card_about_open .feedback-btn_close {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open .feedback-btn_close {
   display: block;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about .feedback-btn_open {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .feedback-btn_open {
   display: none;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about .feedback-btn_close {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .feedback-btn_close {
   display: none;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about_overflow .feedback-btn_open {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about_overflow .feedback-btn_open {
   display: block;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about_overflow .feedback-btn_close {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about_overflow .feedback-btn_close {
   display: none;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about:hover .card__title {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about:hover .card__title {
   color: #555a5e;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about:hover .card__desc {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about:hover .card__desc {
   color: #828282;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about:hover .card__link {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about:hover .card__link {
   color: #37cbd3;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about .card__title {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__title {
   font-size: 18px;
   font-weight: 500;
   line-height: 22.01px;
@@ -1901,7 +1924,7 @@ img {
   text-transform: none;
   transition: color 0.3s ease-in-out;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about .card__desc {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__desc {
   width: 321px;
   height: 60px;
   text-overflow: ellipsis;
@@ -1914,7 +1937,7 @@ img {
   color: #56565e;
   transition: color 0.3s ease-in-out;
 }
-.glavnaya .glavnaya__section_main .main-block_about .slider .swiper-slide .card_about .card__link {
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__link {
   position: absolute;
   bottom: 23px;
   left: 30px;
@@ -4578,52 +4601,5 @@ img {
 }
 .goods-item .goods-item__container .bot-block .bot-block__text_active {
   display: block;
-}
-
-.owl-carousel .owl-nav {
-  position: absolute;
-  top: -73px;
-  right: 318px;
-  /* width: 100%; */
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  align-items: center;
-}
-.owl-carousel .owl-prev {
-  /* border: 1px solid #000; */
-  background: url("../img/owl_prev.svg") !important;
-  width: 32px;
-  height: 29px;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer;
-}
-.owl-carousel .owl-next {
-  background: url("../img/owl_next.svg") !important;
-  width: 32px;
-  height: 29px;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer;
-}
-.owl-carousel .owl-prev span {
-  display: none;
-  /* background-image: url("../img/owl_prev.svg");
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    cursor: pointer; */
-}
-.owl-carousel .owl-next span {
-  display: none;
-  /* display: block; */
-  /* background-image: url("../img/owl_next.svg");
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  cursor: pointer; */
 }
 /*# sourceMappingURL=style.css.map */

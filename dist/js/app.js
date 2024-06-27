@@ -278,9 +278,10 @@ if (btns.length) {
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 
 const cardsFeedback = document.querySelectorAll(".card_about");
+// console.log(cardsFeedback);
 
 if (cardsFeedback.length) {
-  console.log(cardsFeedback);
+  // console.log(cardsFeedback);
   const openBtns = document.querySelectorAll(".feedback-btn_open");
   openBtns.forEach((item) => {
     item.addEventListener("click", function () {
@@ -305,7 +306,7 @@ if (cardsFeedback.length) {
     if (overflow(item.querySelector(".card__desc"))) {
       item.classList.add("card_about_overflow");
     } else {
-      item.classList.remove("card_about_overflow");
+      // item.classList.remove("card_about_overflow");
     }
     // item.addEventListener("click", function () {
     //   console.log(3);
@@ -535,9 +536,43 @@ if (goodsItem) {
 }
 
 // -------------------------------------------- end Описание товара ---------------------------------------------
-// -------------------------------------------- start Отзывы: ---------------------------------------------
+// -------------------------------------------- start OWL: ---------------------------------------------
+// let margin = 16;
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
+// jQuery(($) => {
+//   if ($(window).width() <= 768) {
+//     margin = 13;
+//   }
+// });
+
+jQuery(($) => {
+  if ($(window).width() > 560) {
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 16,
+      items: 3,
+      nav: true,
+      // navText : ["<i class='fa fa-chevron-left'>>>>></i>","<i class='fa fa-chevron-right'><<<<<<<</i>"],
+      dots: false,
+      singleItem: false,
+      autoplay: false,
+      smartSpeed: 1000,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          nav: false,
+        },
+        1300: {
+          // items: 4
+        },
+      }
+    });
+  }
+});
+
+
+
+// -------------------------------------------- end OWL ---------------------------------------------
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 

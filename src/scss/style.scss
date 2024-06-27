@@ -1978,7 +1978,7 @@ img {
           align-items: center;
           justify-content: space-between;
           gap: 10px;
-          @media (max-width: 1280px) {  
+          @media (max-width: 1280px) {
             flex: 1 1 48%;
             // left: 10%;
             width: unset;
@@ -1986,7 +1986,6 @@ img {
 
           .card {
             width: 100%;
-
           }
         }
         .card {
@@ -2004,33 +2003,33 @@ img {
             height: 515px;
             background-image: url("@img/portfolio-img1.png");
           }
-  
+
           &_2 {
             width: 380px;
             height: 246px;
             min-height: unset;
             background-image: url("@img/portfolio-img2.png");
           }
-  
+
           &_3 {
             width: 380px;
             height: 246px;
             min-height: unset;
-  
+
             background-image: url("@img/portfolio-img3.png");
           }
-  
+
           &_4 {
             width: 380px;
             height: 515px;
             background-image: url("@img/portfolio-img4.png");
           }
 
-          @media (max-width: 1280px) {  
-              flex: 1 1 48%;
-              // left: 10%;
-              width: unset;
-            }
+          @media (max-width: 1280px) {
+            flex: 1 1 48%;
+            // left: 10%;
+            width: unset;
+          }
         }
       }
 
@@ -2283,163 +2282,118 @@ img {
 
         // --------------- slider start ---------------
 
-        .slider {
-          max-width: 100vw;
-          .swiper {
-            position: relative;
-          }
-          .swiper::before {
+          .owl-carousel {
+          padding: 2px;
+          height: 192px;
+          
+          .owl-nav {
             position: absolute;
-            content: "";
-            z-index: 10;
-            height: 100%;
-            display: block;
-          }
-
-          .swiper-wrapper {
-            // padding: 50px 0;
-            // gap: 10px;
-          }
-
-          .swiper-slide {
-            padding: 10px;
-            display: flex;
-            flex-flow: row nowrap;
-            // width: 100%;
-            width:auto!important;
-
-            align-items: flex-start;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 105%;
+            // display: flex;
             justify-content: space-between;
+            gap: 40px;
+            align-items: center;
+  
+            .owl-prev {
+              position: absolute;
+              top: 0;
+              left: 0;
+              /* border: 1px solid #000; */
+              background: url("@img/owl-index-prew-btn.svg") !important;
+              width: 32px;
+              height: 29px;
+  
+              background-size: cover !important;
+              background-repeat: no-repeat !important;
+              background-position: center !important;
+  
+              cursor: pointer;
+  
+              & span {
+                display: none;
+                /* background-image: url("../img/owl_prev.svg");
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        cursor: pointer; */
+              }
+            }
+  
+            .owl-next {
+              position: absolute;
+              top: 0;
+              right: 0;
+              background: url("@img/owl-index-next-btn.svg") !important;
+              width: 32px;
+              height: 29px;
+              background-size: cover !important;
+              background-repeat: no-repeat !important;
+              background-position: center !important;
+              cursor: pointer;
+  
+              & span {
+                display: none;
+  
+                /* display: block; */
+  
+                /* background-image: url("../img/owl_next.svg");
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        cursor: pointer; */
+              }
+            }
+          }
+          .owl-stage-outer {
+            padding: 7px;
+
+            // overflow-x: visible;
+          }
+          .owl-item {
+            // opacity: 0;
+            // transition: opacity 500ms;
+          }
+          .owl-item.active {
+            // opacity: 1;
+          }
+
+          .card_about {
+            position: relative;
+            width: 380px;
+            height: 192px;
+            min-height: unset;
+            background: $color-white;
+            box-shadow: 0px 4px 8px rgba(178, 178, 178, 0.3);
+            // margin-right: 20px;
+            // border-radius: 15px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 33px 30px 15px;
             gap: 20px;
-            // flex: 0 1 730px;
-            // background: #fff
-            // width: 100vw;
-            // height: 615px;
-            // background-size: contain;
-            // background-repeat: no-repeat;
-            // background-position: right center;/
+            // background: rgba(255, 255, 255, 0.3);
+            // backdrop-filter: blur(10px);
+            border-radius: 10px;
+            cursor: grab;
 
-            // .swiper__container {
-            //   max-width: 1178px;
-            //   padding: 126px 10px;
-            //   display: flex;
-            //   flex-flow: column nowrap;
-            //   align-items: flex-start;
-            //   justify-content: flex-start;
-            //   gap: 78px;
-            //   flex: 0 1 730px;
-            // }
+            &.card_about_open {
+              height: unset;
+              min-height: 192px;
 
-            .slider__title {
-              max-width: 796px;
-              font-style: normal;
-              font-weight: 700;
-              font-size: 70px;
-              line-height: 83px;
-              color: #ffffff;
-            }
-
-            .slider__card-block {
-              display: flex;
-              flex-flow: row nowrap;
-              align-items: stretch;
-              justify-content: flex-start;
-              gap: 47px;
-            }
-
-            .card_about {
-              position: relative;
-              width: 380px;
-              height: 192px;
-              min-height: unset;
-              background: $color-white;
-              box-shadow: 0px 4px 8px rgba(178, 178, 178, 0.3);
-              // border-radius: 15px;
-
-              display: flex;
-              flex-flow: column nowrap;
-              justify-content: flex-start;
-              align-items: flex-start;
-              padding: 33px 30px 15px;
-              gap: 20px;
-              // background: rgba(255, 255, 255, 0.3);
-              // backdrop-filter: blur(10px);
-              border-radius: 10px;
-
-              &.card_about_open {
-                height: unset;
-                min-height: 192px;
-
-                .card__title {
-                  // color: $color-555A5E;
-                }
-                .card__desc {
-                  width: 321px;
-                  height: unset;
-                  text-overflow: unset;
-                  overflow: unset;
-                  white-space: unset;
-
-                  font-size: 16px;
-                  font-weight: 400;
-                  line-height: 19.57px;
-                  text-align: left;
-                  color: $color-56565E;
-                  transition: color 0.3s ease-in-out;
-                }
-                .card__link {
-                  position: relative;
-                  top: 0;
-                  left: 0;
-                }
-                .feedback-btn_open {
-                  display: none;
-                }
-                .feedback-btn_close {
-                  display: block;
-                }
-              }
-              .feedback-btn_open {
-                display: none;
-              }
-              .feedback-btn_close {
-                display: none;
-              }
-              &_overflow {
-                .feedback-btn_open {
-                  display: block;
-                }
-                .feedback-btn_close {
-                  display: none;
-                }
-              }
-
-              &:hover {
-                .card__title {
-                  color: $color-555A5E;
-                }
-                .card__desc {
-                  color: $color-828282;
-                }
-                .card__link {
-                  color: $color-37CBD3;
-                }
-              }
               .card__title {
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 22.01px;
-                text-align: left;
-                color: $color-34343B;
-                text-transform: none;
-                transition: color 0.3s ease-in-out;
+                // color: $color-555A5E;
               }
               .card__desc {
                 width: 321px;
-                height: 60px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
+                height: unset;
+                text-overflow: unset;
+                overflow: unset;
+                white-space: unset;
 
                 font-size: 16px;
                 font-weight: 400;
@@ -2448,41 +2402,101 @@ img {
                 color: $color-56565E;
                 transition: color 0.3s ease-in-out;
               }
-
               .card__link {
-                position: absolute;
-                bottom: 23px;
-                left: 30px;
-                // display: none;
-                font-family: Manrope;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 29px;
-                text-align: left;
-                color: $color-0FA5AD;
-                transition: color 0.3s ease-in-out;
-
-                &::after {
-                  // content: "";
-                  // position: absolute;
-                  // top: 0;
-                  // left: 0;
-                  // right: 0;
-                  // bottom: 0;
-
-                  // width: 100%;
-                  // height: 1px;
-                  // background-color: $color-0FA5AD;
-                }
-
-                // display: block;
+                position: relative;
+                top: 0;
+                left: 0;
               }
-              &:hover {
-                // color: $color-268AB1;
+              .feedback-btn_open {
+                display: none;
               }
-              &:active {
-                // color: $color-2073A8;
+              .feedback-btn_close {
+                display: block;
               }
+            }
+            .feedback-btn_open {
+              display: none;
+            }
+            .feedback-btn_close {
+              display: none;
+            }
+            &_overflow {
+              .feedback-btn_open {
+                display: block;
+              }
+              .feedback-btn_close {
+                display: none;
+              }
+            }
+
+            &:hover {
+              .card__title {
+                color: $color-555A5E;
+              }
+              .card__desc {
+                color: $color-828282;
+              }
+              .card__link {
+                color: $color-37CBD3;
+              }
+            }
+            .card__title {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 22.01px;
+              text-align: left;
+              color: $color-34343B;
+              text-transform: none;
+              transition: color 0.3s ease-in-out;
+            }
+            .card__desc {
+              width: 321px;
+              height: 60px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.57px;
+              text-align: left;
+              color: $color-56565E;
+              transition: color 0.3s ease-in-out;
+            }
+
+            .card__link {
+              position: absolute;
+              bottom: 23px;
+              left: 30px;
+              // display: none;
+              font-family: Manrope;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 29px;
+              text-align: left;
+              color: $color-0FA5AD;
+              transition: color 0.3s ease-in-out;
+
+              &::after {
+                // content: "";
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // right: 0;
+                // bottom: 0;
+
+                // width: 100%;
+                // height: 1px;
+                // background-color: $color-0FA5AD;
+              }
+
+              // display: block;
+            }
+            &:hover {
+              // color: $color-268AB1;
+            }
+            &:active {
+              // color: $color-2073A8;
             }
           }
         }
@@ -5866,67 +5880,6 @@ img {
   }
 }
 // --------------------------------------- GOODS-item end ---------------------------------------
-
-// --------------------------------------- OWL start ---------------------------------------
-.owl-carousel {
-  .owl-nav {
-    position: absolute;
-    top: -73px;
-    right: 318px;
-    /* width: 100%; */
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-  
-  }
-  
-  .owl-prev {
-    /* border: 1px solid #000; */
-    background: url("../img/owl_prev.svg") !important;
-    width: 32px;
-    height: 29px;
-  
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-  
-    cursor: pointer;
-  }
-  
-  .owl-next {
-    background: url("../img/owl_next.svg") !important;
-    width: 32px;
-    height: 29px;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    cursor: pointer;
-  
-  }
-  
-  .owl-prev span {
-    display: none;
-  /* background-image: url("../img/owl_prev.svg");
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    cursor: pointer; */
-  }
-  
-  .owl-next span {
-    display: none;
-  
-    /* display: block; */
-  
-    /* background-image: url("../img/owl_next.svg");
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    cursor: pointer; */
-  }
-}
-// --------------------------------------- OWL end ---------------------------------------
 
 // --------------------------------------- &&&&&& start ---------------------------------------
 // --------------------------------------- &&&&&& end ---------------------------------------
