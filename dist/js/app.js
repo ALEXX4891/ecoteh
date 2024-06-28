@@ -1,21 +1,36 @@
-const cartBtn = document.querySelector(".btn__cart");
+const cartHeaderBtn = document.querySelector(".btn__cart");
 
 let key = 0;
-cartBtn.addEventListener("click", () => {
-  cartBtn.classList.toggle("btn__cart_active");
+cartHeaderBtn.addEventListener("click", () => {
+  cartHeaderBtn.classList.toggle("btn__cart_active");
   if (!key) {
-    cartBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5Z" fill="#2DA1B7"/>
-      <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="#2DA1B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>    
-      155`;
+    if (window.screen.width <= 700) {
+      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5Z" fill="#2DA1B7"/>
+        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="#2DA1B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
+    } else {
+      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5Z" fill="#2DA1B7"/>
+        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="#2DA1B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>    
+        155`;
+    }
   } else {
-    cartBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    if (window.screen.width <= 700) {
+      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+          d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
+          stroke="#555A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>`;
+    } else {
+      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
         d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
         stroke="#555A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
     Корзина`;
+    }
   }
   key = !key;
 });
@@ -589,13 +604,14 @@ if (headerSearchWrap) {
     headerSearchWrap.addEventListener("click", function (e) {
       headerSearchWrap.classList.add("header__search-form-wrap_active");
       console.log("200");
-
     });
   }
 
-  const closeSearchBtn = headerSearchWrap.querySelector(".search-form__close-btn");
+  const closeSearchBtn = headerSearchWrap.querySelector(
+    ".search-form__close-btn"
+  );
   const inputField = headerSearchWrap.querySelector(".search-form__input");
-  
+
   if (closeSearchBtn) {
     closeSearchBtn.addEventListener("click", function (e) {
       // e.preventDefault();
@@ -607,18 +623,16 @@ if (headerSearchWrap) {
   }
 
   document.addEventListener("click", function (e) {
-    if (!e.target.closest(".search-form") && headerSearchWrap.classList.contains("header__search-form-wrap_active")) {
-    headerSearchWrap.classList.remove("header__search-form-wrap_active");    
-    inputField.value = "";
-    console.log("400");
-
+    if (
+      !e.target.closest(".search-form") &&
+      headerSearchWrap.classList.contains("header__search-form-wrap_active")
+    ) {
+      headerSearchWrap.classList.remove("header__search-form-wrap_active");
+      inputField.value = "";
+      console.log("400");
     }
   });
 }
-
-
-
-
 
 // -------------------------------------------- end Search ---------------------------------------------
 
