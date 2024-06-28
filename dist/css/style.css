@@ -3842,6 +3842,11 @@ img {
   border-radius: 6px;
 }
 
+@media (max-width: 1200px) {
+  .util .util__main-conteiner {
+    padding: 30px;
+  }
+}
 .util .util-bunner {
   padding: 176px 10px 148px;
   max-width: 100%;
@@ -3912,6 +3917,11 @@ img {
   width: 1140px;
   margin-bottom: 25px;
 }
+@media (max-width: 1280px) {
+  .util .util__section_main .util__price .table {
+    width: 100%;
+  }
+}
 .util .util__section_main .util__price .table .table__head .table__cell {
   width: 380px;
   height: 59px;
@@ -3956,9 +3966,15 @@ img {
   flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
+  gap: 15px;
+}
+@media (max-width: 1000px) {
+  .util .util__section_main .util-serv .util-serv__main-block {
+    justify-content: center;
+  }
 }
 .util .util__section_main .util-serv .util-serv__left-wrap {
+  position: relative;
   padding-top: 52px;
   display: flex;
   flex-flow: column nowrap;
@@ -3973,6 +3989,11 @@ img {
   justify-content: space-between;
   gap: 60px 20px;
   max-width: 624px;
+}
+@media (max-width: 1000px) {
+  .util .util__section_main .util-serv .util-serv__list {
+    flex-flow: column nowrap;
+  }
 }
 .util .util__section_main .util-serv .util-card {
   display: flex;
@@ -4019,6 +4040,14 @@ img {
   text-align: left;
   color: #5f5f69;
 }
+@media (max-width: 1000px) {
+  .util .util__section_main .util-serv .util-serv__desc {
+    width: 560px;
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+  }
+}
 .util .util__section_main .util-serv .util-serv__img-wrap {
   width: 282px;
   height: 398px;
@@ -4048,6 +4077,13 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
+}
+@media (max-width: 1000px) {
+  .util .util__section_main .util-why .util-why__main-block {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 .util .util__section_main .util-why .util-why__img-wrap {
   width: 480px;
@@ -4094,6 +4130,13 @@ img {
   background: #1f384f;
   border-radius: 15px;
 }
+@media (max-width: 1280px) {
+  .util .util__section_main .util__form .project-form {
+    padding: 30px;
+    align-items: center;
+    min-height: 433px;
+  }
+}
 .util .util__section_main .util__form .project-form__title {
   width: 100%;
   font-size: 32px;
@@ -4127,12 +4170,24 @@ img {
   padding: 16px;
   color: #fff;
 }
+@media (max-width: 1280px) {
+  .util .util__section_main .util__form .project-form__input {
+    max-width: 280px;
+    width: 100%;
+  }
+}
 .util .util__section_main .util__form .project-form__input.project-form__input_textarea {
   width: unset;
   height: unset;
   max-width: 880px;
   min-height: 137px;
   margin-bottom: 10px;
+}
+@media (max-width: 1280px) {
+  .util .util__section_main .util__form .project-form__input.project-form__input_textarea {
+    max-width: 721px;
+    width: 100%;
+  }
 }
 .util .util__section_main .util__form .project-form__input:focus-visible {
   outline: none;
