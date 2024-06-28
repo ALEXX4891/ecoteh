@@ -555,7 +555,7 @@ if (goodsItem) {
 console.log(window.screen.width / 340);
 
 jQuery(($) => {
-  if ($(window).width() > 560) {
+  if ($(window).width() > 0) {
     $(".owl-carousel").owlCarousel({
       loop: true,
       margin: 16,
