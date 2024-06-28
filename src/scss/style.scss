@@ -881,6 +881,10 @@ img {
   background-size: 1915px;
 
   padding-bottom: 120px;
+
+  @media (max-width: 660px) {
+    padding-bottom: 69px;
+  }
 }
 
 .bg_util {
@@ -1090,6 +1094,13 @@ padding: 30px 0;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+
+    @media (max-width: 660px) {
+      width: 78%;
+      height: 71%;
+      max-width: 78%;
+      min-height: 71%;
+    }
   }
 
   &:hover .card__text-block {
@@ -1109,6 +1120,15 @@ padding: 30px 0;
     // letter-spacing: 0%;
     text-align: left;
     text-transform: uppercase;
+
+    @media (max-width: 660px) {
+      font-family: Commissioner;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22.01px;
+      text-align: center;
+      
+    }
   }
 
   .card__desc {
@@ -1121,6 +1141,14 @@ padding: 30px 0;
     text-align: center;
     @media (max-width: 700px) {
       max-width: 100%;
+    }
+    @media (max-width: 660px) {
+      font-family: Commissioner;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.57px;
+text-align: center;
+
     }
   }
 
@@ -2255,6 +2283,10 @@ text-align: center;
   .catalog-main__container {
     position: relative;
 
+    @media (max-width: 1280px) {
+      padding: 0 30px;
+    }
+
     // padding: 0 10px;
     // min-height: 100vh;
     .link {
@@ -2262,7 +2294,18 @@ text-align: center;
       right: 10px;
       top: 126px;
       text-align: right;
+      @media (max-width: 1280px) {
+        position: relative;
+        top: unset;
+        right: unset;
+        display: block;
+        // width: 300px;
+        // margin: 0 auto;
+      text-align: center;
+
+      }
     }
+
   }
 
   .card {
@@ -2280,6 +2323,12 @@ text-align: center;
     position: relative;
     padding-top: 83px;
     margin-bottom: 13px;
+
+    @media (max-width: 660px) {
+      padding-top: 76px;
+    margin-bottom: 10px;
+
+    }
   }
   .catalog-main__body {
     padding: 0 10px;
@@ -2288,6 +2337,27 @@ text-align: center;
     align-items: center;
     justify-content: space-between;
     gap: 20px 10px;
+
+    @media (max-width: 1280px) {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 43px;
+    padding: 0;
+    
+ 
+    }
+    .catalog-main__card {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+      @media (max-width: 660px) {
+      min-height: 234px;
+      }
+    }
   }
   .card_tile {
     background-image: url("@img/catalog-tile.jpg");
