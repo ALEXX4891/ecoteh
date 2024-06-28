@@ -1117,7 +1117,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     padding: 23px 2px;
-    gap: 20px;
+    gap: 20px;  
 
     .card__title {
       color: $color-34343B;
@@ -1159,6 +1159,13 @@ img {
     transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
     // cursor: pointer;
 
+    @media (max-width: 1200px) {
+      max-width: 460px;
+      align-items: center;
+    padding: 29px 60px;
+
+    }
+
     &:hover {
       border: 1px solid rgba(47, 167, 190, 0.5);
       background-color: rgba(255, 255, 255, 0.8);
@@ -1170,6 +1177,9 @@ img {
       font-weight: 600;
       line-height: 24.46px;
       max-width: 310px;
+      @media (max-width: 1200px) {
+        text-align: center;
+      }
     }
     .card__desc {
       color: $color-828282;
@@ -1177,6 +1187,9 @@ img {
       font-weight: 400;
       line-height: 19.57px;
       text-align: left;
+      @media (max-width: 1200px) {
+        text-align: center;
+      }
     }
     .card__link {
       margin-top: auto;
@@ -1202,6 +1215,13 @@ img {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    @media (max-width: 800px) {
+      opacity: 1;
+      top: unset;
+      bottom: 0;
+      border-radius: 0 0 15px 15px;
+      height: 139px;
+    }
   }
   &_big {
     width: 380px;
@@ -1230,10 +1250,20 @@ img {
       font-size: 20px;
       font-weight: 600;
       line-height: 27.32px;
-      text-align: center;
+      // text-align: center;
       opacity: 0;
       transition: all 0.3s ease-in-out;
       z-index: 2;
+      @media (max-width: 800px) {
+        opacity: 1;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 88%;
+        font-size: 25px;
+        line-height: 34.32px;
+      }
     }
     .card__desc {
       font-family: Manrope;
@@ -1244,6 +1274,18 @@ img {
       opacity: 0;
       transition: all 0.3s ease-in-out;
       z-index: 2;
+      @media (max-width: 800px) {
+        opacity: 1;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 88%;
+        font-size: 18px;
+        line-height: 34.32px;
+        display: flex;
+        justify-content: flex-start;
+      }
     }
   }
   &_prod {
@@ -1261,7 +1303,7 @@ img {
     backdrop-filter: blur(4px);
     border-radius: 15px;
 
-    @media (max-width: 1830px) {
+    @media (max-width: 1280px) {
       flex-flow: row nowrap;
 
       flex: 1 1 100%;
@@ -2193,6 +2235,7 @@ img {
     width: 100vw;
     max-width: 1920px;
 
+
     .glavnaya__slider {
       .swiper {
         position: relative;
@@ -2251,6 +2294,10 @@ img {
         background-repeat: no-repeat;
         background-position: right center;
 
+        @media (max-width: 1200px) {
+          padding: 0 30px;
+        }
+
         .swiper__container {
           max-width: 1178px;
           padding: 126px 0;
@@ -2260,6 +2307,16 @@ img {
           justify-content: flex-start;
           gap: 78px;
           flex: 0 1 730px;
+
+          @media (max-width: 1200px) {
+          padding: 126px 0 48px;
+          height: 100%;
+
+            // gap: 117px;
+          justify-content: space-between;
+
+
+          }
         }
 
         .slider__title {
@@ -2269,6 +2326,16 @@ img {
           font-size: 70px;
           line-height: 83px;
           color: #ffffff;
+
+          @media (max-width: 1200px) {
+
+            font-family: Commissioner;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 70.8px;
+            text-align: left;
+          }
+
         }
 
         .slider__card-block {
@@ -2277,6 +2344,13 @@ img {
           align-items: stretch;
           justify-content: flex-start;
           gap: 47px;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+            justify-content: space-between;
+            gap: 15px;
+
+          }
         }
 
         .card_slide {
@@ -2293,6 +2367,11 @@ img {
           background: rgba(255, 255, 255, 0.3);
           backdrop-filter: blur(10px);
           border-radius: 10px;
+
+          @media (max-width: 1200px) {
+            max-width: 215px;
+
+          }
           .card__title {
             font-weight: 700;
             font-size: 20px;
@@ -2306,6 +2385,9 @@ img {
             line-height: 24px;
             letter-spacing: 0.04em;
             color: $color-white;
+            @media (max-width: 1200px) {
+  
+            }
           }
         }
 
@@ -2360,9 +2442,17 @@ img {
     padding-bottom: 120px;
 
     .glavnaya__container {
+      @media (max-width: 1200px) {
+        padding: 32px;
+      }
+
     }
     .main-block {
       padding-top: 105px;
+      @media (max-width: 1200px) {
+        padding-top: 75px;
+        padding-bottom: 10px;
+      }
       &__body {
         padding: 0 10px;
         display: flex;
@@ -2370,11 +2460,21 @@ img {
         align-items: stretch;
         justify-content: space-between;
         gap: 15px;
-        // @media (max-width: 768px) {
-        //   flex-direction: column;
-        //   align-items: center;
-        //   justify-content: center;
-        // }
+        @media (max-width: 1200px) {
+          flex-flow: row wrap;
+          padding: 0;
+          // max-width: 643px;
+          margin: 0 auto;
+          gap: 20px;
+        justify-content: space-around;
+
+
+
+        // justify-content: center;
+        // gap: 15px 15px;
+
+
+        }
       }
 
       &_portfolio {
@@ -2383,6 +2483,19 @@ img {
         align-items: center;
         // justify-content: space-between;
         gap: 20px;
+
+        @media (max-width: 1280px) {
+          padding-top: 105px;
+
+        }
+
+        .card_big:last-child {
+          @media (max-width: 1280px) {
+            height: 263px;  
+            min-height: unset;
+          }
+
+        }
 
         .main-block__title {
           margin-bottom: 10px;
@@ -2406,6 +2519,10 @@ img {
           color: $color-2FA7BE;
           transition: color 0.3s ease-in-out;
 
+          @media (max-width: 1280px) {
+            font-size: 20px;
+          }
+
           &:hover {
             text-decoration: underline;
           }
@@ -2426,6 +2543,8 @@ img {
             flex: 1 1 48%;
             // left: 10%;
             width: unset;
+          gap: 23px;
+
           }
 
           .card {
@@ -2480,6 +2599,11 @@ img {
       &_evo {
         padding: 0 10px;
 
+        @media (max-width: 1280px) {
+          padding: 0;
+
+        }
+
         .main-block__body_promo {
           padding: 70px 38px;
           gap: unset;
@@ -2503,6 +2627,10 @@ img {
           align-items: flex-start;
           justify-content: center;
           color: $color-white;
+
+          @media (max-width: 1280px) {
+            height: 28vw;  
+          }
 
           .main-block__title {
             font-size: 32px;
@@ -2627,8 +2755,30 @@ img {
           // background-color: transparent;
         }
       }
+      &_why {
+        @media (max-width: 1200px) {
+          // gap: 15px;
+          // padding: 0;
+          }
+          .main-block__title {
+            @media (max-width: 1200px) {
+              margin-bottom: 23px;
+            }
+          }
+          .card_why {
+            @media (max-width: 1200px) {
+              padding: 0;
+              gap: 15px;
+            }
+          }
+      
+      }
       &_business {
         padding-top: 85px;
+        @media (max-width: 1280px) {
+          padding-bottom: 30px;
+
+        }
         .main-block__body {
           display: flex;
           flex-flow: row wrap;
@@ -2654,11 +2804,54 @@ img {
         @media (max-width: 1280px) {
           .main-block__body {
             flex-direction: column;
+            // max-width: unset;
           }
         }
 
         .main-block__title {
           margin-bottom: 20px;
+        }
+
+        .card__image {
+          @media (max-width: 1280px) {
+            flex: 1 1 80%;
+          }
+        }
+        .card_prod {
+          .paragraph__title {
+
+            @media (max-width: 1280px) {
+              font-size: 22px;
+            }
+          }
+        }
+        .card_advantage {
+          .card__text-wrap_blue {
+            @media (max-width: 1280px) {
+              max-width: 295px;
+            }
+          }
+          .card__text-wrap_cyan {
+            @media (max-width: 1280px) {
+              max-width: 330px;
+            }
+          }
+          .card__bot-block {
+            @media (max-width: 1280px) {
+              gap: 10px;
+            width: 100%;
+
+            }
+          }
+          @media (max-width: 1280px) {
+            padding: 30px 10px 30px 30px;
+          }
+          .card__subtitle {
+            @media (max-width: 1280px) {
+              font-size: 25px;
+              line-height: 29.46px;
+            }
+          }
         }
       }
 
@@ -2666,6 +2859,12 @@ img {
         min-height: 750px;
         position: relative;
         // padding-top: 80px;
+
+        @media (max-width: 1280px) {
+          padding-top: 95px;
+          min-height: 739px;
+
+        }
 
         .main-block__title {
           padding: 30px 100px 40px;
@@ -2675,6 +2874,8 @@ img {
           position: relative;
           margin-bottom: 114px;
           // display: block;
+
+
 
           .swiper-button-prev {
             position: absolute;
@@ -2709,7 +2910,7 @@ img {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 100%;
+          // height: 100%;
           margin-bottom: 119px;
           display: flex;
           flex-flow: row wrap;
@@ -2722,13 +2923,28 @@ img {
           margin: 0 auto;
           background: #2fa7be;
           border-radius: 15px;
+
+          @media (max-width: 1280px) {
+            flex-flow: column nowrap;
+          height: auto;
+          padding: 24px 30px 34px;
+          gap: 25px;
+
+          }
         }
 
         // --------------- slider start ---------------
 
         .owl-carousel {
           padding: 2px;
-          height: 192px;
+          height: 220px;
+          width: 102%;
+          margin-left: -1%;
+          @media (max-width: 1280px) {
+            overflow: hidden;
+
+
+          }
 
           .owl-nav {
             position: absolute;
@@ -2740,6 +2956,9 @@ img {
             justify-content: space-between;
             gap: 40px;
             align-items: center;
+            @media (max-width: 1280px) {
+              display: none;
+            }
 
             .owl-prev {
               position: absolute;
@@ -2793,6 +3012,10 @@ img {
           }
           .owl-stage-outer {
             padding: 7px;
+            @media (max-width: 1280px) {
+              padding: 7px 1%;  
+            }
+
 
             // overflow-x: visible;
           }
@@ -2825,6 +3048,12 @@ img {
             border-radius: 10px;
             cursor: grab;
 
+            @media (max-width: 800px) {
+              width: 315px;
+              height: 200px;
+   
+            }
+
             &.card_about_open {
               height: unset;
               min-height: 192px;
@@ -2845,6 +3074,10 @@ img {
                 text-align: left;
                 color: $color-56565E;
                 transition: color 0.3s ease-in-out;
+                @media (max-width: 1280px) {
+                  width: 100%;
+      
+                }
               }
               .card__link {
                 position: relative;
@@ -2906,6 +3139,13 @@ img {
               text-align: left;
               color: $color-56565E;
               transition: color 0.3s ease-in-out;
+              @media (max-width: 1280px) {
+                // flex: 1 1 48%;
+                // left: 10%;
+                width: 100%;
+              // gap: 23px;
+    
+              }
             }
 
             .card__link {
@@ -2960,6 +3200,10 @@ img {
     width: 100%;
     height: 380px;
     margin-bottom: 122px;
+    @media (max-width: 1280px) {
+      height: 27vw;
+      margin-bottom: 85px;
+    }
   }
 }
 
@@ -4395,9 +4639,18 @@ img {
   margin: 0 auto;
   background: #2fa7be;
   border-radius: 15px;
+  @media (max-width: 1280px) {
+    flex-flow: column nowrap;
+    height: auto;
+    padding: 24px 30px 34px;
+    gap: 25px;
+  }
 
   .btn {
     border: 1px solid $color-white;
+    @media (max-width: 1280px) {
+      width: 216px;
+    }
   }
 
   .call-form__form {
@@ -4429,6 +4682,11 @@ img {
     // margin-bottom: 50px;
 
     color: $color-white;
+    @media (max-width: 1280px) {
+      font-size: 22px;
+      max-width: unset;
+
+    }
   }
 
   .call-form__input-block {
@@ -4437,6 +4695,9 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    @media (max-width: 1280px) {
+      gap: 10px;
+    }
 
     .call-form__input {
       width: 217px;
@@ -4447,6 +4708,13 @@ img {
       padding-left: 20px;
       transition: background-color 0.3s ease-in-out;
       color: $color-white;
+
+      &_phone {
+        @media (max-width: 1280px) {
+          width: 185px;
+        }
+      }
+
 
       &:hover {
         // border: 1px solid $color-white;

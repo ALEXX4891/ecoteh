@@ -216,8 +216,12 @@ if (cartCards.length) {
     let quontity = 0;
 
     counterValue.addEventListener("input", function (e) {
-      quontity = counterValue.value;
-      counterValue.value = counterValue.value;
+      if (Number(counterValue.value) <= 0) {
+        quontity = 0;
+        counterValue.value = 0;
+      } else {
+        quontity = counterValue.value;
+      }
       getCost(item, quontity);
       getTotalCost();
     });
@@ -400,12 +404,12 @@ if (catalog) {
       //   quontity = e.target.value;
       // });
       counterValue.addEventListener("input", function (e) {
-        quontity = counterValue.value;
-        counterValue.value = counterValue.value;
-        // quontity = Number(counterValue.value);
-        // counterValue.value = Number(counterValue.value).toLocaleString();
-        // // console.log(counterValue.value);
-        // console.log(Number(counterValue.value).toLocaleString());
+        if (Number(counterValue.value) <= 0) {
+          quontity = 0;
+          counterValue.value = "";
+        } else {
+          quontity = counterValue.value;
+        }
       });
 
       plus.addEventListener("click", function (e) {
@@ -435,9 +439,7 @@ if (catalog) {
       });
 
       toCartBtn.addEventListener("click", function (e) {
-        console.log(cartBtn);
         e.preventDefault();
-        console.log(2);
         toCartBtn.classList.add("card__btn_to-cart_hide");
         cartBtn.classList.add("card__btn_in-cart_visible");
       });
@@ -501,9 +503,12 @@ if (goodsItem) {
 
   let quontity = 0;
   counterValue.addEventListener("input", function (e) {
-    quontity = counterValue.value;
-    counterValue.value = counterValue.value;
-    console.log(quontity * price);
+    if (Number(counterValue.value) <= 0) {
+      quontity = 0;
+      counterValue.value = 0;
+    } else {
+      quontity = counterValue.value;
+    }
     totalCost.innerHTML = (quontity * price).toLocaleString();
   });
 
@@ -547,6 +552,7 @@ if (goodsItem) {
 //     margin = 13;
 //   }
 // });
+console.log(window.screen.width / 340);
 
 jQuery(($) => {
   if ($(window).width() > 560) {
@@ -564,9 +570,13 @@ jQuery(($) => {
       responsive: {
         0: {
           nav: false,
-          items: 2.5,
+          items: window.screen.width / 360,
         },
-        1300: {
+        800: {
+          nav: false,
+          items: window.screen.width / 420,
+        },
+        1200: {
           // items: 4
         },
       },
@@ -588,7 +598,7 @@ if (burger) {
   });
 
   document.addEventListener("click", function (e) {
-    if (!e.target.closest(".headerNav") && !e.target.closest(".burger")) {
+    if (!e.target.closest(".header__nav") && !e.target.closest(".burger")) {
       burger.classList.remove("burger_active");
       headerNav.classList.remove("nav_active");
     }
