@@ -1,39 +1,3 @@
-const cartHeaderBtn = document.querySelector(".btn__cart");
-
-let key = 0;
-cartHeaderBtn.addEventListener("click", () => {
-  cartHeaderBtn.classList.toggle("btn__cart_active");
-  if (!key) {
-    if (window.screen.width <= 700) {
-      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5Z" fill="#2DA1B7"/>
-        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="#2DA1B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>`;
-    } else {
-      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5Z" fill="#2DA1B7"/>
-        <path d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274" stroke="#2DA1B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>    
-        155`;
-    }
-  } else {
-    if (window.screen.width <= 700) {
-      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-          d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
-          stroke="#555A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>`;
-    } else {
-      cartHeaderBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M3.87388 5H17.0842C17.3518 5.00001 17.6165 5.05857 17.8612 5.17191C18.1059 5.28524 18.3251 5.45083 18.5047 5.65801C18.6843 5.86519 18.8203 6.10936 18.904 6.37478C18.9877 6.64019 19.0171 6.92097 18.9905 7.199L18.4157 13.199C18.3684 13.6925 18.1472 14.1501 17.7949 14.4829C17.4427 14.8157 16.9845 15 16.5094 15H7.36085C6.91777 15.0002 6.48832 14.84 6.14563 14.5469C5.80293 14.2537 5.56818 13.8456 5.48134 13.392L3.87388 5ZM3.87388 5L3.09793 1.757C3.04604 1.54075 2.92641 1.34881 2.75806 1.21166C2.5897 1.0745 2.38227 1.00001 2.16871 1H1M6.74776 19H8.66368M14.4114 19H16.3274"
-        stroke="#555A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    Корзина`;
-    }
-  }
-  key = !key;
-});
 
 //подсветка активного пункта меню:---------------------------------------------------------
 const body = document.querySelector("body");
@@ -186,7 +150,31 @@ if (previews) {
 
 // -------------------------------------------- end btn_montage ---------------------------------------------
 
-// -------------------------------------------- start cart: ---------------------------------------------
+// -------------------------------------------- start корзина: ---------------------------------------------
+
+const headerCartBtn = document.querySelector(".btn__cart");
+function setCartActive() {
+  headerCartBtn.classList.add("btn__cart_active");
+}
+function setCartEmpty() {
+  headerCartBtn.classList.remove("btn__cart_active");
+}
+headerCartBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "cart.html";
+});
+
+const cartItemDelBtns = document.querySelectorAll(".card__del-btn");
+if (cartItemDelBtns) {
+  cartItemDelBtns.forEach((item) => {
+    const el = item.closest(".cart__card");
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      el.remove();
+      getTotalCost();
+    });
+  });
+}
 
 const cartCards = document.querySelectorAll(".cart__card");
 
@@ -198,10 +186,10 @@ if (cartCards.length) {
       // изменение вида кнопки при клике:
       item.addEventListener("click", function () {
         item.classList.toggle("btn_montage_active");
-        const cost = item.closest(".cart__card").querySelector(".card__cost");
-        let quontity = item
-          .closest(".cart__card")
-          .querySelector(".card__counter-value").value;
+        // const cost = item.closest(".cart__card").querySelector(".card__cost");
+        // let quontity = item
+        //   .closest(".cart__card")
+        //   .querySelector(".card__counter-value").value;
         // console.log(quontity);
         getTotalCost();
       });
@@ -231,6 +219,7 @@ if (cartCards.length) {
       counterValue.value = quontity;
       getCost(item, quontity);
       getTotalCost();
+      setCartActive()
     });
     minus.addEventListener("click", function () {
       if (counterValue.value > 0) {
@@ -263,9 +252,13 @@ function getTotalCost() {
     total += parseInt(item.innerHTML.replace("&nbsp;", ""));
     totalCost.innerHTML = total.toLocaleString();
   });
+  if (total === 0) {
+    setCartEmpty()
+    totalCost.innerHTML = "0";
+  }
 }
 
-// -------------------------------------------- end cart ---------------------------------------------
+// -------------------------------------------- end корзина ---------------------------------------------
 
 // -------------------------------------------- start О компании: ---------------------------------------------
 
@@ -344,6 +337,32 @@ function overflow(e) {
 // -------------------------------------------- start Каталог: ---------------------------------------------
 const catalog = document.querySelector(".catalog-all-main");
 if (catalog) {
+
+  const activOptionsItem = document.querySelectorAll(".activ-options__item");
+  if (activOptionsItem) {
+    activOptionsItem.forEach((item) => {
+      const closeBtn = item.querySelector(".activ-options__icon");
+      closeBtn.addEventListener("click", function () {
+        item.remove();
+      });
+    });
+  }
+
+  const allActivOptionsDelBtn = document.querySelector(".activ-options__del-all");
+  if (allActivOptionsDelBtn) {
+    const closeBtn = allActivOptionsDelBtn.querySelector(".activ-options__icon");
+    closeBtn.addEventListener("click", function () {
+      activOptionsItem.forEach((item) => {
+        item.remove();
+      })
+      allActivOptionsDelBtn.remove();
+    });
+  }
+
+
+
+
+
   const menuItem = catalog.querySelectorAll(".filter__item_head");
   menuItem.forEach((item) => {
     item.addEventListener("click", function () {
@@ -354,12 +373,46 @@ if (catalog) {
     });
   });
 
+  //открытие фильтра:
   const filterItem = catalog.querySelectorAll(".filter__item_body");
   filterItem.forEach((item) => {
     item.addEventListener("click", function (e) {
+      //закрытие всех остальных фильтров:
+      filterItem.forEach((item) => {
+        if (item !== e.target.closest(".filter__item_body")) {
+          item.classList.remove("filter__item_body_active");
+          const arrow = item.querySelector(".filter__icon");
+          arrow.classList.remove("filter__icon_active");
+        }
+      });
+
       item.classList.toggle("filter__item_body_active");
+      const arrow = item.querySelector(".filter__icon");
+      arrow.classList.toggle("filter__icon_active");
     });
   });
+
+  // закрытие фильтра:
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      filterItem.forEach((item) => {
+        item.classList.remove("filter__item_body_active");
+        const arrow = item.querySelector(".filter__icon");
+        arrow.classList.remove("filter__icon_active");
+      });
+    }    
+  })
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".filter__item_body")) {
+      filterItem.forEach((item) => {
+        item.classList.remove("filter__item_body_active");
+        const arrow = item.querySelector(".filter__icon");
+        arrow.classList.remove("filter__icon_active");
+      });
+    }
+  })
+
+  
 
   const catalogCards = document.querySelectorAll(".catalog-all__item");
 
@@ -646,12 +699,26 @@ if (headerSearchWrap) {
 
 // -------------------------------------------- end Search ---------------------------------------------
 
-// -------------------------------------------- start Отзывы: ---------------------------------------------
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
-// -------------------------------------------- start Отзывы: ---------------------------------------------
+// -------------------------------------------- start товар: ---------------------------------------------
+const goodsCartBtn = document.querySelectorAll(".goods-item__btn_to-cart");
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
+if (goodsCartBtn) {
+  // const goodsQuantity = document.querySelector(".goods__quantity");
+  goodsCartBtn.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      item.classList.toggle("goods-item__btn_to-cart_active");
+      // headerCartBtn.classList.toggle("btn__cart_active");
+      setCartActive()
+    });
+  });
+}
+
+// -------------------------------------------- end товар ---------------------------------------------
+// -------------------------------------------- start корзина: ---------------------------------------------
+
+// -------------------------------------------- end корзина ---------------------------------------------
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 
