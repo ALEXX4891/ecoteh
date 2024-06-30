@@ -1,3 +1,8 @@
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
+
 //подсветка активного пункта меню:---------------------------------------------------------
 const body = document.querySelector("body");
 const page = body.getAttribute("data-page");
@@ -291,7 +296,6 @@ if (btns.length) {
 document.addEventListener("click", function (e) {
   // закрытие отзывов при клике на другой елемент:
   if (!e.target.closest(".card_about_open")) {
-    console.log("1");
     const cardsFeedback = document.querySelectorAll(".card_about");
 
     cardsFeedback.forEach((item) => {
@@ -730,8 +734,23 @@ if (goodsCartBtn) {
 }
 
 // -------------------------------------------- end товар ---------------------------------------------
-// -------------------------------------------- start корзина: ---------------------------------------------
+// -------------------------------------------- start сертификаты: ---------------------------------------------
+// const sertificates = document.querySelectorAll(".card_sert");
 
+// if (sertificates) {
+//   sertificates.forEach((item) => {
+//     item.addEventListener("click", function (e) {
+//       const img = item.innerHTML;
+//       // const img = item.querySelector("img").getAttribute("src");
+//       console.log(img);
+//       // item.querySelector("img").setAttribute("src", img);
+
+//       e.preventDefault();
+//     });
+//   });
+// }
+
+// -------------------------------------------- start сертификаты: ---------------------------------------------
 // -------------------------------------------- end корзина ---------------------------------------------
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
