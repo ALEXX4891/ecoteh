@@ -1,4 +1,3 @@
-
 //подсветка активного пункта меню:---------------------------------------------------------
 const body = document.querySelector("body");
 const page = body.getAttribute("data-page");
@@ -219,7 +218,7 @@ if (cartCards.length) {
       counterValue.value = quontity;
       getCost(item, quontity);
       getTotalCost();
-      setCartActive()
+      setCartActive();
     });
     minus.addEventListener("click", function () {
       if (counterValue.value > 0) {
@@ -253,7 +252,7 @@ function getTotalCost() {
     totalCost.innerHTML = total.toLocaleString();
   });
   if (total === 0) {
-    setCartEmpty()
+    setCartEmpty();
     totalCost.innerHTML = "0";
   }
 }
@@ -289,47 +288,66 @@ if (btns.length) {
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 
-const cardsFeedback = document.querySelectorAll(".card_about");
-// console.log(cardsFeedback);
+document.addEventListener("click", function (e) {
+  // закрытие отзывов при клике на другой елемент:
+  if (!e.target.closest(".card_about_open")) {
+    console.log("1");
+    const cardsFeedback = document.querySelectorAll(".card_about");
 
-if (cardsFeedback.length) {
-  // console.log(cardsFeedback);
-  const openBtns = document.querySelectorAll(".feedback-btn_open");
-  openBtns.forEach((item) => {
-    item.addEventListener("click", function () {
-      console.log(1);
-      const card = item.closest(".card_about");
-      card.classList.add("card_about_open");
-      // const id = item.getAttribute("data-id");
-      // document.querySelector(`.feedback[data-id="${id}"]`).classList.add("feedback_active");
+    cardsFeedback.forEach((item) => {
+      item.classList.remove("card_about_open");
     });
-  });
+  }
+
+  // открытие отзывов:
+  const openBtns = document.querySelectorAll(".feedback-btn_open");
+  if (openBtns) {
+    openBtns.forEach((item) => {
+      if (e.target.closest(".feedback-btn_open") == item) {
+        const card = item.closest(".card_about");
+        const truthCardTextBlock = card.querySelector(".card__desc_hide");
+        const truthCardText = truthCardTextBlock.textContent;
+        const cardTextBlockForShow = card.querySelector(".card__desc_show");
+        card.classList.add("card_about_open");
+        cardTextBlockForShow.textContent = truthCardText;
+      }
+    });
+  }
+
+  // закрытие отзывов:
   const closeBtns = document.querySelectorAll(".feedback-btn_close");
   if (closeBtns) {
     closeBtns.forEach((item) => {
-      item.addEventListener("click", function () {
-        console.log(2);
+      if (e.target.closest(".feedback-btn_close") == item) {
         const card = item.closest(".card_about");
+        const truthCardTextBlock = card.querySelector(".card__desc_hide");
+        const truthCardText = truthCardTextBlock.textContent;
+        const cardTextBlockForShow = card.querySelector(".card__desc_show");
         card.classList.remove("card_about_open");
-      });
+        const cardTextTrim = truthCardText.slice(0, 140) + "...";
+        cardTextBlockForShow.textContent = cardTextTrim;
+      }
     });
   }
-  cardsFeedback.forEach((item) => {
-    if (overflow(item.querySelector(".card__desc"))) {
-      item.classList.add("card_about_overflow");
-    } else {
-      // item.classList.remove("card_about_overflow");
-    }
-    // item.addEventListener("click", function () {
-    //   console.log(3);
-    //   const card = item.closest(".card_about");
-    //   card.classList.remove("card_about_open");
-    // });
-  });
-}
+});
 
-function overflow(e) {
-  return e.scrollWidth > e.offsetWidth || e.scrollHeight > e.offsetHeight;
+// форматирование отзывов при загрузке страницы:
+const cardsFeedback = document.querySelectorAll(".card_about");
+if (cardsFeedback.length) {
+  cardsFeedback.forEach((item) => {
+    const truthCardTextBlock = item.querySelector(".card__desc_hide");
+    const truthCardText = truthCardTextBlock.textContent;
+    console.log(truthCardText);
+    const cardTextBlockForShow = item.querySelector(".card__desc_show");
+
+    if (truthCardText.length > 160) {
+      item.classList.add("card_about_overflow");
+      const cardTextTrim = truthCardText.slice(0, 140) + "...";
+      cardTextBlockForShow.textContent = cardTextTrim;
+    } else {
+      cardTextBlockForShow.textContent = truthCardText;
+    }
+  });
 }
 
 // -------------------------------------------- end Отзывы ---------------------------------------------
@@ -337,7 +355,6 @@ function overflow(e) {
 // -------------------------------------------- start Каталог: ---------------------------------------------
 const catalog = document.querySelector(".catalog-all-main");
 if (catalog) {
-
   const activOptionsItem = document.querySelectorAll(".activ-options__item");
   if (activOptionsItem) {
     activOptionsItem.forEach((item) => {
@@ -348,20 +365,20 @@ if (catalog) {
     });
   }
 
-  const allActivOptionsDelBtn = document.querySelector(".activ-options__del-all");
+  const allActivOptionsDelBtn = document.querySelector(
+    ".activ-options__del-all"
+  );
   if (allActivOptionsDelBtn) {
-    const closeBtn = allActivOptionsDelBtn.querySelector(".activ-options__icon");
+    const closeBtn = allActivOptionsDelBtn.querySelector(
+      ".activ-options__icon"
+    );
     closeBtn.addEventListener("click", function () {
       activOptionsItem.forEach((item) => {
         item.remove();
-      })
+      });
       allActivOptionsDelBtn.remove();
     });
   }
-
-
-
-
 
   const menuItem = catalog.querySelectorAll(".filter__item_head");
   menuItem.forEach((item) => {
@@ -400,8 +417,8 @@ if (catalog) {
         const arrow = item.querySelector(".filter__icon");
         arrow.classList.remove("filter__icon_active");
       });
-    }    
-  })
+    }
+  });
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".filter__item_body")) {
       filterItem.forEach((item) => {
@@ -410,9 +427,7 @@ if (catalog) {
         arrow.classList.remove("filter__icon_active");
       });
     }
-  })
-
-  
+  });
 
   const catalogCards = document.querySelectorAll(".catalog-all__item");
 
@@ -605,7 +620,7 @@ if (goodsItem) {
 //     margin = 13;
 //   }
 // });
-console.log(window.screen.width / 340);
+// console.log(window.screen.width / 340);
 
 jQuery(($) => {
   if ($(window).width() > 0) {
@@ -699,7 +714,6 @@ if (headerSearchWrap) {
 
 // -------------------------------------------- end Search ---------------------------------------------
 
-
 // -------------------------------------------- start товар: ---------------------------------------------
 const goodsCartBtn = document.querySelectorAll(".goods-item__btn_to-cart");
 
@@ -710,7 +724,7 @@ if (goodsCartBtn) {
       e.preventDefault();
       item.classList.toggle("goods-item__btn_to-cart_active");
       // headerCartBtn.classList.toggle("btn__cart_active");
-      setCartActive()
+      setCartActive();
     });
   });
 }

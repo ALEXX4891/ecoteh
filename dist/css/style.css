@@ -1095,11 +1095,17 @@ img {
   color: #555a5e;
   margin: 0 auto;
   width: max-content;
+  max-width: 100%;
   text-transform: uppercase;
   background-image: url(../img/bg-title.svg);
   background-repeat: no-repeat;
   background-position: 10px 15px;
   background-size: 180px;
+}
+@media (max-width: 1280px) {
+  .title {
+    padding: 30px 60px;
+  }
 }
 @media (max-width: 760px) {
   .title {
@@ -3065,20 +3071,14 @@ img {
 .glavnaya .glavnaya__section_main .main-block_about .main-block__title {
   padding: 30px 100px 40px;
 }
+@media (max-width: 600px) {
+  .glavnaya .glavnaya__section_main .main-block_about .main-block__title {
+    padding: 30px 40px 40px;
+  }
+}
 .glavnaya .glavnaya__section_main .main-block_about .main-block__body {
   padding: 0;
   position: relative;
-  margin-bottom: 108px;
-}
-@media (max-width: 900px) {
-  .glavnaya .glavnaya__section_main .main-block_about .main-block__body {
-    margin-bottom: 112px;
-  }
-}
-@media (max-width: 700px) {
-  .glavnaya .glavnaya__section_main .main-block_about .main-block__body {
-    margin-bottom: 40px;
-  }
 }
 .glavnaya .glavnaya__section_main .main-block_about .main-block__body .swiper-button-prev {
   position: absolute;
@@ -3140,13 +3140,18 @@ img {
 }
 .glavnaya .glavnaya__section_main .main-block_about .owl-carousel {
   padding: 2px;
-  height: 220px;
+  height: 328px;
   width: 102%;
   margin-left: -1%;
 }
 @media (max-width: 1280px) {
   .glavnaya .glavnaya__section_main .main-block_about .owl-carousel {
     overflow: hidden;
+  }
+}
+@media (max-width: 600px) {
+  .glavnaya .glavnaya__section_main .main-block_about .owl-carousel {
+    height: 264px;
   }
 }
 .glavnaya .glavnaya__section_main .main-block_about .owl-carousel .owl-nav {
@@ -3248,8 +3253,9 @@ img {
 .glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about.card_about_open .card__desc {
   width: 321px;
   height: unset;
+  max-height: 160px;
+  overflow: auto;
   text-overflow: unset;
-  overflow: unset;
   white-space: unset;
   font-size: 16px;
   font-weight: 400;
@@ -3307,15 +3313,16 @@ img {
 .glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__desc {
   width: 321px;
   height: 60px;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.57px;
   text-align: left;
   color: #56565e;
   transition: color 0.3s ease-in-out;
+}
+.glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__desc_hide {
+  display: none;
 }
 @media (max-width: 1280px) {
   .glavnaya .glavnaya__section_main .main-block_about .owl-carousel .card_about .card__desc {

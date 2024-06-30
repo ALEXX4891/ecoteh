@@ -1202,6 +1202,7 @@ img {
   // display: block;
   margin: 0 auto;
   width: max-content;
+  max-width: 100%;
   text-transform: uppercase;
   // overflow: visible;
   // background-image: url(@img/bg-title.svg);
@@ -1230,7 +1231,7 @@ img {
   // }
 
   @media (max-width: 1280px) {
-    // padding: 30px 100px;
+    padding: 30px 60px;
   }
   @media (max-width: 760px) {
     font-family: Commissioner;
@@ -3477,17 +3478,21 @@ img {
           @media (max-width: 1280px) {
             // padding: 30px 100px 30px;
           }
+          @media (max-width: 600px) {
+            padding: 30px 40px 40px;
+
+          }
         }
         .main-block__body {
           padding: 0;
           position: relative;
-          margin-bottom: 108px;
+          // margin-bottom: 108px;
           // display: block;
           @media (max-width: 900px) {
-            margin-bottom: 112px;
+            // margin-bottom: 112px;
           }
           @media (max-width: 700px) {
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
           }
 
           .swiper-button-prev {
@@ -3552,11 +3557,14 @@ img {
 
         .owl-carousel {
           padding: 2px;
-          height: 220px;
+          height: 328px;
           width: 102%;
           margin-left: -1%;
           @media (max-width: 1280px) {
             overflow: hidden;
+          }
+          @media (max-width: 600px) {
+            height: 264px;
           }
 
           .owl-nav {
@@ -3680,8 +3688,10 @@ img {
               .card__desc {
                 width: 321px;
                 height: unset;
+                max-height: 160px;
+                overflow: auto;
                 text-overflow: unset;
-                overflow: unset;
+                // overflow: unset;
                 white-space: unset;
 
                 font-size: 16px;
@@ -3744,9 +3754,9 @@ img {
             .card__desc {
               width: 321px;
               height: 60px;
-              text-overflow: ellipsis;
+              // text-overflow: ellipsis;
               overflow: hidden;
-              white-space: nowrap;
+              // white-space: nowrap;
 
               font-size: 16px;
               font-weight: 400;
@@ -3754,6 +3764,10 @@ img {
               text-align: left;
               color: $color-56565E;
               transition: color 0.3s ease-in-out;
+
+              &_hide {
+                display: none;
+              }
               @media (max-width: 1280px) {
                 // flex: 1 1 48%;
                 // left: 10%;
