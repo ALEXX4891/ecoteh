@@ -619,16 +619,16 @@ if (goodsItem) {
 // -------------------------------------------- start OWL: ---------------------------------------------
 // let margin = 16;
 
-jQuery(($) => {
-  if ($(window).width() <= 768) {
-    margin = 13;
-  }
-});
-console.log(window.screen.width / 340);
+// jQuery(($) => {
+//   if ($(window).width() <= 768) {
+//     margin = 13;
+//   }
+// });
+// console.log(window.screen.width / 340);
 
 jQuery(($) => {
   if ($(window).width() > 0) {
-    $(".owl-carousel-index").owlCarousel({
+    $(".owl-carousel").owlCarousel({
       loop: true,
       margin: 16,
       items: 3,
@@ -653,70 +653,8 @@ jQuery(($) => {
         },
       },
     });
-    $(".owl-carousel-about").owlCarousel({
-      loop: false,
-      margin: 16,
-      items: 4,
-      nav: true,
-      // navText : ["<i class='fa fa-chevron-left'>>>>></i>","<i class='fa fa-chevron-right'><<<<<<<</i>"],
-      dots: false,
-      singleItem: false,
-      autoplay: false,
-      smartSpeed: 1000,
-      autoplayTimeout: 5000,
-      responsive: {
-        0: {
-          nav: false,
-          margin: 5,
-          items: 1
-
-
-          // items: window.screen.width / 360,
-        },
-        400: {
-          nav: false,
-          margin: 5,
-
-          items: 1.3
-
-          // items: window.screen.width / 360,
-        },
-        520: {
-          nav: false,
-          margin: 5,
-
-          items: 1.7
-
-          // items: window.screen.width / 360,
-        },
-        650: {
-          nav: false,
-          items: 2.2
-
-          // items: window.screen.width / 360,
-        },
-        800: {
-          nav: false,
-          items: 2.5
-          // items: window.screen.width / 420,
-        },
-        900: {
-          nav: false,
-          items: 3
-          // items: window.screen.width / 420,
-        },
-        1200: {
-          nav: false,
-          items: 4
-        },
-        1350: {
-          items: 4
-        },
-      },
-    });
   }
 });
-
 
 // -------------------------------------------- end OWL ---------------------------------------------
 

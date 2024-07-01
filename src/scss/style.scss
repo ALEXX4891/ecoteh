@@ -617,7 +617,7 @@ a {
   flex-flow: column nowrap;
   max-width: 1180px;
   min-height: 506px;
-  transition: all 0.8s ease 0s;
+  // transition: all 0.8s ease 0s;
   align-items: flex-start;
   padding: 65px 150px;
   gap: 10px;
@@ -862,7 +862,7 @@ a {
       height: 23px;
       border: 1px solid #ffffff;
       border-radius: 2px;
-      transition: all 0.3s ease-in-out;
+      // transition: all 0.3s ease-in-out;
 
       &::before {
         content: "";
@@ -878,7 +878,7 @@ a {
         background-size: contain;
         background-position: center;
         opacity: 0;
-        transition: all 0.3s ease-in-out;
+        // transition: all 0.3s ease-in-out;
       }
     }
 
@@ -1605,8 +1605,9 @@ a {
       max-width: 80%;
       text-align: center;
       opacity: 0;
-      transition: all 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
       z-index: 2;
+
       @media (max-width: 1100px) {
         opacity: 1;
         position: absolute;
@@ -1614,7 +1615,7 @@ a {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 88%;
-        height: 70px;
+        min-height: 70px;
         font-size: 25px;
         line-height: 34.32px;
         display: flex;
@@ -1632,7 +1633,8 @@ a {
       line-height: 21.86px;
       text-align: center;
       opacity: 0;
-      transition: all 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+
       z-index: 2;
       @media (max-width: 1100px) {
         opacity: 1;
@@ -2981,14 +2983,23 @@ a {
 
         .main-block__body {
           width: 100%;
-          display: flex;
-          flex-flow: row wrap;
-          align-items: center;
-          justify-content: center;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 246px);
           gap: 20px;
 
+          @media (max-width: 1100px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 246px);
+            // flex-flow: column nowrap;
+            // gap: 18px;
+            // margin-bottom: 38px;
+          }
+
           @media (max-width: 700px) {
-            flex-flow: column nowrap;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 246px);
+            // flex-flow: column nowrap;
             gap: 18px;
             margin-bottom: 38px;
           }
@@ -3025,7 +3036,7 @@ a {
           gap: 10px;
 
           @media (max-width: 1280px) {
-            flex: 1 1 48%;
+            // flex: 1 1 48%;
             // left: 10%;
             width: unset;
             gap: 23px;
@@ -3052,44 +3063,92 @@ a {
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
+          width: 100%;
+          height: 100%;
+          min-height: unset;
+
+          .card__title {
+            @media (max-width: 1100px) {
+              font-family: Manrope;
+              font-size: 25px;
+              font-weight: 600;
+              line-height: 34.15px;
+              text-align: left;  
+              min-height: 60px; 
+              bottom: 50px;
+            left: 20px;
+            transform: unset;
+
+            }
+          }
+
+          .card__desc {
+            @media (max-width: 1100px) {
+              bottom: 13px;
+              left: 20px;
+            transform: unset;
+
+            }
+          }
+          
+
+          &_big {
+            grid-row: span 2;
+
+            @media (max-width: 700px) {
+              grid-row: unset;
+            }
+
+            &_last {
+              @media (max-width: 1100px) {
+                grid-row: 3 / 4;
+                grid-column: span 2;
+              }
+              @media (max-width: 700px) {
+                grid-row: unset;
+                grid-column: unset;
+              }
+            }
+
+          }
 
           &_1 {
-            width: 380px;
-            height: 515px;
+            // width: 380px;
+            // height: 515px;
             background-image: url("@img/portfolio-img1.png");
           }
 
           &_2 {
-            width: 380px;
-            height: 246px;
-            min-height: unset;
+            // width: 380px;
+            // height: 246px;
+            // min-height: unset;
             background-image: url("@img/portfolio-img2.png");
           }
 
           &_3 {
-            width: 380px;
-            height: 246px;
-            min-height: unset;
+            // width: 380px;
+            // height: 246px;
+            // min-height: unset;
 
             background-image: url("@img/portfolio-img3.png");
           }
 
           &_4 {
-            width: 380px;
-            height: 515px;
+            // width: 380px;
+            // height: 515px;
             background-image: url("@img/portfolio-img4.png");
           }
 
           @media (max-width: 1280px) {
-            flex: 1 1 48%;
+            // flex: 1 1 48%;
             // left: 10%;
-            width: unset;
+            // width: unset;
           }
           @media (max-width: 700px) {
-            flex: none;
-            min-height: unset;
-            width: 100%;
-            height: 246px;
+            // flex: none;
+            // min-height: unset;
+            // width: 100%;
+            // height: 246px;
           }
         }
       }
@@ -4354,23 +4413,53 @@ a {
 .portfolio {
   .container_portfolio {
     padding: 101px 0 120px 0;
-    display: flex;
+    display: grid;
     flex-flow: column nowrap;
     align-items: center;
     // justify-content: space-between;
     gap: 3px;
 
+    @media (max-width: 1280px) {
+      padding: 101px 30px 120px;
+    }
+
+    @media (max-width: 700px) {
+      padding: 130px 15px 70px;
+    }
+
     .main-block__title {
       margin-bottom: 25px;
+      @media (max-width: 700px) {
+        margin-bottom: 2px;
+
+      }
     }
 
     .main-block__body {
       width: 100%;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 341px);
       gap: 20px;
+      padding: 0 10px;
+
+      @media (max-width: 1280px) {
+        padding: 0;
+      }
+
+      @media (max-width: 900px) {
+        grid-template-rows: repeat(6, 237px);
+
+      }
+
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 237px);
+      gap: 15px;
+
+
+      }
+
     }
 
     .main-block__link {
@@ -4405,13 +4494,41 @@ a {
       align-items: center;
       justify-content: center;
       gap: 10px;
-      width: 580px;
-      height: 702px;
-
-      background-image: url("@img/portfolio-img1.png");
+      width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      min-height: unset;
+
+      &_big {
+        grid-row: span 2;
+        @media (max-width: 700px) {
+          grid-row: unset;
+        }
+      }
+
+      .card__title {
+        @media (max-width: 1100px) {
+          font-family: Manrope;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 30.05px;
+          text-align: left;
+          bottom: 43px;
+        left: 24px;
+        transform: unset;
+        }
+      }
+
+      .card__desc {
+        @media (max-width: 1100px) {
+          bottom: 8px;
+          left: 24px;
+        transform: unset;
+
+        }
+      }
     }
     .card_1 {
       // width: 380px;
@@ -4421,15 +4538,15 @@ a {
 
     .card_2 {
       // width: 380px;
-      height: 341px;
-      min-height: unset;
+      // height: 341px;
+      // min-height: unset;
       background-image: url("@img/portfolio-img2.png");
     }
 
     .card_3 {
       // width: 380px;
-      height: 341px;
-      min-height: unset;
+      // height: 341px;
+      // min-height: unset;
       background-image: url("@img/portfolio-img3.png");
     }
 
@@ -5992,7 +6109,7 @@ cursor: pointer; */
                 transform: translate(-431%, -43%);
                 text-align: center;
                 border-radius: 2px;
-                transition: all 0.3s ease-in-out;
+                // transition: all 0.3s ease-in-out;
                 width: 19px;
                 height: 19px;
                 border: 1px solid #5f5f69;
@@ -6011,7 +6128,7 @@ cursor: pointer; */
                   background-size: contain;
                   background-position: center;
                   opacity: 0;
-                  transition: all 0.3s ease-in-out;
+                  transition: opacity 0.3s ease-in-out;
                 }
               }
 
