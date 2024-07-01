@@ -628,6 +628,7 @@ console.log(window.screen.width / 340);
 
 jQuery(($) => {
   if ($(window).width() > 0) {
+
     $(".owl-carousel-index").owlCarousel({
       loop: true,
       margin: 16,
@@ -653,6 +654,7 @@ jQuery(($) => {
         },
       },
     });
+
     $(".owl-carousel-about").owlCarousel({
       loop: false,
       margin: 16,
@@ -714,6 +716,37 @@ jQuery(($) => {
         },
       },
     });
+
+    $(".owl-carousel_porf-item").owlCarousel({
+      loop: false,
+      margin: 16,
+      // autoWidth:true,
+      items: 4,
+      nav: true,
+      // navText : ["<i class='fa fa-chevron-left'>>>>></i>","<i class='fa fa-chevron-right'><<<<<<<</i>"],
+      dots: false,
+      singleItem: false,
+      autoplay: false,
+      smartSpeed: 1000,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          nav: false,
+          // margin: 5,
+          items: 4,
+          margin: 13,
+        },
+        600: {
+        nav: false,
+        items: 4,
+        margin: 15,
+        },
+        1050: {
+          items: 4
+        },
+      },
+    });
+
   }
 });
 
