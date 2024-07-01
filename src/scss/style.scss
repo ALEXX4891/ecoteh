@@ -7027,15 +7027,20 @@ img {
   }
   .cart__container {
     padding: 101px 0 100px;
+
     @media (max-width: 1280px) {
       padding: 101px 30px 120px;
     }
-    @media (max-width: 600px) {
-      padding: 111px 15px 100px;
+    @media (max-width: 650px) {
+      padding: 111px 15px 70px;
     }
   }
   .cart__title {
     margin-bottom: 28px;
+    @media (max-width: 650px) {
+          margin-bottom: 35px;
+
+    }
   }
   .title {
   }
@@ -7059,7 +7064,7 @@ img {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    gap: 17px;
+    gap: 12px;
   }
   .cart__card {
   }
@@ -7096,9 +7101,16 @@ img {
     }
 
     @media (max-width: 650px) {
-      padding: 16px 22px;
+      padding: 20px 10px;
+      gap: 10px 30px;
+
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: 5fr 2fr 1fr;
+
+    }
+
+    @media (max-width: 410px) {
+      grid-template-rows: 3fr 2fr 1fr;
 
     }
   }
@@ -7121,7 +7133,9 @@ img {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       width: 100%;
-      height: 100%;
+      height: 100px;
+
+      // height: 85%;
       // width: 190px;
       // height: 149px;
     }
@@ -7145,6 +7159,13 @@ img {
     @media (max-width: 1280px) {
       margin-right: auto;
     }
+
+    @media (max-width: 650px) {
+      margin-right: 0;
+    }
+    @media (max-width: 410px) {
+      width: auto;
+    }
     .card__title {
       font-size: 16px;
       font-weight: 600;
@@ -7153,6 +7174,14 @@ img {
       color: $color-555A5E;
       text-transform: none;
       margin-bottom: 10px;
+
+      @media (max-width: 650px) {
+        font-family: Commissioner;
+font-size: 14px;
+font-weight: 600;
+text-align: left;
+      }
+
     }
     .card__desc {
       font-size: 14px;
@@ -7191,6 +7220,14 @@ img {
     gap: 10px;
     margin-right: auto;
 
+
+
+    .btn_montage {
+      @media (max-width: 650px) {
+        width: 206px;
+      }
+    }
+
     @media (max-width: 1280px) {
       grid-row: 2/2;
       grid-column: 2/3;
@@ -7203,36 +7240,60 @@ img {
       width: 100%;
     flex-flow: row nowrap;
     justify-content: space-between;
-
-
-
-      // grid-row: span 2;
+    margin-top: -1px;
     }
+    @media (max-width: 410px) {
+      flex-flow: column nowrap;  
+        }
 
     .card__counter-wrap {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
-      gap: 5px;
+      gap: 6px;
       width: 100%;
 
       @media (max-width: 1280px) {
         // width: 86%;
       }
       @media (max-width: 650px) {
+      justify-content: flex-start;
+      font-family: Commissioner;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.04em;
+text-align: center;
+
+
+
         // flex: 1 1 47% 
       }
 
       .card__counter {
+
+        .card__counter-value {
+          @media (max-width: 650px) {
+            width: 44px;
+          }
+        }
         @media (max-width: 1280px) {
           width: 132px;
+        }
+
+        @media (max-width: 650px) {
+          width: 88px;
+          height: 33px;
         }
       }
 
       .card__counter-desc {
         width: 72px;
         text-align: start;
+
+        @media (max-width: 650px) {
+          width: 40px;
+        }
       }
     }
   }
@@ -7255,9 +7316,12 @@ img {
 
     @media (max-width: 650px) {
       grid-column: span 2;
+      height: auto;
 
     flex-flow: row nowrap;
     justify-content: space-between;
+    // margin-top: -10px;
+    align-self: end;
 
 
     }
@@ -7268,6 +7332,10 @@ img {
       align-items: flex-start;
       justify-content: flex-start;
       gap: 3px;
+
+      @media (max-width: 650px) {  
+        align-items: flex-end;
+      }
     }
     .card__cost {
       font-size: 20px;
@@ -7275,12 +7343,27 @@ img {
       line-height: 24.46px;
       text-align: left;
       color: $color-555A5E;
+
+      @media (max-width: 650px) {
+        font-family: Commissioner;
+font-size: 18px;
+font-weight: 600;
+text-align: left;
+line-height: 18px;
+
+
+      }
       &_desc {
         font-size: 20px;
         font-weight: 600;
         line-height: 24.46px;
         text-align: left;
         color: $color-555A5E;
+        @media (max-width: 650px) {
+  line-height: 20px;
+  
+  
+        }
       }
     }
     .btn-del {
@@ -7296,6 +7379,14 @@ img {
       justify-content: flex-start;
       gap: 12px;
       transition: color 0.3s ease-in-out;
+
+      @media (max-width: 650px) {
+        font-family: Commissioner;
+font-size: 14px;
+font-weight: 500;
+text-align: left;
+
+      }
       & svg path {
         fill: transparent;
         transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
@@ -7326,12 +7417,17 @@ img {
     background: #ffffff;
     border: 1px solid #2fa7be;
     border-radius: 15px;
+
     @media (max-width: 1280px) {
       margin-left: 0;
       max-width: 880px;
       width: 100%;
       margin-right: 0;
       padding: 26px;
+    }
+
+    @media (max-width: 650px) {
+      padding: 35px 23px;
     }
 
     .form__cost {
@@ -7383,6 +7479,10 @@ img {
         justify-content: flex-start;
         margin-bottom: 10px;
       }
+
+      @media (max-width: 650px) {
+        flex-flow: column nowrap;
+      }
     }
     .form__input {
       padding: 13px 20px;
@@ -7393,11 +7493,17 @@ img {
       @media (max-width: 1280px) {
         width: 33%;
       }
+      @media (max-width: 650px) {
+        width: 100%;
+      }
     }
     .form__submit {
       width: 100%;
       @media (max-width: 1280px) {
         width: 33%;
+      }
+      @media (max-width: 650px) {
+        width: 100%;
       }
     }
     .btn {
@@ -7424,6 +7530,10 @@ img {
         }
         @media (max-width: 1280px) {
           top: -5px;
+        }
+        @media (max-width: 1280px) {
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }
