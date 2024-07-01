@@ -4857,13 +4857,24 @@ img {
 .catalog-all .catalog-all-main__container .filter {
   margin-bottom: 30px;
 }
+.catalog-all .catalog-all-main__container .filter .filter__body {
+  position: relative;
+  height: 82px;
+}
+.catalog-all .catalog-all-main__container .filter .filter__body .filter__list_body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+}
 .catalog-all .catalog-all-main__container .filter .filter__list {
   max-width: 100%;
   overflow-x: auto;
+  overflow-y: inherit;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 18px;
   gap: 60px;
 }
