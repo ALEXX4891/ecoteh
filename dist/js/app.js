@@ -747,6 +747,73 @@ jQuery(($) => {
       },
     });
 
+    $(".owl-carousel-news-item").owlCarousel({
+      loop: false,
+      margin: 16,
+      // autoWidth:true,
+      items: 3,
+      nav: true,
+      // navText : ["<i class='fa fa-chevron-left'>>>>></i>","<i class='fa fa-chevron-right'><<<<<<<</i>"],
+      dots: false,
+      singleItem: false,
+      autoplay: false,
+      smartSpeed: 1000,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          nav: false,
+          // margin: 5,
+          items: 1,
+      autoWidth:true,
+
+          // margin: 13,
+        },
+        410: {
+          nav: false,
+          // margin: 5,
+          items: 1.17,
+          // margin: 13,
+        },
+        425: {
+          nav: false,
+          // margin: 5,
+          items: 1.2,
+          // margin: 13,
+        },
+        530: {
+          nav: false,
+          // margin: 5,
+          items: 1.5,
+          // margin: 13,
+        },
+        600: {
+          nav: false,
+          // margin: 5,
+          items: 1.7,
+          // margin: 13,
+        },
+        750: {
+          nav: false,
+          // margin: 5,
+          items: 2.15,
+          // margin: 13,
+        },
+        950: {
+          nav: false,
+          items: 2.4,
+          // margin: 15,
+          },
+        1050: {
+        nav: false,
+        items: 2.7,
+        // margin: 15,
+        },
+        1180: {
+          items: 3
+        },
+      },
+    });
+
   }
 });
 
