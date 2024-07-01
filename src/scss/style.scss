@@ -1159,7 +1159,6 @@ img {
   background-position: calc(50% - 420px) 319px;
   background-size: 2921px;
 
-  padding-bottom: 120px;
   @media (max-width: 800px) {
     background: $color-F3FAFC;
   }
@@ -2589,12 +2588,12 @@ img {
 
   .catalog-main__head {
     position: relative;
-    padding-top: 83px;
-    margin-bottom: 13px;
+    padding-top: 98px;
+    margin-bottom: 28px;
 
     @media (max-width: 660px) {
-      padding-top: 76px;
-      margin-bottom: 10px;
+      padding-top: 100px;
+      margin-bottom: 35px;
     }
   }
   .catalog-main__body {
@@ -4313,6 +4312,7 @@ img {
   .section_news {
     .news-main__container {
       position: relative;
+      padding-bottom: 48px;
       .link {
         position: absolute;
         right: 10px;
@@ -4323,8 +4323,8 @@ img {
 
     .news-main__head {
       position: relative;
-      padding-top: 83px;
-      margin-bottom: 13px;
+      padding-top: 101px;
+      margin-bottom: 28px;
     }
     .news-main__body {
       padding: 0 10px;
@@ -4349,7 +4349,7 @@ img {
 
 .portfolio {
   .container_portfolio {
-    padding: 86px 0 120px 0;
+    padding: 101px 0 120px 0;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -4357,7 +4357,7 @@ img {
     gap: 3px;
 
     .main-block__title {
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
 
     .main-block__body {
@@ -4539,6 +4539,10 @@ img {
 
   .container_about {
     padding: 86px 10px 123px;
+
+    &_bot {
+      padding: 103px 10px 47px;
+    }
   }
 
   .about__top-wrapper {
@@ -4596,12 +4600,15 @@ img {
   }
 
   .main-block {
-    margin-bottom: 109px;
+    margin-bottom: 109px;    
   }
 
   .main-block_stage {
+
+    margin-bottom: 124px;
+
     .about__title_stage {
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       background-position: 110px 15px;
       width: 700px;
     }
@@ -4751,7 +4758,7 @@ img {
       margin-bottom: 27px;
     }
     .main-block__body {
-      margin-bottom: 121px;
+      margin-bottom: 134px;
     }
     .slider {
     }
@@ -4872,6 +4879,8 @@ img {
 
 .util {
   .util__main-conteiner {
+    padding-bottom: 86px;
+
     @media (max-width: 1200px) {
       padding: 30px 30px 97px;
     }
@@ -4940,7 +4949,7 @@ img {
     }
 
     .util__price {
-      padding: 105px 10px 20px;
+      padding: 120px 10px 20px;
 
       display: flex;
       flex-flow: column nowrap;
@@ -4949,16 +4958,19 @@ img {
       gap: 10px;
 
       @media (max-width: 900px) {
-        padding: 76px 0 20px;
+        padding: 90px 0 20px;
       }
       @media (max-width: 600px) {
-        padding: 14px 0 20px;
+        padding: 40px 0 20px;
       }
 
       .util__title {
-        margin-bottom: 7px;
+        margin-bottom: 22px;
         @media (max-width: 900px) {
-          margin-bottom: 0;
+          margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+          margin-bottom: 25px;
         }
       }
       .util__subtitle {
@@ -5014,7 +5026,7 @@ img {
           margin-bottom: 36px;
         }
         @media (max-width: 600px) {
-          margin-bottom: 21px;
+          margin-bottom: 20px;
         }
         // border-radius: 20px 20px 0px 0px;
 
@@ -5098,25 +5110,25 @@ img {
     }
 
     .util-serv {
-      padding: 64px 31px 20px;
+      padding: 80px 31px 20px;
 
       @media (max-width: 900px) {
-        padding: 64px 0 95px;
+        padding: 80px 0 95px;
       }
 
       @media (max-width: 600px) {
-        padding: 5px 0 20px;
+        padding: 29px 0 20px;
       }
 
       .util-serv__title {
-        margin-bottom: 13px;
+        margin-bottom: 30px;
 
         @media (max-width: 900px) {
-          margin-bottom: 20px;
+          margin-bottom: 35px;
         }
 
         @media (max-width: 600px) {
-          margin-bottom: 3px;
+          margin-bottom: 29px;
         }
       }
 
@@ -5292,19 +5304,19 @@ img {
     }
 
     .util-why {
-      padding: 86px 10px 20px;
+      padding: 100px 10px 20px;
       @media (max-width: 900px) {
-        padding: 86px 0 0;
+        padding: 100px 0 0;
       }
 
       @media (max-width: 600px) {
-        padding: 22px 0 20px;
+        padding: 46px 0 20px;
       }
       .util-why__title {
-        margin-bottom: 25px;
+        margin-bottom: 35px;
 
         @media (max-width: 600px) {
-          margin-bottom: 10px;
+          margin-bottom: 35px;
         }
       }
 
@@ -5374,11 +5386,11 @@ img {
       padding: 50px 10px 20px;
 
       @media (max-width: 900px) {
-        padding: 70px 0 20px;
+        padding: 58px 0 20px;
       }
 
       @media (max-width: 600px) {
-        padding: 26px 0 20px;
+        padding: 27px 0 20px;
       }
     }
   }
@@ -6287,13 +6299,15 @@ img {
 // --------------------------------------- CONTACTS start ---------------------------------------
 
 .contacts-page {
+  .title {
+    margin-bottom: 18px;
+  }
   .bg_contacts {
     background: url("@img/bg-contacts.svg"), $color-F3FAFC;
     background-repeat: no-repeat;
     background-position: center 149px;
     background-size: 1915px;
 
-    padding-bottom: 120px;
     @media (max-width: 800px) {
       background: $color-F3FAFC;
     }
@@ -6304,7 +6318,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    padding: 86px 10px 105px;
+    padding: 101px 10px 105px;
     border-bottom: 1px solid var(--color-E9E9E9);
 
     .contacts__list {

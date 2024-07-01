@@ -1047,7 +1047,6 @@ img {
   background-position: center 118px;
   background-position: calc(50% - 420px) 319px;
   background-size: 2921px;
-  padding-bottom: 120px;
 }
 @media (max-width: 800px) {
   .bg_news {
@@ -2219,13 +2218,13 @@ img {
 }
 .section_catalog .catalog-main__head {
   position: relative;
-  padding-top: 83px;
-  margin-bottom: 13px;
+  padding-top: 98px;
+  margin-bottom: 28px;
 }
 @media (max-width: 660px) {
   .section_catalog .catalog-main__head {
-    padding-top: 76px;
-    margin-bottom: 10px;
+    padding-top: 100px;
+    margin-bottom: 35px;
   }
 }
 .section_catalog .catalog-main__body {
@@ -3749,6 +3748,7 @@ img {
 
 .novosti .section_news .news-main__container {
   position: relative;
+  padding-bottom: 48px;
 }
 .novosti .section_news .news-main__container .link {
   position: absolute;
@@ -3758,8 +3758,8 @@ img {
 }
 .novosti .section_news .news-main__head {
   position: relative;
-  padding-top: 83px;
-  margin-bottom: 13px;
+  padding-top: 101px;
+  margin-bottom: 28px;
 }
 .novosti .section_news .news-main__body {
   padding: 0 10px;
@@ -3770,14 +3770,14 @@ img {
   gap: 20px 10px;
 }
 .portfolio .container_portfolio {
-  padding: 86px 0 120px 0;
+  padding: 101px 0 120px 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   gap: 3px;
 }
 .portfolio .container_portfolio .main-block__title {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 .portfolio .container_portfolio .main-block__body {
   width: 100%;
@@ -3909,6 +3909,9 @@ img {
 .about .container_about {
   padding: 86px 10px 123px;
 }
+.about .container_about_bot {
+  padding: 103px 10px 47px;
+}
 .about .about__top-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -3959,8 +3962,11 @@ img {
 .about .main-block {
   margin-bottom: 109px;
 }
+.about .main-block_stage {
+  margin-bottom: 124px;
+}
 .about .main-block_stage .about__title_stage {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   background-position: 110px 15px;
   width: 700px;
 }
@@ -4085,7 +4091,7 @@ img {
   margin-bottom: 27px;
 }
 .about .main-block_sert .main-block__body {
-  margin-bottom: 121px;
+  margin-bottom: 134px;
 }
 .about .main-block_sert .swiper-slide {
   display: flex;
@@ -4156,6 +4162,9 @@ img {
   border-radius: 6px;
 }
 
+.util .util__main-conteiner {
+  padding-bottom: 86px;
+}
 @media (max-width: 1200px) {
   .util .util__main-conteiner {
     padding: 30px 30px 97px;
@@ -4223,7 +4232,7 @@ img {
   border-radius: 6px;
 }
 .util .util__section_main .util__price {
-  padding: 105px 10px 20px;
+  padding: 120px 10px 20px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -4232,20 +4241,25 @@ img {
 }
 @media (max-width: 900px) {
   .util .util__section_main .util__price {
-    padding: 76px 0 20px;
+    padding: 90px 0 20px;
   }
 }
 @media (max-width: 600px) {
   .util .util__section_main .util__price {
-    padding: 14px 0 20px;
+    padding: 40px 0 20px;
   }
 }
 .util .util__section_main .util__price .util__title {
-  margin-bottom: 7px;
+  margin-bottom: 22px;
 }
 @media (max-width: 900px) {
   .util .util__section_main .util__price .util__title {
-    margin-bottom: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .util .util__section_main .util__price .util__title {
+    margin-bottom: 25px;
   }
 }
 .util .util__section_main .util__price .util__subtitle {
@@ -4298,7 +4312,7 @@ img {
 }
 @media (max-width: 600px) {
   .util .util__section_main .util__price .table {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 }
 .util .util__section_main .util__price .table .table__head .table__cell {
@@ -4365,29 +4379,29 @@ img {
   text-align: left;
 }
 .util .util__section_main .util-serv {
-  padding: 64px 31px 20px;
+  padding: 80px 31px 20px;
 }
 @media (max-width: 900px) {
   .util .util__section_main .util-serv {
-    padding: 64px 0 95px;
+    padding: 80px 0 95px;
   }
 }
 @media (max-width: 600px) {
   .util .util__section_main .util-serv {
-    padding: 5px 0 20px;
+    padding: 29px 0 20px;
   }
 }
 .util .util__section_main .util-serv .util-serv__title {
-  margin-bottom: 13px;
+  margin-bottom: 30px;
 }
 @media (max-width: 900px) {
   .util .util__section_main .util-serv .util-serv__title {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 600px) {
   .util .util__section_main .util-serv .util-serv__title {
-    margin-bottom: 3px;
+    margin-bottom: 29px;
   }
 }
 .util .util__section_main .util-serv .util-serv__main-block {
@@ -4571,24 +4585,24 @@ img {
   transform: scale(1.05);
 }
 .util .util__section_main .util-why {
-  padding: 86px 10px 20px;
+  padding: 100px 10px 20px;
 }
 @media (max-width: 900px) {
   .util .util__section_main .util-why {
-    padding: 86px 0 0;
+    padding: 100px 0 0;
   }
 }
 @media (max-width: 600px) {
   .util .util__section_main .util-why {
-    padding: 22px 0 20px;
+    padding: 46px 0 20px;
   }
 }
 .util .util__section_main .util-why .util-why__title {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 @media (max-width: 600px) {
   .util .util__section_main .util-why .util-why__title {
-    margin-bottom: 10px;
+    margin-bottom: 35px;
   }
 }
 .util .util__section_main .util-why .util-why__main-block {
@@ -4659,12 +4673,12 @@ img {
 }
 @media (max-width: 900px) {
   .util .util__section_main .util__form {
-    padding: 70px 0 20px;
+    padding: 58px 0 20px;
   }
 }
 @media (max-width: 600px) {
   .util .util__section_main .util__form {
-    padding: 26px 0 20px;
+    padding: 27px 0 20px;
   }
 }
 
@@ -5424,12 +5438,14 @@ img {
   background: transparent;
 }
 
+.contacts-page .title {
+  margin-bottom: 18px;
+}
 .contacts-page .bg_contacts {
   background: url("../img/bg-contacts.svg"), #f3fafc;
   background-repeat: no-repeat;
   background-position: center 149px;
   background-size: 1915px;
-  padding-bottom: 120px;
 }
 @media (max-width: 800px) {
   .contacts-page .bg_contacts {
@@ -5442,7 +5458,7 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  padding: 86px 10px 105px;
+  padding: 101px 10px 105px;
   border-bottom: 1px solid var(--color-E9E9E9);
 }
 .contacts-page .contacts__container .contacts__list {
