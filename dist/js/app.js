@@ -341,7 +341,7 @@ if (cardsFeedback.length) {
   cardsFeedback.forEach((item) => {
     const truthCardTextBlock = item.querySelector(".card__desc_hide");
     const truthCardText = truthCardTextBlock.textContent;
-    console.log(truthCardText);
+    // console.log(truthCardText);
     const cardTextBlockForShow = item.querySelector(".card__desc_show");
 
     if (truthCardText.length > 160) {
@@ -624,7 +624,7 @@ jQuery(($) => {
     margin = 13;
   }
 });
-console.log(window.screen.width / 340);
+// console.log(window.screen.width / 340);
 
 jQuery(($) => {
   if ($(window).width() > 0) {
@@ -914,6 +914,11 @@ if (goodsCartBtn) {
 
 // -------------------------------------------- start сертификаты: ---------------------------------------------
 // -------------------------------------------- end корзина ---------------------------------------------
+
+
+$("#phone_1").mask("+7(999) 999 99 99");
+$("#phone_2").mask("+7(999) 999 99 99");
+
 
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 

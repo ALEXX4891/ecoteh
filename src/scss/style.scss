@@ -739,10 +739,11 @@ a {
       min-height: 137px;
       margin-bottom: 10px;
       @media (max-width: 1280px) {
-        max-width: 721px;
+        max-width: 707px;
         width: 100%;
       }
       @media (max-width: 900px) {
+        max-width: 687px;
         margin-bottom: 0;
       }
 
@@ -781,8 +782,15 @@ a {
     flex-flow: row nowrap;
     gap: 20px;
 
+    @media (max-width: 1280px) {
+      max-width: 707px;
+    }
+
     @media (max-width: 900px) {
-      align-self: flex-start;
+      max-width: 687px;
+      width: 100%;
+
+      align-self: center;
     }
 
     @media (max-width: 600px) {
@@ -6798,9 +6806,12 @@ cursor: pointer; */
         }
 
         @media (max-width: 1280px) {
-          height: 276px;  
           margin-bottom: 40px;   
           }
+
+          @media (max-width: 750px) {
+            height: 276px;   
+            }
 
       & iframe {
         border-radius: 20px;
