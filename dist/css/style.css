@@ -7459,7 +7459,7 @@ a {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 13px 50px;
+  padding: 13px 110px 13px 20px;
   display: flex;
   width: 100%;
   border-top: 1px solid #333333;
@@ -7469,23 +7469,20 @@ a {
   z-index: 1000;
   align-items: center;
 }
-
-.cookie__wrapper {
+.cookie .cookie__wrapper {
   display: flex;
   margin-right: 20px;
   color: #333333;
   align-items: center;
 }
-
-.cookie__wrapper p {
+.cookie .cookie__wrapper p {
   margin-right: 5px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
 }
-
-.cookie__wrapper a {
+.cookie .cookie__wrapper a {
   color: #333333;
   text-decoration: none;
   font-style: normal;
@@ -7493,14 +7490,12 @@ a {
   font-size: 18px;
   line-height: 100%;
 }
-
-.cookie__wrapper a:hover {
+.cookie .cookie__wrapper a:hover {
   color: #333333;
   text-decoration: underline;
 }
-
-.cookie__btn {
-  color: #008ED7;
+.cookie .cookie__btn {
+  color: #008ed7;
   cursor: pointer;
   font-family: "Noto Sans Display";
   font-style: normal;
@@ -7508,8 +7503,7 @@ a {
   font-size: 16px;
   line-height: 100%;
 }
-
-.cookie__close {
+.cookie .cookie__close {
   position: absolute;
   right: 66px;
   top: 50%;
