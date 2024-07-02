@@ -920,9 +920,49 @@ $("#phone_1").mask("+7(999) 999 99 99");
 $("#phone_2").mask("+7(999) 999 99 99");
 
 
-// -------------------------------------------- start Отзывы: ---------------------------------------------
+// -------------------------------------------- start Куки: ---------------------------------------------
+function setCookie(name, value, lifetimeDays=30, path="/") {
+  var expires = "";
+  if (lifetimeDays) {
+      var date = new Date();
+      date.setTime(date.getTime() + (lifetimeDays*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "")  + expires + "; path=" + path;
+}
 
-// -------------------------------------------- end Отзывы ---------------------------------------------
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var cookies = document.cookie.split(";");
+  for(var i=0; i < cookies.length; i++) {
+      var c = cookies[i];
+      while (c.charAt(0) == " ")
+          c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0)
+          return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+if (!getCookie("CookiePolicyAccepted")) {
+  $('.cookie').show();
+} else {
+  $('.cookie').hide();
+}
+
+function acceptCookiePolicy() {
+  console.log("acceptCookiePolicy");
+  setCookie("CookiePolicyAccepted", true);
+  $('.cookie').fadeTo(500, 0);
+  setTimeout(() => {
+    $('.cookie').hide();
+  }, 500);
+}
+function closeCookiePolicyNotification() {
+  console.log("closeCookiePolicyNotification");
+  $('.cookie').fadeOut(300);
+}
+// -------------------------------------------- end Куки ---------------------------------------------
 // -------------------------------------------- start Отзывы: ---------------------------------------------
 
 // -------------------------------------------- end Отзывы ---------------------------------------------
