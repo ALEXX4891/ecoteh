@@ -323,7 +323,7 @@ a {
 }
 .btn.btn_montage {
   font-size: 14px;
-  padding: 3px 17px;
+  padding: 3px 10px;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-align: left;
@@ -386,7 +386,7 @@ a {
 }
 .btn.btn_montage_active .btn__icon {
   display: block;
-  margin-left: 23px;
+  margin-left: 10px;
 }
 .btn.btn_montage_active .btn__plus {
   display: none;
