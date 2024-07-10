@@ -585,7 +585,15 @@ if (goodsItem) {
   });
 
   plus.addEventListener("click", function (e) {
-    quontity++;
+    if (goodsItem.closest(".goods-item_mass")) {
+      const mass = Number(goodsItem.querySelector('.in-cart__desc').getAttribute('data-mass'));
+      quontity += mass;
+      // counterValue.value = quontity;
+      // console.log(quontity * price);
+      // totalCost.innerHTML = (quontity * price).toLocaleString();
+    } else {
+      quontity++;      
+    }
     counterValue.value = quontity;
     console.log(quontity * price);
     totalCost.innerHTML = (quontity * price).toLocaleString();
@@ -593,7 +601,12 @@ if (goodsItem) {
 
   minus.addEventListener("click", function (e) {
     if (counterValue.value > 0) {
-      quontity--;
+      if (goodsItem.closest(".goods-item_mass")) {
+        const mass = Number(goodsItem.querySelector('.in-cart__desc').getAttribute('data-mass'));
+        quontity -= mass;
+      } else {
+        quontity--;        
+      }
       counterValue.value = quontity;
       totalCost.innerHTML = (quontity * price).toLocaleString();
       console.log(quontity * price);

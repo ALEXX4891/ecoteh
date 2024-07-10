@@ -8539,6 +8539,7 @@ cursor: pointer; */
           display: flex;
           flex-direction: row;
           align-items: center;
+          justify-content: center;
           padding: 10px 20px;
           gap: 10px;
           width: 176px;
@@ -8714,6 +8715,32 @@ cursor: pointer; */
       }
     }
   }
+  .in-cart__desc {
+    display: none;
+  }
+
+  &.goods-item_mass {
+    .btn_montage {
+      display: none;
+    }
+
+    .goods-item__container {
+      .in-cart {
+        margin-bottom: 0;
+      }
+    }
+    .in-cart__desc {
+      display: block;
+      width: 123px;
+      font-family: Commissioner;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17.12px;
+      text-align: center;
+      margin-top: -15px;
+
+    }
+  }
 }
 // --------------------------------------- GOODS-item end ---------------------------------------
 
@@ -8782,3 +8809,19 @@ cursor: pointer; */
 }
 
 // --------------------------------------- куки end ---------------------------------------
+
+// --------------------------------------- input number start ---------------------------------------
+// убрать стрелочки в input number:
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+// --------------------------------------- input number end ---------------------------------------

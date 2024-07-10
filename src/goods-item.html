@@ -4,7 +4,9 @@
 "title": "Экотех. Товар",
 })
 
-<body class="goods-item" data-page="catalog">
+<body class="goods-item goods-item_mass" data-page="catalog">
+<!-- <body class="goods-item" data-page="catalog"> -->
+
   @@include('./html/header.html', {})
 
   <main class="main goods-item__main">
@@ -113,7 +115,9 @@
           </div>
 
 
-          <!-- <div class="form__cost"> -->
+          <div class="in-cart__desc" data-mass="30">
+            По 30 кг.
+          </div>
           <div class="goods-item__cost cost">
             <p class="cost__cost-value">
               100 000
